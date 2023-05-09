@@ -661,11 +661,26 @@ p{
  * -----------------------------------------------------------------------------
  */
 
+ .fotografiawtc{
+	height: 600px; 
+	position: relative;
+ }
+
+ .img-banner{
+	background-image: url(images/wtcfoto.png);
+ }
+
+
 .fullsize  {
 	height: 100%;
 	width: 100%;
 }
 
+.titulofotografiawtc {
+	position: absolute;
+    top: 0;
+    left: 0;
+}
 
 
 
