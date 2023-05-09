@@ -81,21 +81,27 @@
     <?php wp_head(); ?>
 </head>
 
-<header>
-  <nav class="container navbar navbar" id="wrapper-menu-header">
-    <a class="navbar-brand" href="#">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="d-inline-block align-top" alt="logo principal">
-    </a>
-    <?php
-      wp_nav_menu( array(
-            'menu' => 'Main Menu',
-            'menu_class' => 'nav nav-menu-header d-print-none',
-            'container_id' => 'navigation',
-          //   'container_class' => 'collapse navbar-collapse navbar-ex1-collapse'
-          ));
-			?>
-  </nav>
-</header>
-
+    <header>
+      <nav class="container navbar" id="wrapper-menuheader">
+        <div class="row sizeHeader">
+          <div class="col-4 centrarmenu"> 
+            <a href="#" class="navbar-brand">
+					    <img src="<?php echo get_template_directory_uri();?>/images/logo.png" class="" alt="Logo Principal">
+            </a>
+          </div>
+          <div class="col centrarmenu">
+            <?php
+                  wp_nav_menu( array(
+                    'menu' => 'Main Menu',
+                    'menu_class' => 'nav nav-menu-header d-print-none',
+                    'container_id' => 'navigation',
+                  //   'container_class' => 'collapse navbar-collapse navbar-ex1-collapse'
+                  ));
+            ?>
+          </div>
+        </div>
+     </nav>  
+    </header>
+    
 <body>
     <div class="wrapper">

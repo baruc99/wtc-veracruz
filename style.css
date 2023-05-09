@@ -38,7 +38,7 @@ Text Domain: wtc veracruz 2023
  */
 
 html {
-	font-family: sans-serif;
+	font-family: Montserrat;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
@@ -630,7 +630,41 @@ p{
 	padding-left: 0;
 }
 
+/**
+ * header
+ * -----------------------------------------------------------------------------
+ */
 
+
+ .sizeHeader{
+	height: 59px;
+ }
+
+.centrarmenu{
+	height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .nav-menu-header a{
+    color: #4c4d4d;
+	font-family: Montserrat Medium;
+	font-size: 16px;
+	padding: 10px;
+	display: flex;
+ }
+
+
+ /**
+ * banner
+ * -----------------------------------------------------------------------------
+ */
+
+.fullsize  {
+	height: 100%;
+	width: 100%;
+}
 
 
 
