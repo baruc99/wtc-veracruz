@@ -6,69 +6,88 @@ var Functions = {
 				 .uploadMediaWp()
 				 .addMorePatrocinador()
 				 .addVideoGaleria()
-				 .saveThemeOption();
+				 .saveThemeOption()
+				 .addMedia();
 	},
-	addMedia: function(click_media, size = ''){
-		var uploadButton =  jQuery(document);
-		var mediaUploader;
-		var self;
-		console.log(uploadButton);
-
-		uploadButton.off('click').on('click','#'+click_media, function(){
-			var button = jQuery(this);
-			index = button.data('index');
-			title = button.attr('title');
-
-			if (mediaUploader) {
-				mediaUploader.open();
-				return;
+	addMedia: function(click_media){
+		var button = jQuery("#"+click_media);
+		var send_attachment = wp.media.editor.send.attachment;
+		wp.media.editor.send.attachment = function(props, attachment){
+			button.html("<img src='"+attachment.url+"' width='120px'>");
+			jQuery("input[name*='"+click_media+"']").val(attachment.url);
+			
+			if(attachment.url != ''){
+				jQuery( '.remove-p-'+click_media).css('display', 'block');
+			}else{
+				jQuery( '.remove-p-'+click_media).css('display', 'none');
 			}
+			wp.media.editor.send.attachment = send_attachment;
+		}
+		wp.media.editor.open(button);
+		return false;
+		return this;
+	},
+	// addMedia: function(click_media, size = ''){
+	// 	var uploadButton =  jQuery(document);
+	// 	var mediaUploader;
+	// 	var self;
+	// 	console.log(uploadButton);
 
-			mediaUploader = wp.media.frames.file_frame = wp.media({
-				title: 'Selecciona la imagen del servicio',
-				button: {
-					text: title
-				},
-				library : {
-					type : 'image'
-				},
-				multiple: false
-			});
+	// 	uploadButton.off('click').on('click','#'+click_media, function(){
+	// 		var button = jQuery(this);
+	// 		index = button.data('index');
+	// 		title = button.attr('title');
 
-			self = $(this);
-			mediaUploader.on('select', function() {
-				attachment = mediaUploader.state().get('selection').first().toJSON();
+	// 		if (mediaUploader) {
+	// 			mediaUploader.open();
+	// 			return;
+	// 		}
 
-				var imagen_use = attachment;
-				if(size !== null && size !== ''){
-					imagen_use = attachment.sizes;
+	// 		mediaUploader = wp.media.frames.file_frame = wp.media({
+	// 			title: 'Selecciona la imagen del servicio',
+	// 			button: {
+	// 				text: title
+	// 			},
+	// 			library : {
+	// 				type : 'image'
+	// 			},
+	// 			multiple: false
+	// 		});
 
-					console.log(Object.assign({}, imagen_use));
-					//console.log(attachment.sizes.'img-default'.url);
+	// 		self = $(this);
+	// 		mediaUploader.on('select', function() {
+	// 			attachment = mediaUploader.state().get('selection').first().toJSON();
 
-					/*var url = Object.keys(imagen_use);
-					var keys = url[5];
+	// 			var imagen_use = attachment;
+	// 			if(size !== null && size !== ''){
+	// 				imagen_use = attachment.sizes;
 
-					console.log(Object.values(imagen_use));*/
+	// 				console.log(Object.assign({}, imagen_use));
+	// 				//console.log(attachment.sizes.'img-default'.url);
 
-				}
+	// 				/*var url = Object.keys(imagen_use);
+	// 				var keys = url[5];
 
-				jQuery("input[name='"+click_media+"']").val(attachment.url);
+	// 				console.log(Object.values(imagen_use));*/
+
+	// 			}
+
+	// 			jQuery("input[name='"+click_media+"']").val(attachment.url);
 
 			
-				button.html("<img src='"+attachment.url+"' width='120px'>");
+	// 			button.html("<img src='"+attachment.url+"' width='120px'>");
 
-				if(attachment.url != ''){
-					jQuery( '.remove-p-'+click_media).css('display', 'block');
-				}else{
-					jQuery( '.remove-p-'+click_media).css('display', 'none');
-				}
-			});
+	// 			if(attachment.url != ''){
+	// 				jQuery( '.remove-p-'+click_media).css('display', 'block');
+	// 			}else{
+	// 				jQuery( '.remove-p-'+click_media).css('display', 'none');
+	// 			}
+	// 		});
 
-			mediaUploader.open();
-			return false;
-		});
-	},
+	// 		mediaUploader.open();
+	// 		return false;
+	// 	});
+	// },
 	addMediaVideo: function(click_media){
 		var uploadButton =  jQuery(document);
 		var mediaUploader;

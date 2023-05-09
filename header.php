@@ -80,5 +80,16 @@
     <?php } ?>
     <?php wp_head(); ?>
 </head>
+
+<header>
+  <!-- Image and text -->
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="<?php $branding['logo-principal'] ?>" width="30" height="30" class="d-inline-block align-top" alt="">
+      Bootstrap
+    </a>
+  </nav>
+</header>
+
 <body>
     <div class="wrapper">
