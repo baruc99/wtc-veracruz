@@ -15,4 +15,25 @@
 </script>
 <?php wp_footer(); ?>
 </body>
+<footer>
+    <section style="height: 56px; background: #f7a05d;">
+      <p>Tel. 229 923 0300</p>
+      <p> ofmercado@wtc.veracruz.gob.mx</p>
+    </section>
+
+    <section style="height: 90px;">
+
+    </section>
+
+    <section style="height: 36px; background: #4d4d4d;">
+      <p>
+        Boulevard Adolfo Ruiz Cortines No. 3497 Col. Ylang Ylang. Boca del Río, Veracruz. México. C.P. 94298
+      </p>
+    </section>
+
+    <section style="height: 30px;">
+      <p>Sitio desarrollado por la Dirección General de Innovación Tecnológica</p>
+      <p>2023-2024  WTC Veracruz. Todos los derechos reservados.</p>
+    </section>
+</footer>
 </html>

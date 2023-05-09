@@ -82,12 +82,18 @@
 </head>
 
 <header>
-  <!-- Image and text -->
-  <nav class="navbar navbar-light bg-light">
+  <nav class="container navbar navbar" id="wrapper-menu-header">
     <a class="navbar-brand" href="#">
-      <img src="<?php $branding['logo-principal'] ?>" width="30" height="30" class="d-inline-block align-top" alt="">
-      Bootstrap
+      <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="d-inline-block align-top" alt="logo principal">
     </a>
+    <?php
+      wp_nav_menu( array(
+            'menu' => 'Main Menu',
+            'menu_class' => 'nav nav-menu-header d-print-none',
+            'container_id' => 'navigation',
+          //   'container_class' => 'collapse navbar-collapse navbar-ex1-collapse'
+          ));
+			?>
   </nav>
 </header>
 

@@ -12,11 +12,7 @@
                         <i class="fas fa-grin-alt"></i>  <?php echo __( 'Marca y social media', 'clean-theme'); ?>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
-                        <i class="fas fa-home"></i>  <?php echo __( 'Home', 'clean-theme'); ?>
-                    </a>
-                </li>
+                
             </ul>
         </div>
     </div>
@@ -36,12 +32,7 @@
     			<?php get_template_part( 'theme-options/template/content', 'branding' ); ?>
             </div><!--#branding-->
 
-            <!-- Tab Home - Menu
-            ============================================= -->
-            <div class="tab-pane" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <?php get_template_part( 'theme-options/template/home', 'slider' ); ?>
-            </div><!--#home-->
-
+            
         </div>
     </div>
 </div>

@@ -63,7 +63,7 @@ function theme_options_do_page() {
 					<div class="col-md-6">
 						<div class="pull-right text-right">
 			                <button type="submit" class="btn-custom" name="submit"/>
-			                	<i class="spin-loader fas fa-save"></i> <?php echo __( 'Guardar Opciones', 'clean-theme' ); ?>
+			                	<i class="spin-loader fas fa-save"></i> <?php// echo __( 'Guardar Opciones', 'clean-theme' ); ?>
 			                </button>
 			            </div>
 					</div>
@@ -135,7 +135,7 @@ function themeoption_save(){
 	update_option("themeoption_branding", array_merge($branding));
 
 	//Home
-	update_option("themeoption_home_slider", $home_slider);
+	//update_option("themeoption_home_slider", array_merge($home_slider);
 
 	exit();
 }

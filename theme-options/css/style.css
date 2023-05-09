@@ -70,7 +70,7 @@
 	border: 1px solid #AA983F;
 }
 .wrap-title{
-	background-color: #002475;
+	background-color: #4D5752;
 	padding: 20px;
 }
 .wrap-title h2{
@@ -136,7 +136,7 @@
 	color: #fff;
 }
 .content-tab-link .nav-tabs li a.active{
-	background-color: #3863c4;
+	background-color: #AAACAD;
 	color: #fff;
 }
 form.theme_options .tab-content{
@@ -275,7 +275,7 @@ form.theme_options .form-group{
 }
 .content-tab-home .nav-pills .nav-link{
     background-color: transparent !Important;
-    color: #063191;
+    color: #AAACAD;
     padding: 15px 26px;
 }
 .content-tab-home .nav-pills .nav-item{
