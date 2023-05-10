@@ -668,18 +668,56 @@ p{
 
  .img-banner{
 	background-image: url(images/wtcfoto.png);
+	background-size: cover;
+	width: 100%;
+	height: 100%;
  }
 
 
-.fullsize  {
+/* .fullsize{
 	height: 100%;
 	width: 100%;
+} */
+.positionTitleBanner{
+	position: absolute;
+	bottom: 12%;
+    left: 15%;
+	font-size: 48px;
+    font-family: Montserrat Medium;
+	color: #FFFFFF;
 }
 
-.titulofotografiawtc {
-	position: absolute;
-    top: 0;
-    left: 0;
+.positionTitleBanner p{
+	margin: -22px;
+}
+
+.positionTitleBanner span{
+	font-weight: 900;
+	font-style: italic;
+}
+
+.card-index{
+	background-color: #fff;
+	height: 285px;
+	width: 285px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.card-index h3{
+	color: #4D4D4D;
+	font-size: 20px;
+	font-family: Montserrat;
+	font-weight: 400;
+	/* justify-content: center; */
+}
+
+.card-index p{
+	color: #989898;
+	font-size: 14px;
+	/* justify-content: center; */
 }
 
 
