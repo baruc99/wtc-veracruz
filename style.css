@@ -697,8 +697,6 @@ p{
 }
 
 .card-index{
-	font-family: Montserrat;
-	font-weight: 400;
 	background-color: #fff;
 	height: 285px;
 	width: 285px;
@@ -710,6 +708,7 @@ p{
 }
 
 .card-index h3{
+	font-family: Montserrat;
 	color: #4D4D4D;
 	font-size: 20px;
 	font-weight: 900;
@@ -718,9 +717,12 @@ p{
 }
 
 .card-index p{
+	font-family: Montserrat;
+	font-weight: 400;
 	color: #989898;
 	font-size: 14px;
-    padding: 5% 19%;
+	text-align: center;
+    padding: 5% 14%;
 }
 
 .alignCenterAbsolute{
