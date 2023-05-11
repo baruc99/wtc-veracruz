@@ -680,7 +680,7 @@ p{
 } */
 .positionTitleBanner{
 	position: absolute;
-	bottom: 12%;
+	bottom: 20%;
     left: 15%;
 	font-size: 48px;
     font-family: Montserrat Medium;
@@ -712,7 +712,6 @@ p{
 .card-index h3{
 	color: #4D4D4D;
 	font-size: 20px;
-	
 	font-weight: 900;
     font-style: italic;
 	padding-top: 30%;
@@ -722,6 +721,23 @@ p{
 	color: #989898;
 	font-size: 14px;
     padding: 5% 19%;
+}
+
+.alignCenterAbsolute{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+	top: -118px;
+}
+
+.imgCard{
+	height: 84px;
+    width: 84px;
+    background-color: #F7A05D;
+    border-radius: 10px;
+    position: relative;
+    top: 35px;
 }
 
 

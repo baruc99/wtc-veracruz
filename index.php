@@ -16,24 +16,40 @@
    <div class="container">
       <div class="row">
          <div class="col-4">
-
-            <div class="card-index">
-               <div>
-                  <h3>Centro de Negocios</h3>
-                  <p>Un área común, que ofrece espacios físicos de trabajo y salas de reuniones diseñadas para sus necesidades de negocios</p>
+            <div class="alignCenterAbsolute">
+               <div class="imgCard"></div>
+               <div class="card-index">
+                  <div>
+                     <h3>Centro de Negocios</h3>
+                     <p>Un área común, que ofrece espacios físicos de trabajo y salas de reuniones diseñadas para sus necesidades de negocios</p>
+                  </div>  
                </div>
-              
             </div>
-
          </div>
 
          <div class="col-4">
-            <h3>Áreas de Cocina</h3>
-            <p>Con la finalidad de dar un servicio integral, se ponen a disposición 3 cocinas.</p>
+            <div class="alignCenterAbsolute">
+               <div class="imgCard"></div>
+               <div class="card-index">
+                  <div>
+                     <h3>Áreas de Cocina</h3>
+                     <p>Con la finalidad de dar un servicio integral, se ponen a disposición 3 cocinas.</p>
+                  </div>
+               </div>
+            </div>
+           
          </div>
          <div class="col-4">
-            <h3>Mesa de Servicios</h3>
-            <p>Podrá contratar los productos y servicios que se adapten a sus necesidades durante el montaje y desmontaje del evento</p>
+            <div class="alignCenterAbsolute">
+               <div class="imgCard"></div>
+            
+               <div class="card-index">
+                  <div>
+                     <h3>Mesa de Servicios</h3>
+                     <p>Podrá contratar los productos y servicios que se adapten a sus necesidades durante el montaje y desmontaje del evento</p>      
+                  </div>
+               </div>  
+            </div>   
          </div>
       </div>
    </div>
