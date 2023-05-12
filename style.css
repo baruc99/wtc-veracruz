@@ -82,14 +82,15 @@ template {
 
 a {
 	color: #919187;
-    font-size: 13px;
-    font-family: 'aleolight';
+	font-size: 13px;
+	font-family: Montserrat;
 	background-color: transparent;
 }
+
 a:hover,
-a:focus{
-	color:#211915;
-	text-decoration:none;
+a:focus {
+	color: #211915;
+	text-decoration: none;
 }
 
 abbr[title] {
@@ -221,7 +222,7 @@ fieldset {
 	padding: 0.875em;
 }
 
-fieldset > :last-child {
+fieldset> :last-child {
 	margin-bottom: 0;
 }
 
@@ -244,16 +245,16 @@ optgroup {
  * 2.0 - Typography
  */
 
- @font-face {
-    font-family: 'fontname';
-    src: url('fonts/fontname.eot');
-    src: url('fonts/fontname.eot?#iefix') format('embedded-opentype'),
-         url('fonts/fontname.woff2') format('woff2'),
-         url('fonts/fontname.woff') format('woff'),
-         url('fonts/fontname.ttf') format('truetype'),
-         url('fonts/fontname.svg#fontname') format('svg');
-    font-weight: normal;
-    font-style: normal;
+@font-face {
+	font-family: 'fontname';
+	src: url('fonts/fontname.eot');
+	src: url('fonts/fontname.eot?#iefix') format('embedded-opentype'),
+		url('fonts/fontname.woff2') format('woff2'),
+		url('fonts/fontname.woff') format('woff'),
+		url('fonts/fontname.ttf') format('truetype'),
+		url('fonts/fontname.svg#fontname') format('svg');
+	font-weight: normal;
+	font-style: normal;
 
 }
 
@@ -346,7 +347,7 @@ blockquote b {
 	font-weight: 400;
 }
 
-blockquote > :last-child {
+blockquote> :last-child {
 	margin-bottom: 0;
 }
 
@@ -443,8 +444,8 @@ ol {
 	margin-left: 1.5em;
 }
 
-li > ul,
-li > ol {
+li>ul,
+li>ol {
 	margin-bottom: 0;
 }
 
@@ -615,17 +616,18 @@ textarea:focus {
 	outline: 0;
 }
 
-body{
-	background-color:#EDEDED;
+body {
+	background-color: #EDEDED;
 }
-p{
-	font-family: 'aleolight';
+
+p {
+	font-family: Montserrat;
 	padding: 0;
-    margin: 0;
+	margin: 0;
 }
 
 /*Setting*/
-.sin-padding{
+.sin-padding {
 	padding-right: 0;
 	padding-left: 0;
 }
@@ -636,67 +638,72 @@ p{
  */
 
 
- .sizeHeader{
+.sizeHeader {
 	height: 59px;
- }
-
-.centrarmenu{
-	height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
- .nav-menu-header a{
-    color: #4c4d4d;
+.centrarmenu {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.nav-menu-header a {
+	color: #4c4d4d;
 	font-family: Montserrat Medium;
 	font-size: 16px;
 	padding: 10px;
 	display: flex;
- }
+}
 
 
- /**
+/**
  * banner
  * -----------------------------------------------------------------------------
  */
 
- .fotografiawtc{
-	height: 600px; 
+.fotografiawtc {
+	height: 600px;
 	position: relative;
- }
+}
 
- .img-banner{
+.img-banner {
 	background-image: url(images/wtcfoto.png);
 	background-size: cover;
 	width: 100%;
 	height: 100%;
- }
+}
 
 
 /* .fullsize{
 	height: 100%;
 	width: 100%;
 } */
-.positionTitleBanner{
+.positionTitleBanner {
 	position: absolute;
 	bottom: 20%;
-    left: 15%;
+	left: 15%;
 	font-size: 48px;
-    font-family: Montserrat Medium;
+	font-family: Montserrat Medium;
 	color: #FFFFFF;
 }
 
-.positionTitleBanner p{
+.positionTitleBanner p {
 	margin: -22px;
 }
 
-.positionTitleBanner span{
+.positionTitleBanner span {
 	font-weight: 900;
 	font-style: italic;
 }
 
-.card-index{
+.servicios-cards {
+	height: 320px;
+	background: #e5e5e5;
+}
+
+.card-index {
 	background-color: #fff;
 	height: 285px;
 	width: 285px;
@@ -707,39 +714,72 @@ p{
 	border-radius: 10%;
 }
 
-.card-index h3{
+.card-index h3 {
 	font-family: Montserrat;
 	color: #4D4D4D;
 	font-size: 20px;
 	font-weight: 900;
-    font-style: italic;
+	font-style: italic;
 	padding-top: 30%;
 }
 
-.card-index p{
+.card-index p {
 	font-family: Montserrat;
 	font-weight: 400;
 	color: #989898;
 	font-size: 14px;
 	text-align: center;
-    padding: 5% 14%;
+	padding: 5% 14%;
 }
 
-.alignCenterAbsolute{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
+.alignCenterAbsolute {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	margin-left: 10%;
+	position: absolute;
 	top: -118px;
 }
 
-.imgCard{
+
+.imgCard {
+	align-items: center;
+	background-color: #F7A05D;
+	border-radius: 10px;
+	display: flex;
 	height: 84px;
-    width: 84px;
-    background-color: #F7A05D;
-    border-radius: 10px;
-    position: relative;
-    top: 35px;
+	justify-content: center;
+	position: relative;
+	top: 35px;
+	width: 84px;
+}
+
+.imgCard img {
+	height: 70%;
+}
+
+.seccion-eslogan {
+	background-color: #fff;
+}
+
+.eslogan {
+	align-items: center;
+	color: #989898;
+	display: flex;
+	flex-direction: column;
+	font-size: 48px;
+	font-style: italic;
+	font-weight: bold;
+	height: 250px;
+	justify-content: center;
+}
+
+.eslogan p {
+	margin: -1%;
+}
+
+.eslogan span {
+	color: #F7A05D;
 }
 
 
@@ -749,95 +789,115 @@ p{
  * -----------------------------------------------------------------------------
  */
 
-	/*---  >= 1999px ---*/
-	@media screen and (min-width: 1199px){ /* >= @screen-lg */
-	    .sin-padding-lg{
-	        padding-left:0 !important;
-	        padding-right:0 !important;
-	    }
+/*---  >= 1999px ---*/
+@media screen and (min-width: 1199px) {
+
+	/* >= @screen-lg */
+	.sin-padding-lg {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+
+
+/*--- <= 1999px ---*/
+@media screen and (max-width: 1199px) {
+	/*< = @screen-lg*/
+
+}
+
+/*--- >= 992px and <= 1999px ---*/
+@media (min-width: 992px) and (max-width: 1199px) {
+	.sin-padding-md {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+
+/*--- >= 992px ---*/
+@media screen and (min-width: 992px) {
+	/* >= @screen-md*/
+
+}
+
+/*--- <= 991px ---*/
+@media screen and (max-width: 991px) {
+	/*< = device until 991px */
+
+}
+
+/*--- >= 767px ---*/
+@media (min-width: 767px) {
+
+	/* >= @screen-xs*/
+	.hide-more-xs {
+		display: none;
+	}
+}
+
+/*--->= 768px and <= 991px---*/
+@media (min-width: 768px) and (max-width: 991px) {
+
+	/* <= device between 768px and 991px*/
+	.sin-padding-sm {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+
+/*--- <= 767px ---*/
+@media screen and (max-width: 767px) {
+
+	/* <= device until 767*/
+	.sin-padding-xs {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+
+/*--->= 600px and <= 767px---*/
+@media (min-width: 600px) and (max-width: 767px) {
+
+	/* <= device between 600px and 767px*/
+	.hidden-more-600 {
+		display: none !important;
 	}
 
-	
-	/*--- <= 1999px ---*/ 
-	@media screen and (max-width: 1199px){ /*< = @screen-lg*/
+}
 
+/*--- <= 599px ---*/
+@media screen and (max-width: 599px) {
+
+	/* <= device less 599px*/
+	.hidden-less-600 {
+		display: none !important;
 	}
 
-	/*--- >= 992px and <= 1999px ---*/ 
-	@media (min-width: 992px) and (max-width: 1199px){
-	    .sin-padding-md{
-	        padding-left:0 !important;
-	        padding-right:0 !important;
-	    }
+}
+
+/*--- <= 320px ---*/
+@media screen and (max-width: 320px) {
+	/* <= device less 320px*/
+
+}
+
+/*utilities*/
+@media (min-width: 992px) {
+
+	/* <= device more 992px*/
+	.hidden-less-992 {
+		display: none !important;
 	}
 
-	/*--- >= 992px ---*/ 
-	@media screen and (min-width: 992px){ /* >= @screen-md*/
-
+	.hidden-more-992 {
+		display: none !important;
 	}
+}
 
-	/*--- <= 991px ---*/ 
-	@media screen and (max-width: 991px){ /*< = device until 991px */
+@media (min-width: 600px) {
+	/* <= device more 600px*/
 
-	}
+}
 
-	/*--- >= 767px ---*/ 
-	@media (min-width: 767px){ /* >= @screen-xs*/
-	    .hide-more-xs{
-	        display: none;
-	    }
-	}
-	/*--->= 768px and <= 991px---*/
-	@media (min-width: 768px) and (max-width: 991px){ /* <= device between 768px and 991px*/
-	    .sin-padding-sm{
-	        padding-left:0 !important;
-	        padding-right:0 !important;
-	    }
-	}
-
-	/*--- <= 767px ---*/ 
-	@media screen and (max-width: 767px){ /* <= device until 767*/
-	    .sin-padding-xs{
-	        padding-left:0 !important;
-	        padding-right:0 !important;
-	    }
-	}
-
-	/*--->= 600px and <= 767px---*/
-	@media (min-width: 600px) and (max-width: 767px) { /* <= device between 600px and 767px*/
-		.hidden-more-600{
-			display:none !important;
-		}
-
-	}
-
-	/*--- <= 599px ---*/ 
-	@media screen and (max-width: 599px){ /* <= device less 599px*/
-	    .hidden-less-600{
-	        display:none !important;
-	    }
-
-	}
-
-	/*--- <= 320px ---*/ 
-	@media screen and (max-width: 320px){ /* <= device less 320px*/
-
-	}
-
-	/*utilities*/
-	@media (min-width: 992px){ /* <= device more 992px*/
-	    .hidden-less-992{
-	        display:none !important;
-	    }
-	    .hidden-more-992{
-	        display:none !important;
-	    }
-	}
-	@media (min-width: 600px){ /* <= device more 600px*/
-
-	}
-
-	/*Iphone(landscape) and device with less 767*/
-	@media (max-width:767px) and (orientation:landscape){
-
-	}
+/*Iphone(landscape) and device with less 767*/
+@media (max-width:767px) and (orientation:landscape) {}

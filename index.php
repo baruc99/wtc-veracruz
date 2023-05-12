@@ -1,23 +1,23 @@
 <?php get_header(); ?>
 
 <section class="fotografiawtc">
-   <!-- <img src="<?php //echo get_template_directory_uri();?>/images/wtcfoto.png" class="fullsize" alt="banner"> -->
    <div class="img-banner"></div>
    <div class="positionTitleBanner">
          <p> El lugar donde <br></p>
          <p>todas las expectativas<br></p>
-         <p><span>se hacen realidad</span> </p>
+         <p><span>se hacen realidad</span></p>
       
    </div>
 </section>
 
-<section style="height: 320px; background: #e5e5e5;">
-
+<section class="servicios-cards">
    <div class="container">
       <div class="row">
          <div class="col-4">
             <div class="alignCenterAbsolute">
-               <div class="imgCard"></div>
+               <div class="imgCard">
+                  <img src="<?php echo get_template_directory_uri();?>/images/centro-trabajo.png" alt="centro de trabajo">
+               </div>
                <div class="card-index">
                   <div>
                      <h3>Centro de Negocios</h3>
@@ -29,7 +29,9 @@
 
          <div class="col-4">
             <div class="alignCenterAbsolute">
-               <div class="imgCard"></div>
+               <div class="imgCard">
+                  <img src="<?php echo get_template_directory_uri();?>/images/areas-cocina.png" alt="áreas de cocina">
+               </div>
                <div class="card-index">
                   <div>
                      <h3>Áreas de Cocina</h3>
@@ -41,8 +43,9 @@
          </div>
          <div class="col-4">
             <div class="alignCenterAbsolute">
-               <div class="imgCard"></div>
-            
+               <div class="imgCard">
+               <img src="<?php echo get_template_directory_uri();?>/images/mesas-servicio.png" alt="mesas de servicios">
+               </div>
                <div class="card-index">
                   <div>
                      <h3>Mesa de Servicios</h3>
@@ -53,8 +56,18 @@
          </div>
       </div>
    </div>
+</section>
 
-   
+<section class="seccion-eslogan">
+   <div class="container">
+      <div class="row">
+         <div class="col eslogan">
+            <p>Veracruz tiene el <br></p>
+            <p>espacio ideal para tu evento. <br></p>
+            <p><span>¡Organiza con nosotros!</span></p>
+         </div>
+      </div>
+   </div>
 
 </section>
 
