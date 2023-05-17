@@ -637,6 +637,11 @@ p {
  * -----------------------------------------------------------------------------
  */
 
+.wrapper-header{
+	background-color: #E9925D;
+	height: 2.188rem;
+}
+
 
 .sizeHeader {
 	height: 59px;
@@ -778,11 +783,137 @@ p {
 	margin: -1%;
 }
 
-.eslogan span {
+.eslogan p span {
 	color: #F7A05D;
 }
 
+.hornament-before{
+	height: 45px;
+    position: relative;
+    top: 10%;
+    right: 25%;
+}
 
+.hornament-after{
+	height: 45px;
+    position: relative;
+    bottom: 10%;
+    left: 30%;
+}
+
+/**
+ * footer
+ * -----------------------------------------------------------------------------
+ */
+.contacto-footer{
+	background-color: #F7A05D;
+	height: 56px;
+	color: #fff;
+	font-size: 20px;
+	font-family: Montserrat;
+	font-style: italic;
+	font-weight: 700;
+}
+
+.inline-list {
+	list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+	justify-content: end;
+}
+
+.inline-list li {
+	/* display: inline;
+	margin-right: 10px;  */
+	flex-basis: 20%;
+    display: flex;
+    justify-content: end;
+}
+
+.logos-footer{
+	height: 88px;
+}
+
+.logos-footer img {
+    height: 3rem;
+}
+
+.centerlogos{
+	position: relative;
+    top: 1rem;
+}
+
+.margin-left-125rem{
+    margin-right: 1.25rem;
+}
+
+.addrees-footer{
+	background-color: #4D4D4D;
+	height: 36px;
+    display: flex;
+    justify-content: center;
+}
+
+.addrees-footer p{
+	color: #FFFFFF;
+    align-items: center;
+    display: flex;
+    font-family: Montserrat;
+    font-size: 0.813rem;
+    font-weight: 400;
+    height: 36px;
+    justify-content: center;
+}
+
+.derechos-reservados{
+	height: 28px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.derechos-reservados p{
+	color: #000000;
+    align-items: center;
+    display: flex;
+    font-family: Montserrat;
+    font-size: 0.688rem;
+    font-weight: 400;
+    height: 28px;
+    justify-content: center;
+	margin-bottom: -10px;
+}
+
+/**
+ * ¿quienes somos?
+ * -----------------------------------------------------------------------------
+ */
+.wrapper-quienes-somos{
+	background-color: #F1F1F1;
+	height: 37.5rem;
+}
+
+.wrapper-quienes-somos p{
+    font-family: Montserrat;
+    color: #4D4D4D;
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+.title{
+    font-family: Montserrat;
+    color: #FAA25E;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2.625rem;
+
+}
+
+/* .wrapper-veracruz-organiza-nostros{
+	background-color: ;
+} */
 
 /**
  * Media Query's

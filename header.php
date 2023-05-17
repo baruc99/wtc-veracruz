@@ -82,11 +82,27 @@
 </head>
 
     <header>
+      <div class="wrapper-header">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <p>Tel. 229 923 0300</p>
+            </div>
+            <div class="col">
+
+            </div>
+            <div class="col">
+
+            </div>
+          </div>
+        </div>
+
+      </div>
       <nav class="container navbar" id="wrapper-menuheader">
         <div class="row sizeHeader">
           <div class="col-4 centrarmenu"> 
             <a href="#" class="navbar-brand">
-					    <img src="<?php echo get_template_directory_uri();?>/images/logo.png" class="" alt="Logo Principal">
+              <img src="<?php echo get_template_directory_uri();?>/images/logo.png" class="" alt="Logo Principal">
             </a>
           </div>
           <div class="col centrarmenu">
@@ -100,7 +116,7 @@
             ?>
           </div>
         </div>
-     </nav>  
+      </nav>  
     </header>
     
 <body>
