@@ -53,7 +53,7 @@
       <div class="container">
         <div class="row">
           <div class="col">
-          <p>Sitio desarrollado por la Dirección General de Innovación Tecnológica</p>
+            <p>Sitio desarrollado por la Dirección General de Innovación Tecnológica</p>
             <p>2023-2024  WTC Veracruz. Todos los derechos reservados.</p>
           </div>
         </div>

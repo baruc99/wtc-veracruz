@@ -887,6 +887,36 @@ p {
 }
 
 /**
+ * Eslogan seccion
+ * -----------------------------------------------------------------------------
+ */
+
+.seccion-eslogan-other{
+	background-image: url(images/eslogan/eslogan-01.jpg);
+	background-size: cover;
+	/* height: 20rem; */
+	width: 100%;
+}
+
+.eslogan-other {
+	align-items: center;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	font-size: 48px;
+	font-style: italic;
+	font-weight: bold;
+	height: 20rem;
+	justify-content: center;
+}
+
+.eslogan-other p {
+	margin: -1%;
+}
+
+
+
+/**
  * ¿quienes somos?
  * -----------------------------------------------------------------------------
  */
@@ -911,9 +941,116 @@ p {
 
 }
 
-/* .wrapper-veracruz-organiza-nostros{
-	background-color: ;
-} */
+
+/**
+ * SERVICIOS
+ * -----------------------------------------------------------------------------
+ */
+
+.wrapper-servicios{
+	background-color: #E8E8E8;
+	height: 70rem;
+}
+
+.title-seccion{
+	padding: 4.25rem;
+	font-family: Montserrat;
+	font-weight: 800;
+	font-style: italic;
+    display: flex;
+    justify-content: center;
+	font-size: 2rem;
+	color: #E9925D;
+}
+
+.title-seccion:before{
+	margin: 0px 15px 0 0px;
+    /* display: inline-block;
+    vertical-align: middle; */
+    width: 100%;
+    /* max-width: 320px; */
+    /* height: 22px; */
+    content: " ";
+	background-image: url(images/hornament.png);
+    background-repeat: no-repeat;
+	background-size: 2.5rem;
+	background-position-x: right;
+	background-position-y: center;
+}
+
+.title-seccion:after{
+	margin: 0px 0px 0 15px;
+    /* display: inline-block;
+    vertical-align: middle; */
+    width: 100%;
+    /* max-width: 320px; */
+    /* height: 22px; */
+    content: " ";
+	background-image: url(images/hornament.png);
+    background-repeat: no-repeat;
+    background-size: 2.5rem;
+	background-position-x: left;
+	background-position-y: center;
+}
+
+.card-servicios{
+	height: 55rem;
+	background-color: #E9925D;
+	display: flex;
+    flex-direction: column;
+}
+
+.img-card-servicios{
+	height: 20.625rem;
+}
+
+.img-card-servicios img{
+	height: 100%;
+	width: 100%;
+}
+
+.alignCenterAbsoluteServicios {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	margin-top: -8.125rem;
+	/* position: absolute; */
+	/* top: 12rem; */
+}
+
+
+.imgCardServicios {
+	align-items: center;
+	background-color: #F7A05D;
+	border-radius: 10px;
+	display: flex;
+	height: 84px;
+	justify-content: center;
+	position: relative;
+	top: 35px;
+	width: 84px;
+}
+
+.imgCardServicios img {
+	height: 70%;
+}
+
+.services-description{
+	color: #fff;
+	font-size: 0.75rem;
+	font-weight: 500;
+	padding: 32px 35px 0px 35px;
+}
+
+.services-description h3{
+	font-weight: 700;
+	
+}
+
+.services-description ul{
+	list-style:none;
+}
+
 
 /**
  * Media Query's

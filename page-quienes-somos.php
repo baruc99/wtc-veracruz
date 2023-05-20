@@ -17,4 +17,5 @@
     </div>
 </div>
 
+<?php get_template_part('eslogan'); ?>
 <?php get_footer(); ?>
