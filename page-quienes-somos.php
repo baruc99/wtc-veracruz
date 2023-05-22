@@ -18,4 +18,5 @@
 </div>
 
 <?php get_template_part('eslogan'); ?>
+<?php get_template_part('orange-line'); ?>
 <?php get_footer(); ?>

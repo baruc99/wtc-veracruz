@@ -1088,6 +1088,23 @@ p {
 	list-style:none;
 }
 
+/**
+ * orange line
+ * -----------------------------------------------------------------------------
+ */
+
+ .wrapper-orange-line{
+	background-color: #e9925d;
+	height: 3.5rem;
+	color: #fff;
+ }
+
+ .wrapper-orange-line p{
+	font-size: 1.25rem;
+	font-weight: 700;
+	font-style: italic;
+ }
+
 
 /**
  * Media Query's
