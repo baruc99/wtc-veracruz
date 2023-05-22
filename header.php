@@ -88,11 +88,19 @@
             <div class="col">
               <p>Tel. 229 923 0300</p>
             </div>
-            <div class="col">
+            <div class="col-8">
 
             </div>
-            <div class="col">
-
+            <div class="col alignLogos">
+              <a href="https://twitter.com/home?lang=es" target="_blank">
+                <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/twitter-vino.png" alt="logo twiter">
+              </a>
+              <a href="https://www.facebook.com/" target="_blank">
+                <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/facebook-vino.png" alt="logo facebook">
+              </a>
+              <a href="https://www.instagram.com/" target="_blank">
+                <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/instagram-vino.png" alt="logo instagram">                  
+              </a>             
             </div>
           </div>
         </div>

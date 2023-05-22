@@ -2,12 +2,16 @@
 
 <section class="fotografiawtc">
    <div class="img-banner"></div>
-   <div class="positionTitleBanner">
-         <p> El lugar donde <br></p>
-         <p>todas las expectativas<br></p>
-         <p><span>se hacen realidad</span></p>
-      
+   <div class="container">
+      <div class="row">
+         <div class="col positionTitleBanner">
+            <p> El lugar donde <br></p>
+            <p>todas las expectativas<br></p>
+            <p><span>se hacen realidad</span></p> 
+         </div>
+      </div>
    </div>
+   
 </section>
 
 <section class="servicios-cards">
@@ -71,5 +75,9 @@
       </div>
    </div>
 </section>
+
+<div class="orange-line">
+
+</div>
 
 <?php get_footer(); ?>

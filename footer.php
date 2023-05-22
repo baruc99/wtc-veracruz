@@ -4,37 +4,14 @@
    $configuration_theme = get_option("themeoption_general_setting");  
 ?>
 <footer>
-    <div class="contacto-footer">
-      <div class="container">
-        <div class="row" style="padding: 0.9rem 0%;">
-          <div class="col-3">
-            <p>Tel. 229 923 0300</p>
-          </div>
-          <div class="col-6">
-            <p>ofmercado@wtc.veracruz.gob.mx</p>
-          </div>
-          <div class="col-3">
-            <ul class="inline-list">
-              <li> <ion-icon name="logo-twitter"></ion-icon></li>
-              <li> <ion-icon name="logo-facebook"></ion-icon></li>
-              <li> <ion-icon name="logo-youtube"></ion-icon></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+  
     <div class="logos-footer">
       <div class="container">
-        <div class="row centerlogos">
-          <div class="col-3">
-            <img class="margin-left-125rem" src="<?php bloginfo('template_url'); ?>/images/logos/logo-veracruz.png" alt="logo de Veracruz">
-            <img class="" src="<?php bloginfo('template_url'); ?>/images/logos/logo-segob.png" alt="logo de SEGOB">
+        <div class="row">
+          <div class="col alignLogosFooter">
+            <img src="<?php echo get_template_directory_uri();?>/images/logos/logos-gev.png" alt="logos de veracruz">
+            <img src="<?php echo get_template_directory_uri();?>/images/logos/wtc-logo-vino.png" alt="logos del world trade center veracruz">
           </div>
-          <div class="col-3" style="border-left: 1px solid #B11548;">
-            <img class="margin-left-125rem" src="<?php bloginfo('template_url'); ?>/images/logos/logo-unidad-trasparencia.png" alt="logo de Unidad de Transparencia">
-            <img class="" src="<?php bloginfo('template_url'); ?>/images/logos/logo-orgullo-veracruz.png" alt="logo Veracruz, me llena de orgullo">
-          </div>
-          <div class="col-6"></div>
         </div>
       </div>
     </div>
@@ -42,8 +19,20 @@
     <div class="addrees-footer">
       <div class="container">
         <div class="row">
-          <div class="col">
+          <div class="col-2"></div>
+          <div class="col-8">
             <p>Boulevard Adolfo Ruiz Cortines No. 3497 Col. Ylang Ylang. Boca del Río, Veracruz. México. C.P. 94298</p>
+          </div>
+          <div class="col-2 alignLogos">
+            <a href="https://twitter.com/home?lang=es" target="_blank">
+              <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/twitter-naranja.png" alt="logo twiter">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+              <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/facebook-naranja.png" alt="logo facebook">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+              <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/instagram-naranja.png" alt="logo instagram">                  
+            </a>  
           </div>
         </div>
       </div>
