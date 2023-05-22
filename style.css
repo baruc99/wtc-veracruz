@@ -638,30 +638,30 @@ p {
  */
 
 
-.wrapper-header{
+.wrapper-header {
 	background-color: #E9925D;
 	height: 2.188rem;
 	color: #fff;
 }
 
-.wrapper-header p{
+.wrapper-header p {
 	font-size: 18px;
-    font-weight: 700;
-    font-style: italic;
-    align-items: center;
-    display: flex;
-    height: 2.188rem;
+	font-weight: 700;
+	font-style: italic;
+	align-items: center;
+	display: flex;
+	height: 2.188rem;
 }
 
-.logo-header{
+.logo-header {
 	border-radius: 50px;
 	height: 23px;
 }
 
-.alignLogos{
+.alignLogos {
 	display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+	flex-direction: row;
+	justify-content: space-evenly;
 	align-items: center;
 	height: 2.188rem;
 }
@@ -712,7 +712,7 @@ p {
 .positionTitleBanner {
 	position: absolute;
 	top: -16.25rem;
-    left: 5%;
+	left: 5%;
 	font-size: 48px;
 	font-family: Montserrat Medium;
 	color: #FFFFFF;
@@ -811,25 +811,25 @@ p {
 	color: #F7A05D;
 }
 
-.hornament-before{
+.hornament-before {
 	height: 45px;
-    position: relative;
-    top: 10%;
-    right: 25%;
+	position: relative;
+	top: 10%;
+	right: 25%;
 }
 
-.hornament-after{
+.hornament-after {
 	height: 45px;
-    position: relative;
-    bottom: 10%;
-    left: 30%;
+	position: relative;
+	bottom: 10%;
+	left: 30%;
 }
 
 /**
  * footer
  * -----------------------------------------------------------------------------
  */
-.contacto-footer{
+.contacto-footer {
 	background-color: #F7A05D;
 	height: 56px;
 	color: #fff;
@@ -841,10 +841,10 @@ p {
 
 .inline-list {
 	list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
 	justify-content: end;
 }
 
@@ -852,73 +852,73 @@ p {
 	/* display: inline;
 	margin-right: 10px;  */
 	flex-basis: 20%;
-    display: flex;
-    justify-content: end;
+	display: flex;
+	justify-content: end;
 }
 
-.logos-footer{
+.logos-footer {
 	/* height: 88px; */
 }
 
-.alignLogosFooter{
+.alignLogosFooter {
 	display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 88px;
+	justify-content: space-between;
+	align-items: center;
+	height: 88px;
 }
 
 
 .logos-footer img {
-    height: 3rem;
+	height: 3rem;
 }
 
-.centerlogos{
+.centerlogos {
 	position: relative;
-    top: 1rem;
+	top: 1rem;
 }
 
-.margin-left-125rem{
-    margin-right: 1.25rem;
+.margin-left-125rem {
+	margin-right: 1.25rem;
 }
 
-.addrees-footer{
+.addrees-footer {
 	background-color: #4D4D4D;
 	height: 36px;
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
-.addrees-footer p{
+.addrees-footer p {
 	color: #FFFFFF;
-    align-items: center;
-    display: flex;
-    font-family: Montserrat;
-    font-size: 0.813rem;
-    font-weight: 400;
-    height: 36px;
-    justify-content: center;
+	align-items: center;
+	display: flex;
+	font-family: Montserrat;
+	font-size: 0.813rem;
+	font-weight: 400;
+	height: 36px;
+	justify-content: center;
 }
 
-.derechos-reservados{
+.derechos-reservados {
 	height: 28px;
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 
-.derechos-reservados p{
+.derechos-reservados p {
 	color: #000000;
-    align-items: center;
-    display: flex;
-    font-family: Montserrat;
-    font-size: 0.688rem;
-    font-weight: 400;
-    height: 28px;
-    justify-content: center;
+	align-items: center;
+	display: flex;
+	font-family: Montserrat;
+	font-size: 0.688rem;
+	font-weight: 400;
+	height: 28px;
+	justify-content: center;
 	margin-bottom: -10px;
 }
 
-.orange-line{
+.orange-line {
 	background-color: #e9925d;
 	height: 8px;
 }
@@ -928,7 +928,7 @@ p {
  * -----------------------------------------------------------------------------
  */
 
-.seccion-eslogan-other{
+.seccion-eslogan-other {
 	background-image: url(images/eslogan/eslogan-01.jpg);
 	background-size: cover;
 	/* height: 20rem; */
@@ -957,25 +957,49 @@ p {
  * ¿quienes somos?
  * -----------------------------------------------------------------------------
  */
-.wrapper-quienes-somos{
+.wrapper-quienes-somos {
 	background-color: #F1F1F1;
 	height: 37.5rem;
 }
 
-.wrapper-quienes-somos p{
-    font-family: Montserrat;
-    color: #4D4D4D;
-    font-weight: 400;
-    font-size: 0.875rem;
+.wrapper-quienes-somos p {
+	font-family: Montserrat;
+	color: #4D4D4D;
+	font-weight: 500;
+	font-size: 0.875rem;
 }
 
-.title{
-    font-family: Montserrat;
-    color: #FAA25E;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 2.625rem;
+.title {
+	color: #FAA25E;
+	font-family: Montserrat;
+	font-size: 2.625rem;
+	font-style: italic;
+	font-weight: 700;
+}
 
+.hornaments-quienes-somos {
+	height: 1rem;
+}
+
+.d-flex-9 {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.d-flex-9 .box:nth-child(2) {
+	flex-basis: calc(50% - 1rem);
+}
+
+.d-flex-9 .box:nth-child(1),
+.d-flex-9 .box:nth-child(3) {
+	flex-basis: calc(25% - 1rem);
+}
+
+.align-Center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 
@@ -984,64 +1008,64 @@ p {
  * -----------------------------------------------------------------------------
  */
 
-.wrapper-servicios{
+.wrapper-servicios {
 	background-color: #E8E8E8;
 	height: 70rem;
 }
 
-.title-seccion{
+.title-seccion {
 	padding: 4.25rem;
 	font-family: Montserrat;
 	font-weight: 800;
 	font-style: italic;
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 	font-size: 2rem;
 	color: #E9925D;
 }
 
-.title-seccion:before{
+.title-seccion:before {
 	margin: 0px 15px 0 0px;
-    /* display: inline-block;
+	/* display: inline-block;
     vertical-align: middle; */
-    width: 100%;
-    /* max-width: 320px; */
-    /* height: 22px; */
-    content: " ";
+	width: 100%;
+	/* max-width: 320px; */
+	/* height: 22px; */
+	content: " ";
 	background-image: url(images/hornament.png);
-    background-repeat: no-repeat;
+	background-repeat: no-repeat;
 	background-size: 2.5rem;
 	background-position-x: right;
 	background-position-y: center;
 }
 
-.title-seccion:after{
+.title-seccion:after {
 	margin: 0px 0px 0 15px;
-    /* display: inline-block;
+	/* display: inline-block;
     vertical-align: middle; */
-    width: 100%;
-    /* max-width: 320px; */
-    /* height: 22px; */
-    content: " ";
+	width: 100%;
+	/* max-width: 320px; */
+	/* height: 22px; */
+	content: " ";
 	background-image: url(images/hornament.png);
-    background-repeat: no-repeat;
-    background-size: 2.5rem;
+	background-repeat: no-repeat;
+	background-size: 2.5rem;
 	background-position-x: left;
 	background-position-y: center;
 }
 
-.card-servicios{
+.card-servicios {
 	height: 55rem;
 	background-color: #E9925D;
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
 }
 
-.img-card-servicios{
+.img-card-servicios {
 	height: 20.625rem;
 }
 
-.img-card-servicios img{
+.img-card-servicios img {
 	height: 100%;
 	width: 100%;
 }
@@ -1072,20 +1096,20 @@ p {
 	height: 70%;
 }
 
-.services-description{
+.services-description {
 	color: #fff;
 	font-size: 0.75rem;
 	font-weight: 500;
 	padding: 32px 35px 0px 35px;
 }
 
-.services-description h3{
+.services-description h3 {
 	font-weight: 700;
-	
+
 }
 
-.services-description ul{
-	list-style:none;
+.services-description ul {
+	list-style: none;
 }
 
 
