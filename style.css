@@ -958,7 +958,7 @@ p {
  * -----------------------------------------------------------------------------
  */
 .wrapper-quienes-somos {
-	background-color: #F1F1F1;
+	background-color: #E8E8E8;
 	height: 37.5rem;
 }
 
@@ -1002,6 +1002,14 @@ p {
 	justify-content: center;
 }
 
+.textura{
+	background-image: url(images/texturas/textura_gris.png);
+    background-repeat: no-repeat;
+    background-size: 200px 300px;
+    background-position-y: bottom;
+    background-position-x: right;
+}
+
 
 /**
  * SERVICIOS
@@ -1010,7 +1018,7 @@ p {
 
 .wrapper-servicios {
 	background-color: #E8E8E8;
-	height: 70rem;
+	height: 75rem;
 }
 
 .title-seccion {
@@ -1055,7 +1063,7 @@ p {
 }
 
 .card-servicios {
-	height: 55rem;
+	height: 60rem;
 	background-color: #E9925D;
 	display: flex;
 	flex-direction: column;
@@ -1074,7 +1082,7 @@ p {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	margin-top: -8.125rem;
+	margin-top: -9.688rem;
 	/* position: absolute; */
 	/* top: 12rem; */
 }
@@ -1098,9 +1106,9 @@ p {
 
 .services-description {
 	color: #fff;
-	font-size: 0.75rem;
-	font-weight: 500;
-	padding: 32px 35px 0px 35px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 25px 25px 0px 45px;
 }
 
 .services-description h3 {
@@ -1111,6 +1119,64 @@ p {
 .services-description ul {
 	list-style: none;
 }
+
+.services-description ul li{
+	margin-top: 0px;
+}
+
+/**
+ * Transparencia
+ * -----------------------------------------------------------------------------
+ */
+
+.wrapper-transparencia{
+	background-color: #E8E8E8;
+	height: 600px;
+}
+
+.title-seccion-trasnparencia{
+	color: #FAA25E;
+    font-family: Montserrat;
+    font-size: 2.625rem !important;
+    font-style: italic;
+    font-weight: 700 !important;
+    margin: 3rem 0.625rem 3.125rem 0.625rem;
+}
+
+.transparencia-text{
+	font-size: 0.875rem;
+    color: #4D4D4D;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+.transparencia-text span{
+	font-weight: 700;
+}
+
+
+/**
+ * orange line
+ * -----------------------------------------------------------------------------
+ */
+
+.wrapper-orange-line{
+	background-color: #E9925D;
+}
+
+.alignInfoLine{	
+	display: flex;
+    align-items: end;
+    color: #fff;
+    flex-direction: row;
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 700;
+    height: 3.5rem;
+    justify-content: space-around;
+}
+
+
 
 
 /**

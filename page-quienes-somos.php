@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="wrapper-quienes-somos">
+<div class="wrapper-quienes-somos textura">
     <div class="container">
         <div class="row">
             <div class="col-6" style=" display: flex; align-items: center; justify-content: center;">
@@ -22,6 +22,6 @@
 </div>
 
 <?php get_template_part('eslogan'); ?>
-
+<?php get_template_part('orange-line'); ?>
 
 <?php get_footer(); ?>
