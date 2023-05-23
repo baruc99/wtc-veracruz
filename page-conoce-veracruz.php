@@ -11,23 +11,36 @@
     </div>
     <div class="conoce-veracruz">
         <div class="box">
-           <img class="full-size" src="<?php echo get_template_directory_uri();?>/images/conoce-veracruz/jarochas.png" alt="">
+            <img class="full-size" src="<?php echo get_template_directory_uri();?>/images/conoce-veracruz/jarochas.png" alt="">
         </div>
         <div class="box">
             <div class="mosaico-conoce-veracruz">
                 <div class="box-m">
-                    <div class="columna-hoteles">
-                        <div class="columna-hoteles" style="background: blue;"></div>
-                        <div class="columna-hoteles" style="background: green;"></div>
+                    <div class="height-mosailco texto-mosaico">
+                        <h3>Hoteles cercanos A WTC</h3>
+                        <p>Para aprovechar el tiempo, conoce la oferta de hoteles cercanos a WTC Veracruz y descubre sus ofertas.</p>
+                        <button>ver más</button>
+                    </div>
+                    <div class="height-mosailco">
+                        <img class="full-size" src="<?php echo get_template_directory_uri();?>/images/conoce-veracruz/faroVC.png" alt="">
                     </div>
                 </div>
                 <div class="box-m">
-                        <div class="columna-hoteles" style="background: red;"></div>
-                        <div class="columna-hoteles" style="background: yellow;"></div>
+                    <div class="height-mosailco">
+                        <img class="full-size" src="<?php echo get_template_directory_uri();?>/images/conoce-veracruz/hotels.png" alt="">
+                    </div>
+                    <div class="height-mosailco texto-mosaico">
+                        <h3>¿Qué hacer en Veracruz?</h3>
+                        <p>Estos son los destinos turísticos más cercanos al WTC Veracruz. El estado tiene algo para ti.</p>
+                        <button>ver más</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
  </div>
 
+
+<?php get_template_part('eslogan-2'); ?>
+<?php get_template_part('orange-line'); ?>
 <?php get_footer(); ?>

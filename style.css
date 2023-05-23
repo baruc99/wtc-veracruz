@@ -747,7 +747,7 @@ p {
 	font-family: Montserrat;
 	color: #4D4D4D;
 	font-size: 20px;
-	font-weight: 900;
+	font-weight: 700;
 	font-style: italic;
 	padding-top: 30%;
 }
@@ -927,6 +927,13 @@ p {
  * Eslogan seccion
  * -----------------------------------------------------------------------------
  */
+
+ .seccion-eslogan-other-2{
+	background-image: url(images/eslogan/eslogan-02.jpg);
+	background-size: cover;
+	/* height: 20rem; */
+	width: 100%;
+}
 
 .seccion-eslogan-other {
 	background-image: url(images/eslogan/eslogan-01.jpg);
@@ -1183,7 +1190,7 @@ p {
 
  .wrapper-conoce-veracruz{
 	background-color: #e8e8e8;
-	height: 75.5rem;
+	height: 55.461rem;
  }
 
  .align-Center-title-conoce-veracruz{
@@ -1196,7 +1203,7 @@ p {
 
  .title-conoce-veracruz{
 	font-family: Montserrat;
-	font-size: 3.5rem;
+	font-size: 3rem;
 	color: #ec945e;
 	font-weight: 700;
 	font-style: italic;
@@ -1243,11 +1250,45 @@ p {
 	flex-basis: calc(100% - 46.11%);
  }
 
- .columna-hoteles{
+ .height-mosailco{
 	height: 18rem;
  }
 
- 
+.texto-mosaico{
+	color: #4D4D4D;
+	font-family: Montserrat;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto-mosaico button{
+	text-transform: uppercase;
+    font-size: 14px;
+    background: #e9925d;
+    border-radius: 50px;
+    width: 120px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.texto-mosaico h3{
+	font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+
+.texto-mosaico p{
+	text-align: center;
+    color: #8a8a8a;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0px 60px 25px 60px;
+}
+
 
 /**
  * Media Query's
