@@ -1176,8 +1176,78 @@ p {
     justify-content: space-around;
 }
 
+/**
+ * Conoce veracruz
+ * -----------------------------------------------------------------------------
+ */
 
+ .wrapper-conoce-veracruz{
+	background-color: #e8e8e8;
+	height: 75.5rem;
+ }
 
+ .align-Center-title-conoce-veracruz{
+	display: flex;
+    flex-direction: row;
+    height: 11.25rem;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .title-conoce-veracruz{
+	font-family: Montserrat;
+	font-size: 3.5rem;
+	color: #ec945e;
+	font-weight: 700;
+	font-style: italic;
+ }
+
+ .title-conoce-veracruz span{
+	color: #8a8a8a
+ }
+
+ .full-size{
+	height: 100%;
+	width: 100%;
+ }
+
+ .box{
+	height: 100%;
+ }
+
+ .conoce-veracruz{
+	height: 36rem;
+	display: flex;
+	flex-wrap: wrap;
+ }
+
+ .conoce-veracruz .box:nth-child(1){
+	flex-basis: 36.9%;
+ }
+ .conoce-veracruz .box:nth-child(2){
+	flex-basis: calc(100% - 36.9%);
+ }
+
+ .mosaico-conoce-veracruz{
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+	width: 100%;
+ }
+
+ .mosaico-conoce-veracruz .box-m:nth-child(1){
+	flex-basis: 46.11%;
+ }
+
+ .mosaico-conoce-veracruz .box-m:nth-child(2){
+	flex-basis: calc(100% - 46.11%);
+ }
+
+ .columna-hoteles{
+	height: 18rem;
+ }
+
+ 
 
 /**
  * Media Query's
