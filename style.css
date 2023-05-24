@@ -928,7 +928,7 @@ p {
  * -----------------------------------------------------------------------------
  */
 
- .seccion-eslogan-other-2{
+.seccion-eslogan-other-2 {
 	background-image: url(images/eslogan/eslogan-02.jpg);
 	background-size: cover;
 	/* height: 20rem; */
@@ -1009,12 +1009,12 @@ p {
 	justify-content: center;
 }
 
-.textura{
+.textura {
 	background-image: url(images/texturas/textura_gris.png);
-    background-repeat: no-repeat;
-    background-size: 200px 300px;
-    background-position-y: bottom;
-    background-position-x: right;
+	background-repeat: no-repeat;
+	background-size: 200px 300px;
+	background-position-y: bottom;
+	background-position-x: right;
 }
 
 
@@ -1113,9 +1113,9 @@ p {
 
 .services-description {
 	color: #fff;
-    font-size: 0.75rem;
-    font-weight: 500;
-    padding: 25px 25px 0px 45px;
+	font-size: 0.75rem;
+	font-weight: 500;
+	padding: 25px 25px 0px 45px;
 }
 
 .services-description h3 {
@@ -1127,7 +1127,7 @@ p {
 	list-style: none;
 }
 
-.services-description ul li{
+.services-description ul li {
 	margin-top: 0px;
 }
 
@@ -1136,28 +1136,28 @@ p {
  * -----------------------------------------------------------------------------
  */
 
-.wrapper-transparencia{
+.wrapper-transparencia {
 	background-color: #E8E8E8;
 	height: 600px;
 }
 
-.title-seccion-trasnparencia{
+.title-seccion-trasnparencia {
 	color: #FAA25E;
-    font-family: Montserrat;
-    font-size: 2.625rem !important;
-    font-style: italic;
-    font-weight: 700 !important;
-    margin: 3rem 0.625rem 3.125rem 0.625rem;
+	font-family: Montserrat;
+	font-size: 2.625rem !important;
+	font-style: italic;
+	font-weight: 700 !important;
+	margin: 3rem 0.625rem 3.125rem 0.625rem;
 }
 
-.transparencia-text{
+.transparencia-text {
 	font-size: 0.875rem;
-    color: #4D4D4D;
-    font-family: Montserrat;
-    font-weight: 500;
+	color: #4D4D4D;
+	font-family: Montserrat;
+	font-weight: 500;
 }
 
-.transparencia-text span{
+.transparencia-text span {
 	font-weight: 700;
 }
 
@@ -1167,20 +1167,20 @@ p {
  * -----------------------------------------------------------------------------
  */
 
-.wrapper-orange-line{
+.wrapper-orange-line {
 	background-color: #E9925D;
 }
 
-.alignInfoLine{	
+.alignInfoLine {
 	display: flex;
-    align-items: end;
-    color: #fff;
-    flex-direction: row;
-    font-size: 1.25rem;
-    font-style: italic;
-    font-weight: 700;
-    height: 3.5rem;
-    justify-content: space-around;
+	align-items: end;
+	color: #fff;
+	flex-direction: row;
+	font-size: 1.25rem;
+	font-style: italic;
+	font-weight: 700;
+	height: 3.5rem;
+	justify-content: space-around;
 }
 
 /**
@@ -1188,142 +1188,210 @@ p {
  * -----------------------------------------------------------------------------
  */
 
- .wrapper-conoce-veracruz{
+.wrapper-conoce-veracruz {
 	background-color: #e8e8e8;
 	height: 55.461rem;
- }
+}
 
- .align-Center-title-conoce-veracruz{
+.align-Center-title-conoce-veracruz {
 	display: flex;
-    flex-direction: row;
-    height: 11.25rem;
-    justify-content: center;
-    align-items: center;
- }
+	flex-direction: row;
+	height: 11.25rem;
+	justify-content: center;
+	align-items: center;
+}
 
- .title-conoce-veracruz{
+.title-conoce-veracruz {
 	font-family: Montserrat;
 	font-size: 3rem;
 	color: #ec945e;
 	font-weight: 700;
 	font-style: italic;
- }
+}
 
- .title-conoce-veracruz span{
+.title-conoce-veracruz span {
 	color: #8a8a8a
- }
+}
 
- .full-size{
+.full-size {
 	height: 100%;
 	width: 100%;
- }
+}
 
- .box{
+.box {
 	height: 100%;
- }
+}
 
- .conoce-veracruz{
+.conoce-veracruz {
 	height: 36rem;
 	display: flex;
 	flex-wrap: wrap;
- }
+}
 
- .conoce-veracruz .box:nth-child(1){
+.conoce-veracruz .box:nth-child(1) {
 	flex-basis: 36.9%;
- }
- .conoce-veracruz .box:nth-child(2){
-	flex-basis: calc(100% - 36.9%);
- }
+}
 
- .mosaico-conoce-veracruz{
+.conoce-veracruz .box:nth-child(2) {
+	flex-basis: calc(100% - 36.9%);
+}
+
+.mosaico-conoce-veracruz {
 	display: flex;
 	flex-wrap: wrap;
 	height: 100%;
 	width: 100%;
- }
+}
 
- .mosaico-conoce-veracruz .box-m:nth-child(1){
+.mosaico-conoce-veracruz .box-m:nth-child(1) {
 	flex-basis: 46.11%;
- }
+}
 
- .mosaico-conoce-veracruz .box-m:nth-child(2){
+.mosaico-conoce-veracruz .box-m:nth-child(2) {
 	flex-basis: calc(100% - 46.11%);
- }
+}
 
- .height-mosailco{
+.height-mosailco {
 	height: 18rem;
- }
+}
 
-.texto-mosaico{
+.texto-mosaico {
 	color: #4D4D4D;
 	font-family: Montserrat;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
-.texto-mosaico button{
+.texto-mosaico button {
 	text-transform: uppercase;
-    font-size: 14px;
-    background: #e9925d;
-    border-radius: 50px;
-    width: 120px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	font-size: 14px;
+	background: #e9925d;
+	border-radius: 50px;
+	width: 120px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.texto-mosaico h3{
+.texto-mosaico h3 {
 	font-size: 20px;
-    font-style: italic;
-    font-weight: 700;
+	font-style: italic;
+	font-weight: 700;
 }
 
-.texto-mosaico p{
+.texto-mosaico p {
 	text-align: center;
-    color: #8a8a8a;
-    font-size: 14px;
-    font-weight: 400;
-    padding: 0px 60px 25px 60px;
+	color: #8a8a8a;
+	font-size: 14px;
+	font-weight: 400;
+	padding: 0px 60px 25px 60px;
 }
 
 /**
  * Instalaciones
  * -----------------------------------------------------------------------------
  */
-.wrapper-instalaciones{
+.wrapper-instalaciones {
 	background-color: #E8E8E8;
 	height: 800px;
 }
 
-.instalaciones{
+.instalaciones {
 	height: 30.504rem;
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.box-instalaciones{
+.box-instalaciones {
 	height: 50%;
 	width: 25%;
 }
 
 .shadow {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
+	background-color: rgb(0 0 0 / 56%);
 	height: 100%;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* ajusta el tamaño y el color de la sombra según tus necesidades */
+	width: 100%;
 }
 
-.img-salones{
+.text-shadow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-size: 20px;
+	font-family: Montserrat;
+	font-weight: 700;
+	font-style: italic;
+	text-align: center;
+	padding: 0px 60px 0px 60px;
+}
+
+.flecha-derecha{
+	width: 0;
+	height: 0;
+	border-top: 40px solid transparent;
+	border-bottom: 40px solid transparent;
+	border-left: 40px solid #EC945E;
+}
+
+.flecha-derecha-blanca{
+	width: 0;
+	height: 0;
+	border-top: 40px solid transparent;
+	border-bottom: 40px solid transparent;
+	border-left: 40px solid #fff;
+}
+
+.flecha-izquierda{
+	width: 0;
+	height: 0;
+	border-top: 40px solid transparent;
+	border-right: 40px solid #EC945E;
+	border-bottom: 40px solid transparent;
+}
+
+.centrar-fecha-izquierda{
+	position: absolute;
+    top: 85px;
+    right: 0px;
+}
+
+.centrar-fecha-derecha{
+	position: absolute;
+    top: 85px;
+    left: 0px;
+}
+
+.img-salones {
 	background-image: url(images/instalaciones/salones.png);
 	background-size: cover;
 	height: 100%;
 	width: 100%;
 }
+
+.centrar-texto{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.centrar-texto p {
+	color: #fff;
+	font-size: 24px;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-style: italic;
+	padding: 0px 70px 0px 70px;
+}
+
+.centrar-texto p span{
+	color: #e9925d !important;
+}
+
 
 
 
