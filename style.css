@@ -1320,7 +1320,8 @@ p {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: #fff;
+	color: #EC945E
+;
 	font-size: 20px;
 	font-family: Montserrat;
 	font-weight: 700;
@@ -1342,7 +1343,7 @@ p {
 	height: 0;
 	border-top: 40px solid transparent;
 	border-bottom: 40px solid transparent;
-	border-left: 40px solid #fff;
+	border-left: 40px solid #EC945E;
 }
 
 .flecha-izquierda{
@@ -1389,12 +1390,91 @@ p {
 }
 
 .centrar-texto p span{
-	color: #e9925d !important;
+	color: #ffffff !important;
 }
 
+/**
+ * eventos
+ * -----------------------------------------------------------------------------
+ */
 
+.wrapper-eventos{
+	background-image: url(images/wtcsite_fondocartelera.jpg);
+	background-size: cover;
+	width: 100%;
+	height: 54.75rem;
+}
 
+.title-seccion-eventos{
+	/* padding: 6rem; */
+	font-family: Montserrat;
+	font-weight: 700;
+	font-style: italic;
+	display: flex;
+	justify-content: center;
+	font-size: 2.625rem;
+	color: #ffffff;
+	width: 100%;
+}
 
+.title-seccion-eventos:before {
+	margin: 0px 15px 0 0px;
+	width: 100%;
+	content: " ";
+	background-image: url(images/hornament.png);
+	background-repeat: no-repeat;
+	background-size: 2.5rem;
+	background-position-x: right;
+	background-position-y: center;
+}
+
+.title-seccion-eventos:after {
+	margin: 0px 0px 0 15px;
+	width: 100%;
+	content: " ";
+	background-image: url(images/hornament.png);
+	background-repeat: no-repeat;
+	background-size: 2.5rem;
+	background-position-x: left;
+	background-position-y: center;
+}
+
+.altuta-texto-eventos{
+	height: 16.25rem;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	color: #fff;
+}
+
+.texto-eventos {
+	font-size: 1rem;
+	font-weight: 500;
+	height: 20rem;
+}
+
+.texto-eventos p{
+	/* margin-top: -12.5rem;
+    margin-bottom: 13rem; */
+}
+
+.texto-eventos span{
+	font-weight: bold;
+	font-size: 1.25rem;
+}
+
+.agenda-evento{
+	/* background-color: #77e95d;
+	height: 100px;
+    width: 286px; */
+}
+
+.card-eventos{
+	height: 284px;
+    width: 284px;
+    background: orange;
+}
 /**
  * Media Query's
  * -----------------------------------------------------------------------------
