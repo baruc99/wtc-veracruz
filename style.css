@@ -1029,7 +1029,7 @@ p {
 }
 
 .title-seccion {
-	padding: 4.25rem;
+	padding: 2rem;
 	font-family: Montserrat;
 	font-weight: 800;
 	font-style: italic;
@@ -1274,12 +1274,12 @@ p {
     justify-content: center;
     align-items: center;
 }
+
 .texto-mosaico h3{
 	font-size: 20px;
     font-style: italic;
     font-weight: 700;
 }
-
 
 .texto-mosaico p{
 	text-align: center;
@@ -1288,6 +1288,43 @@ p {
     font-weight: 400;
     padding: 0px 60px 25px 60px;
 }
+
+/**
+ * Instalaciones
+ * -----------------------------------------------------------------------------
+ */
+.wrapper-instalaciones{
+	background-color: #E8E8E8;
+	height: 800px;
+}
+
+.instalaciones{
+	height: 30.504rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.box-instalaciones{
+	height: 50%;
+	width: 25%;
+}
+
+.shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* ajusta el tamaño y el color de la sombra según tus necesidades */
+}
+
+.img-salones{
+	background-image: url(images/instalaciones/salones.png);
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+
 
 
 /**
