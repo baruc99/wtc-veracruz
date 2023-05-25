@@ -109,7 +109,7 @@
       <nav class="container navbar" id="wrapper-menuheader">
         <div class="row sizeHeader">
           <div class="col-4 centrarmenu"> 
-            <a href="#" class="navbar-brand">
+            <a href="<?php echo( home_url() )  ?>" class="navbar-brand">
               <img src="<?php echo get_template_directory_uri();?>/images/logo.png" class="" alt="Logo Principal">
             </a>
           </div>

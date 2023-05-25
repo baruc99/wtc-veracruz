@@ -23,14 +23,14 @@
         <div class="box-instalaciones centrar-texto" style=" background: #EC945E">
             <p> ÁREAS COMUNES</p>
         </div>
-        <div class="box-instalaciones centrar-texto" style=" background: #FFF">
+        <div class="box-instalaciones centrar-texto" style=" background: #EC945E">
             <p><span>SALONES ULÚA Y OLMECA</span></p>
         </div>
         <div class="box-instalaciones">
             <div class="full-size img-salones" style="z-index: 0;position: relative;">
-                <div class="shadow text-shadow">
+                <!-- <div class="shadow text-shadow">
                     <p>Más de 3 mil metros cuadrados de espacio comercial. Salones más íntimos.</p> 
-                </div>
+                </div> -->
                <!--  <img class="full-size" src="<?php echo get_template_directory_uri();?>/images/instalaciones/salones.png" alt="SALONES ULÚA Y OLMECA"> -->
                <div class="flecha-derecha-blanca centrar-fecha-derecha"></div>
             </div>
