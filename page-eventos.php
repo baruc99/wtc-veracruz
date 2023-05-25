@@ -12,40 +12,64 @@
         </div>
         <div class="row">
             <div class="col-4 agenda-evento p-3">
-                <div class="card-eventos">Enero</div>
+                <a href="">
+                    <div class="card-eventos align-Center">Enero</div>
+                </a>
             </div>
             <div class="col-4 agenda-evento p-3">
-                <div class="card-eventos">Febrero</div>
+                <a href="">
+                    <div class="card-eventos align-Center">Febrero</div>
+                </a>
             </div>
             <div class="col-4 agenda-evento p-3">
-                <div class="card-eventos">Marzo</div>
+                <a href="">
+                    <div class="card-eventos align-Center">Marzo</div>
+                </a>
             </div>
             <div class="col-4 agenda-evento p-3">
-                <div class="card-eventos">Abril</div>
+                <a href="">
+                    <div class="card-eventos align-Center">Abril</div>
+                </a>
             </div>
             <div class="col-4 agenda-evento p-3">
-                <div class="card-eventos">Mayo</div>
+                <a href="">
+                    <div class="card-eventos align-Center">Mayo</div>
+                </a>
             </div>
             <div class="col-4 agenda-evento p-3">
-                <div class="card-eventos">Junio</div>
+                <a href="">
+                    <div class="card-eventos align-Center">Junio</div>
+                </a>
             </div>
             <div class="col-4 agenda-evento p-3">
-                <div class="card-eventos">Julio</div>
+                <a href="">
+                    <div class="card-eventos align-Center">Julio</div>
+                </a>
             </div>
             <div class="col-4 agenda-evento p-3">
-                <div class="card-eventos">Agosto</div>
+                <a href="">
+                    <div class="card-eventos align-Center">Agosto</div>
+                </a>
             </div>
             <div class="col-4 agenda-evento p-3">
-                <div class="card-eventos">Septiembre</div>
+                <a href="">
+                    <div class="card-eventos align-Center">Septiembre</div>
+                </a>
             </div>
             <div class="col-4 agenda-evento p-3">
-                <div class="card-eventos">Octubre</div>
+                <a href="">
+                    <div class="card-eventos align-Center">Octubre</div>
+                </a>
             </div>
             <div class="col-4 agenda-evento p-3">
-                <div class="card-eventos">Noviembre</div>
+                <a href="">
+                    <div class="card-eventos align-Center">Noviembre</div>
+                </a>
             </div>
             <div class="col-4 agenda-evento p-3">
-                <div class="card-eventos">Diciembre</div>
+                <a href="">
+                    <div class="card-eventos align-Center">Diciembre</div>
+                </a>
             </div>
         </div>
     </div>

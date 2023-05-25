@@ -81,7 +81,7 @@
     <?php wp_head(); ?>
 </head>
 
-    <header>
+    <header class="up-menu">
       <div class="wrapper-header">
         <div class="container">
           <div class="row">
@@ -129,4 +129,4 @@
     </header>
     
 <body>
-    <div class="wrapper">
+    <div class="wrapper down-content">
