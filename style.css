@@ -686,6 +686,81 @@ p {
 	display: flex;
 }
 
+/***********************************************************
+				 Inicio menu de navegacion
+************************************************************/
+/* Estilo para el menú principal */
+#main-menu {
+	background-color: #333;
+	/* Color de fondo del menú principal */
+	padding: 10px;
+	/* Espaciado interno del menú principal */
+}
+
+#main-menu ul {
+	list-style-type: none;
+	/* Quita los puntos de la lista */
+	margin: 0;
+	padding: 0;
+}
+
+#main-menu ul li {
+	display: inline-block;
+	/* Mostrar los elementos del menú en línea */
+	position: relative;
+	/* Posición relativa para los submenús */
+}
+
+#main-menu ul li a {
+	color: #fff;
+	/* Color de texto del menú principal */
+	display: block;
+	/* Convertir los enlaces en elementos de bloque */
+	padding: 10px 20px;
+	/* Espaciado interno de los elementos del menú */
+	text-decoration: none;
+}
+
+#main-menu ul li:hover>ul {
+	display: block;
+	/* Mostrar el submenú al pasar el cursor sobre un elemento del menú principal */
+}
+
+/* Estilo para los submenús */
+#main-menu ul ul {
+	display: none;
+	/* Ocultar los submenús por defecto */
+	position: absolute;
+	/* Posición absoluta para los submenús */
+	top: 100%;
+	/* Colocar los submenús debajo del menú principal */
+	background-color: #555;
+	/* Color de fondo de los submenús */
+	padding: 0;
+}
+
+#main-menu ul ul li {
+	display: block;
+	/* Mostrar los elementos del submenú en bloque */
+	width: 200px;
+	/* Ancho del submenú */
+}
+
+#main-menu ul ul li a {
+	color: #fff;
+	/* Color de texto de los elementos del submenú */
+	padding: 10px 15px;
+	/* Espaciado interno de los elementos del submenú */
+}
+
+
+
+
+
+/***********************************************************
+				 Fin menu de navegacion
+************************************************************/
+
 
 /**
  * banner
@@ -1329,7 +1404,7 @@ p {
 	padding: 0px 60px 0px 60px;
 }
 
-.flecha-derecha{
+.flecha-derecha {
 	width: 0;
 	height: 0;
 	border-top: 40px solid transparent;
@@ -1337,7 +1412,7 @@ p {
 	border-left: 40px solid #EC945E;
 }
 
-.flecha-derecha-blanca{
+.flecha-derecha-blanca {
 	width: 0;
 	height: 0;
 	border-top: 40px solid transparent;
@@ -1345,7 +1420,7 @@ p {
 	border-left: 40px solid #fff;
 }
 
-.flecha-izquierda{
+.flecha-izquierda {
 	width: 0;
 	height: 0;
 	border-top: 40px solid transparent;
@@ -1353,16 +1428,16 @@ p {
 	border-bottom: 40px solid transparent;
 }
 
-.centrar-fecha-izquierda{
+.centrar-fecha-izquierda {
 	position: absolute;
-    top: 85px;
-    right: 0px;
+	top: 85px;
+	right: 0px;
 }
 
-.centrar-fecha-derecha{
+.centrar-fecha-derecha {
 	position: absolute;
-    top: 85px;
-    left: 0px;
+	top: 85px;
+	left: 0px;
 }
 
 .img-salones {
@@ -1372,23 +1447,23 @@ p {
 	width: 100%;
 }
 
-.centrar-texto{
+.centrar-texto {
 	display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 
 .centrar-texto p {
 	color: #fff;
 	font-size: 24px;
-    font-family: Montserrat;
-    font-weight: 700;
-    font-style: italic;
+	font-family: Montserrat;
+	font-weight: 700;
+	font-style: italic;
 	padding: 0px 70px 0px 70px;
 }
 
-.centrar-texto p span{
+.centrar-texto p span {
 	color: #e9925d !important;
 }
 

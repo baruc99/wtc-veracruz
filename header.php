@@ -117,8 +117,9 @@
             <?php
                   wp_nav_menu( array(
                     'menu' => 'Main Menu',
-                    'menu_class' => 'nav nav-menu-header d-print-none',
-                    'container_id' => 'navigation',
+                    'menu_class' => 'nav nav-menu d-print-none',
+                    'container_id' => 'main-menu',
+                    // 'container_id' => 'navigation',
                   //   'container_class' => 'collapse navbar-collapse navbar-ex1-collapse'
                   ));
             ?>
