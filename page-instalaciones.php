@@ -9,16 +9,20 @@
         </div>
     </div>
     <div class="instalaciones">
-        <div class="box-instalaciones" style="z-index: 0;position: relative;">
-            <img class="full-size" src="<?php echo get_template_directory_uri();?>/images/instalaciones/salonTajin.png" alt="SALONES TAJÍN">
-            <div class="flecha-izquierda centrar-fecha-izquierda"></div>
+        <div class="box-instalaciones">
+            <div class="full-size img-tajin" style="z-index: 0;position: relative;">
+                <div class="flecha-izquierda centrar-fecha-izquierda"></div>
+
+            </div>
         </div>
         <div class="box-instalaciones centrar-texto" style=" background: #EC945E">
             <p>SALONES TAJÍN</p>
         </div>
-        <div class="box-instalaciones" style="z-index: 0;position: relative;">
-            <img class="full-size" src="<?php echo get_template_directory_uri();?>/images/instalaciones/areaComun.png" alt="ÁREAS COMUNES">
-            <div class="flecha-izquierda centrar-fecha-izquierda"></div>
+        <div class="box-instalaciones">
+            <div class="full-size img-area" style="z-index: 0;position: relative;">
+                <div class="flecha-izquierda centrar-fecha-izquierda"></div>
+                
+            </div>
         </div>
         <div class="box-instalaciones centrar-texto" style=" background: #EC945E">
             <p> ÁREAS COMUNES</p>
@@ -38,9 +42,10 @@
         <div class="box-instalaciones centrar-texto" style=" background: #EC945E">
             <p>LOCALES COMERCIALES</p>
         </div>
-        <div class="box-instalaciones centrar-texto" style="z-index: 0;position: relative;">
-            <img class="full-size" src="<?php echo get_template_directory_uri();?>/images/instalaciones/localesComerciales.png" alt="LOCALES COMERCIALES">
-            <div class="flecha-derecha centrar-fecha-derecha"></div>
+        <div class="box-instalaciones">
+            <div class="full-size img-locales" style="z-index: 0;position: relative;">
+                <div class="flecha-derecha centrar-fecha-derecha"></div>
+            </div>
         </div>
     </div>
 </div>

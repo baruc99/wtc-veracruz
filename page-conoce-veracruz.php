@@ -11,7 +11,8 @@
     </div>
     <div class="conoce-veracruz">
         <div class="box">
-            <img class="full-size" src="<?php echo get_template_directory_uri();?>/images/conoce-veracruz/jarochas.png" alt="">
+            <div class="full-size img-jarochas" style="z-index: 0;position: relative;"></div>
+            <!-- <img class="full-size" src="<?php echo get_template_directory_uri();?>/images/conoce-veracruz/jarochas.png" alt=""> -->
         </div>
         <div class="box">
             <div class="mosaico-conoce-veracruz">
@@ -22,11 +23,13 @@
                         <button>ver más</button>
                     </div>
                     <div class="height-mosailco">
+                        <!-- <div class="full-size img-faroVC" style="z-index: 0;position: relative;"></div> -->
                         <img class="full-size" src="<?php echo get_template_directory_uri();?>/images/conoce-veracruz/faroVC.png" alt="">
                     </div>
                 </div>
                 <div class="box-m">
                     <div class="height-mosailco">
+                        <!-- <div class="full-size img-hotels" style="z-index: 0;position: relative;"></div> -->
                         <img class="full-size" src="<?php echo get_template_directory_uri();?>/images/conoce-veracruz/hotels.png" alt="">
                     </div>
                     <div class="height-mosailco texto-mosaico">
@@ -44,3 +47,9 @@
 <?php get_template_part('eslogan-2'); ?>
 <?php get_template_part('orange-line'); ?>
 <?php get_footer(); ?>
+
+<!-- <div class="box-instalaciones">
+            <div class="full-size img-locales" style="z-index: 0;position: relative;">
+                <div class="flecha-derecha centrar-fecha-derecha"></div>
+            </div>
+        </div> -->

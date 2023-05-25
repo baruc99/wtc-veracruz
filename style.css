@@ -701,7 +701,7 @@ p {
 ************************************************************/
 /* Estilo para el menú principal */
 #main-menu {
-	background-color: #333;
+	/* background-color: #333; */
 	/* Color de fondo del menú principal */
 	padding: 10px;
 	/* Espaciado interno del menú principal */
@@ -722,7 +722,7 @@ p {
 }
 
 #main-menu ul li a {
-	color: #fff;
+	color: #4d4d4d;
 	/* Color de texto del menú principal */
 	display: block;
 	/* Convertir los enlaces en elementos de bloque */
@@ -744,9 +744,10 @@ p {
 	/* Posición absoluta para los submenús */
 	top: 100%;
 	/* Colocar los submenús debajo del menú principal */
-	background-color: #555;
+	background-color: #ffffff;
 	/* Color de fondo de los submenús */
 	padding: 0;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 #main-menu ul ul li {
@@ -757,10 +758,14 @@ p {
 }
 
 #main-menu ul ul li a {
-	color: #fff;
+	color: #4d4d4d;
 	/* Color de texto de los elementos del submenú */
 	padding: 10px 15px;
 	/* Espaciado interno de los elementos del submenú */
+	text-decoration: underline;
+	text-decoration-color: #e9925d;
+	text-decoration-style: solid;
+	text-decoration-thickness: 2px;
 }
 
 
@@ -787,6 +792,7 @@ p {
 	background-size: cover;
 	width: 100%;
 	height: 100%;
+	background-position: center;
 }
 
 
@@ -1018,6 +1024,7 @@ p {
 	background-size: cover;
 	/* height: 20rem; */
 	width: 100%;
+	background-position: center;
 }
 
 .seccion-eslogan-other {
@@ -1025,6 +1032,7 @@ p {
 	background-size: cover;
 	/* height: 20rem; */
 	width: 100%;
+	background-position: center;
 }
 
 .eslogan-other {
@@ -1375,6 +1383,30 @@ p {
 	padding: 0px 60px 25px 60px;
 }
 
+.img-faroVC {
+	background-image: url(images/conoce-veracruz/faroVC.png);
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	background-position: center;
+}
+
+.img-hotels {
+	background-image: url(images/conoce-veracruz/hotels.png);
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	background-position: center;
+}
+
+.img-jarochas {
+	background-image: url(images/conoce-veracruz/jarochas.png);
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	background-position: center;
+}
+
 /**
  * Instalaciones
  * -----------------------------------------------------------------------------
@@ -1451,11 +1483,36 @@ p {
 	left: 0px;
 }
 
+.img-tajin {
+	background-image: url(images/instalaciones/salonTajin.png);
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	background-position: center;
+}
+
+.img-area {
+	background-image: url(images/instalaciones/areaComun.png);
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	background-position: center;
+}
+
 .img-salones {
 	background-image: url(images/instalaciones/salones.png);
 	background-size: cover;
 	height: 100%;
 	width: 100%;
+	background-position: center;
+}
+
+.img-locales {
+	background-image: url(images/instalaciones/localesComerciales.png);
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	background-position: center;
 }
 
 .centrar-texto {
@@ -1629,6 +1686,47 @@ p {
 	background-position-y: center;
 }
 
+.imgMes {
+	align-items: center;
+	background-color: #5882b5;
+	border-radius: 10px;
+	display: flex;
+	height: 84px;
+	justify-content: center;
+	position: relative;
+	top: 35px;
+	width: 84px;
+}
+
+.imgMes img {
+	height: 70%;
+}
+
+.text-mes {
+	height: 285px;
+	width: 285px;
+	/* display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center; */
+}
+
+.text-mes h3{
+	font-family: Montserrat;
+	color: #4D4D4D;
+	font-size: 32px;
+	font-weight: 700;
+	font-style: italic;
+}
+
+.text-mes p{
+	font-family: Montserrat;
+	font-weight: 400;
+	color: #989898;
+	font-size: 22px;
+	/* text-align: center; */
+	padding: 5% 14%;
+}
 
 
 
@@ -1646,6 +1744,10 @@ p {
 		padding-right: 0 !important;
 	}
 }
+
+
+
+
 
 
 /*--- <= 1999px ---*/
