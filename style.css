@@ -1691,43 +1691,55 @@ p {
 	background-color: #5882b5;
 	border-radius: 10px;
 	display: flex;
-	height: 84px;
+	height: 100px;
 	justify-content: center;
-	position: relative;
-	top: 35px;
-	width: 84px;
+	/* position: relative;
+	top: 35px; */
+	width: 100px;
+}
+
+.card-dias-mes{
+	height: 6.25rem;
+    width: 17.75rem;
+    background: #E9925D;
+    border-radius: 1.875rem;
+    font-family: Montserrat;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #fff;
 }
 
 .imgMes img {
 	height: 70%;
 }
 
+.align-start{
+	display: flex;
+    justify-content: start;
+    align-items: center;
+	height: 6.25rem;
+}
+
 .text-mes {
-	height: 285px;
-	width: 285px;
-	/* display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center; */
+	font-family: Montserrat;
+	color: #4D4D4D;
 }
 
 .text-mes h3{
-	font-family: Montserrat;
-	color: #4D4D4D;
-	font-size: 32px;
-	font-weight: 700;
-	font-style: italic;
+	font-size: 2rem;
+	font-weight: 900;
+	margin-bottom: -0.313rem;
 }
 
 .text-mes p{
-	font-family: Montserrat;
-	font-weight: 400;
-	color: #989898;
-	font-size: 22px;
-	/* text-align: center; */
-	padding: 5% 14%;
+	font-weight: 700;
+	color: #8A8A8A;
+	font-size: 1.375rem;
 }
 
+.altura-eventos-fin{
+	height: 160px;
+}
 
 
 /**
