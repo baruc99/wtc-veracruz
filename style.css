@@ -680,7 +680,8 @@ p {
 
 .nav-menu-header a {
 	color: #4c4d4d;
-	font-family: Montserrat Medium;
+	font-family: Montserrat;
+	font-weight: 500;
 	font-size: 16px;
 	padding: 10px;
 	display: flex;
@@ -705,6 +706,8 @@ p {
 	/* Color de fondo del menú principal */
 	padding: 10px;
 	/* Espaciado interno del menú principal */
+	font-family: Montserrat;
+	font-weight: 500;
 }
 
 #main-menu ul {
@@ -1638,12 +1641,12 @@ p {
 .texto-mes {
 	font-size: 0.75rem;
 	font-weight: 500;
-	height: 20rem;
+	/* height: 20rem; */
 	color: #8a8a8a;
 }
 
 .altuta-texto-mes{
-	height: 16.25rem;
+	/* height: 16.25rem; */
 	display: flex;
 	align-items: center;
 	flex-direction: column;
