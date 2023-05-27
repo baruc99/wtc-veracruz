@@ -1,10 +1,15 @@
 <?php get_header(); ?>
 
+<?php
+    $mes = $_GET['mes'];
+    $mesNombre = obtenerNombreMes($mes);
+?>
+
 <div class="wrapper-mes textura">
     <div class="container">
         <div class="row">
             <div class="col altuta-texto-eventos texto-mes">
-                <h3 class="title-seccion-mes">MAYO 2023</h3>
+                <h3 class="title-seccion-mes"><?php echo($mesNombre) ?> 2023</h3>
                 <p>Eventos sujetos a cambio sin previo aviso.</p>
             </div>
         </div>

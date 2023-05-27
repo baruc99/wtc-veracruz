@@ -199,3 +199,28 @@ function sendmail(){
 }
 add_action('wp_ajax_sendmail', 'sendmail');
 add_action('wp_ajax_nopriv_sendmail', 'sendmail');
+
+
+function obtenerNombreMes($numeroMes) {
+    $meses = array(
+        1 => 'Enero',
+        2 => 'Febrero',
+        3 => 'Marzo',
+        4 => 'Abril',
+        5 => 'Mayo',
+        6 => 'Junio',
+        7 => 'Julio',
+        8 => 'Agosto',
+        9 => 'Septiembre',
+        10 => 'Octubre',
+        11 => 'Noviembre',
+        12 => 'Diciembre'
+    );
+
+    // Verificar si el número de mes está dentro del rango válido
+    if (isset($meses[$numeroMes])) {
+        return $meses[$numeroMes];
+    } else {
+        return 'Mes inválido';
+    }
+}

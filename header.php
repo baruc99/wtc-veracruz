@@ -86,7 +86,9 @@
         <div class="container">
           <div class="row">
             <div class="col">
-              <p>Tel. 229 923 0300</p>
+              <a href="tel:229-923-0300" >
+                Tel. 229 923 0300
+              </a>
             </div>
             <div class="col-8">
 
@@ -119,6 +121,7 @@
                     'menu' => 'Main Menu',
                     'menu_class' => 'nav nav-menu d-print-none',
                     'container_id' => 'main-menu',
+                    'current_class' => 'current-menu-item'
                     // 'container_id' => 'navigation',
                   //   'container_class' => 'collapse navbar-collapse navbar-ex1-collapse'
                   ));

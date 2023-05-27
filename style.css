@@ -653,6 +653,16 @@ p {
 	height: 2.188rem;
 }
 
+.wrapper-header a {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 700;
+	font-style: italic;
+	align-items: center;
+	display: flex;
+	height: 2.188rem;
+}
+
 .logo-header {
 	border-radius: 50px;
 	height: 23px;
@@ -687,19 +697,22 @@ p {
 	display: flex;
 }
 
-.up-menu{
+.up-menu {
 	position: relative;
-    z-index: 3;
+	z-index: 3;
 }
 
-.down-content{
+.down-content {
 	position: relative;
-    z-index: 1;
+	z-index: 1;
 }
 
 /***********************************************************
 				 Inicio menu de navegacion
 ************************************************************/
+
+
+/*  */
 /* Estilo para el menú principal */
 #main-menu {
 	/* background-color: #333; */
@@ -765,15 +778,50 @@ p {
 	/* Color de texto de los elementos del submenú */
 	padding: 10px 15px;
 	/* Espaciado interno de los elementos del submenú */
-	text-decoration: underline;
-	text-decoration-color: #e9925d;
-	text-decoration-style: solid;
-	text-decoration-thickness: 2px;
+
 }
 
+#main-menu ul li a {
+	color: #4d4d4d;
+	/* Color de texto del menú principal */
+	display: block;
+	/* Convertir los enlaces en elementos de bloque */
+	padding: 10px 20px;
+	/* Espaciado interno de los elementos del menú */
+	text-decoration: none;
+	position: relative; /* Agregar posición relativa para subrayado */
+}
 
+#main-menu ul li a:hover {
+	text-decoration: none; /* Quitar subrayado predeterminado al pasar el cursor */
+}
 
+#main-menu ul li a:hover::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #E9925D;
+	/* Color del subrayado */
+}
 
+#main-menu ul li.current-menu-item > a {
+	background-color: #f0f0f0;
+}
+
+#main-menu ul li.current-menu-item > a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #E9925D;
+}
+
+/*  */
 
 /***********************************************************
 				 Fin menu de navegacion
@@ -1265,6 +1313,7 @@ p {
 
 .wrapper-orange-line {
 	background-color: #E9925D;
+	font-family: Montserrat;
 }
 
 .alignInfoLine {
@@ -1277,6 +1326,14 @@ p {
 	font-weight: 700;
 	height: 3.5rem;
 	justify-content: space-around;
+}
+
+.alignInfoLine a{
+	color: #fff;
+	font-size: 1.25rem;
+	height: 3.5rem;
+	display: flex;
+	align-items: center;
 }
 
 /**
@@ -1426,22 +1483,19 @@ p {
 }
 
 .box-instalaciones {
-	height: 50%;
-	width: 25%;
+	/* height: 50%; */
+	width: 50%;
 }
 
 .shadow {
-	background-color: rgb(0 0 0 / 56%);
-	height: 100%;
-	width: 100%;
+	
 }
 
 .text-shadow {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: #EC945E
-;
+	color: #EC945E;
 	font-size: 20px;
 	font-family: Montserrat;
 	font-weight: 700;
@@ -1534,23 +1588,36 @@ p {
 	padding: 0px 70px 0px 70px;
 }
 
-.centrar-texto p span{
+.centrar-texto p span {
 	color: #ffffff !important;
 }
+
+.hover-instalaciones{
+	width: 50%;
+	height: 50%;
+    display: flex;
+}
+
+.hover-instalaciones:hover .shadow {
+	background-color: rgb(0 0 0 / 56%);
+	height: 100%;
+	width: 100%;
+}
+
 
 /**
  * eventos
  * -----------------------------------------------------------------------------
  */
 
-.wrapper-eventos{
+.wrapper-eventos {
 	background-image: url(images/wtcsite_fondocartelera.jpg);
 	background-size: cover;
 	width: 100%;
 	height: 54.75rem;
 }
 
-.title-seccion-eventos{
+.title-seccion-eventos {
 	/* padding: 6rem; */
 	font-family: Montserrat;
 	font-weight: 700;
@@ -1584,7 +1651,7 @@ p {
 	background-position-y: center;
 }
 
-.altuta-texto-eventos{
+.altuta-texto-eventos {
 	height: 16.25rem;
 	display: flex;
 	align-items: center;
@@ -1599,43 +1666,79 @@ p {
 	height: 20rem;
 }
 
-.texto-eventos p{
+.texto-eventos p {
 	/* margin-top: -12.5rem;
     margin-bottom: 13rem; */
 }
 
-.texto-eventos span{
+.texto-eventos span {
 	font-weight: bold;
 	font-size: 1.25rem;
 }
 
-.agenda-evento{
+.agenda-evento {
 	/* background-color: #77e95d;
 	height: 100px;
     width: 286px; */
 	display: flex;
-    justify-content: center;
-    align-items: center;
+	justify-content: center;
+	align-items: center;
 }
 
-.card-eventos{
+.card-eventos {
 	height: 6.25rem;
-    width: 17.75rem;
-    background: #E9925D;
-    border-radius: 1.875rem;
-    font-family: Montserrat;
-    font-size: 2rem;
-    font-weight: 800;
-    color: #fff;
-    text-transform: uppercase;
+	width: 17.75rem;
+	background: #E9925D;
+	border-radius: 1.875rem;
+	font-family: Montserrat;
+	font-size: 2rem;
+	font-weight: 800;
+	color: #fff;
+	text-transform: uppercase;
 }
+
+.card-eventos:hover {
+	background: #fff;
+	color: #4D4D4D;
+}
+
+.align-Center-column{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-eventos .hover-text {
+	display: none;
+}
+
+.card-eventos:hover .hover-text {
+	display: block;
+	font-size: 0.875rem;
+    font-weight: 700;
+    color: #E9925D;
+	/* transform: translate(-50%, -50%); */
+}
+
+.card-eventos:hover a {
+    color: #4D4D4D;
+    /* padding: 0px 0; */
+    text-decoration: underline;
+}
+
+
+
+
+
+
 /**
  * mes
  * -----------------------------------------------------------------------------
  */
 
-.wrapper-mes{
-	background-color: #e8e8e8;	
+.wrapper-mes {
+	background-color: #e8e8e8;
 }
 
 .texto-mes {
@@ -1645,7 +1748,7 @@ p {
 	color: #8a8a8a;
 }
 
-.altuta-texto-mes{
+.altuta-texto-mes {
 	/* height: 16.25rem; */
 	display: flex;
 	align-items: center;
@@ -1654,7 +1757,7 @@ p {
 
 }
 
-.title-seccion-mes{
+.title-seccion-mes {
 	/* padding: 6rem; */
 	font-family: Montserrat;
 	font-weight: 700;
@@ -1665,6 +1768,7 @@ p {
 	color: #e9925d;
 	width: 100%;
 	white-space: nowrap;
+	text-transform: uppercase;
 }
 
 .title-seccion-mes:before {
@@ -1701,25 +1805,25 @@ p {
 	width: 100px;
 }
 
-.card-dias-mes{
+.card-dias-mes {
 	height: 6.25rem;
-    width: 17.75rem;
-    background: #E9925D;
-    border-radius: 1.875rem;
-    font-family: Montserrat;
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: #fff;
+	width: 17.75rem;
+	background: #E9925D;
+	border-radius: 1.875rem;
+	font-family: Montserrat;
+	font-size: 3.5rem;
+	font-weight: 800;
+	color: #fff;
 }
 
 .imgMes img {
 	height: 70%;
 }
 
-.align-start{
+.align-start {
 	display: flex;
-    justify-content: start;
-    align-items: center;
+	justify-content: start;
+	align-items: center;
 	height: 6.25rem;
 }
 
@@ -1728,19 +1832,19 @@ p {
 	color: #4D4D4D;
 }
 
-.text-mes h3{
+.text-mes h3 {
 	font-size: 2rem;
 	font-weight: 900;
 	margin-bottom: -0.313rem;
 }
 
-.text-mes p{
+.text-mes p {
 	font-weight: 700;
 	color: #8A8A8A;
 	font-size: 1.375rem;
 }
 
-.altura-eventos-fin{
+.altura-eventos-fin {
 	height: 160px;
 }
 
