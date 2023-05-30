@@ -123,6 +123,12 @@ function get_img_feed($id){
 	return $post_thumbnail;
 }
 
+function inputTelephoneFormat($num){
+     $newNum = str_replace(' ', '-', $num);
+
+    return $newNum;
+}
+
 /************************************************/
 /* Formulario de contacto para todos los sitios */
 /************************************************/

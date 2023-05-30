@@ -1,9 +1,8 @@
-
-<?php
-   $branding = get_option("themeoption_branding");
-   $configuration_theme = get_option("themeoption_general_setting");  
-?>
 <footer>
+  <?php
+    $branding = get_option("themeoption_branding");
+  ?>
+
   
     <div class="logos-footer">
       <div class="container">
@@ -24,15 +23,21 @@
             <p>Boulevard Adolfo Ruiz Cortines No. 3497 Col. Ylang Ylang. Boca del Río, Veracruz. México. C.P. 94298</p>
           </div>
           <div class="col-2 alignLogos">
-            <a href="https://twitter.com/home?lang=es" target="_blank">
-              <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/twitter-naranja.png" alt="logo twiter">
-            </a>
-            <a href="https://www.facebook.com/" target="_blank">
-              <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/facebook-naranja.png" alt="logo facebook">
-            </a>
-            <a href="https://www.instagram.com/" target="_blank">
-              <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/instagram-naranja.png" alt="logo instagram">                  
-            </a>  
+            <?php if(isset($branding['twitter-url']) && !empty($branding['twitter-url'])){ ?>
+              <a href="https://twitter.com/home?lang=es" target="_blank">
+                <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/twitter-naranja.png" alt="logo twiter">
+              </a>
+            <?php } ?>
+            <?php if(isset($branding['facebook-url']) && !empty($branding['facebook-url'])){ ?>
+              <a href="https://www.facebook.com/" target="_blank">
+                <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/facebook-naranja.png" alt="logo facebook">
+              </a>
+            <?php }?>
+            <?php if(isset($branding['instagram-url']) && !empty($branding['instagram-url'])){ ?>
+              <a href="https://www.instagram.com/" target="_blank">
+                <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/instagram-naranja.png" alt="logo instagram">                  
+              </a>
+            <?php }?> 
           </div>
         </div>
       </div>

@@ -83,17 +83,17 @@
     <?php 
       $branding = get_option("themeoption_branding");
 	    $general_settings = get_option("themeoption_configuration_general");
+      $newPhone =  inputTelephoneFormat($general_settings['phone']);
     ?>
 
-
-
+    
     <header class="up-menu">
       <div class="wrapper-header">
         <div class="container">
           <div class="row">
             <div class="col">
               <?php if(isset($general_settings['phone']) && !empty($general_settings['phone'])){ ?>
-                  <a href="tel:229-923-0300" >
+                  <a href="tel:<?php echo $newPhone ?>" >
                     Tel. <?php echo $general_settings['phone']?>
                   </a>
                 <?php }?>
