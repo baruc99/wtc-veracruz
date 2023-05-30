@@ -1,5 +1,5 @@
 <?php 
-$themename = "clean-theme";
+$themename = "wtc-veracruz-2023";
 /************************************************/
 /* Requires file externals                      */
 /************************************************/

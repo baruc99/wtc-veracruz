@@ -80,29 +80,43 @@
     <?php } ?>
     <?php wp_head(); ?>
 </head>
+    <?php 
+      $branding = get_option("themeoption_branding");
+	    $general_settings = get_option("themeoption_configuration_general");
+    ?>
+
+
 
     <header class="up-menu">
       <div class="wrapper-header">
         <div class="container">
           <div class="row">
             <div class="col">
-              <a href="tel:229-923-0300" >
-                Tel. 229 923 0300
-              </a>
+              <?php if(isset($general_settings['phone']) && !empty($general_settings['phone'])){ ?>
+                  <a href="tel:229-923-0300" >
+                    Tel. <?php echo $general_settings['phone']?>
+                  </a>
+                <?php }?>
             </div>
             <div class="col-8">
 
             </div>
             <div class="col alignLogos">
-              <a href="https://twitter.com/home?lang=es" target="_blank">
-                <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/twitter-vino.png" alt="logo twiter">
-              </a>
-              <a href="https://www.facebook.com/" target="_blank">
-                <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/facebook-vino.png" alt="logo facebook">
-              </a>
-              <a href="https://www.instagram.com/" target="_blank">
-                <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/instagram-vino.png" alt="logo instagram">                  
-              </a>             
+            <?php if(isset($branding['twitter-url']) && !empty($branding['twitter-url'])){ ?>
+                <a href="<?php echo $branding['facebook-url']; ?>" target="_blank">
+                  <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/twitter-vino.png" alt="logo twiter">
+                </a>
+              <?php }?>
+              <?php if(isset($branding['facebook-url']) && !empty($branding['facebook-url'])){ ?>
+                <a href="<?php echo $branding['facebook-url']; ?>" target="_blank">
+                  <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/facebook-vino.png" alt="logo facebook">
+                </a>
+              <?php }?>
+              <?php if(isset($branding['instagram-url']) && !empty($branding['instagram-url'])){ ?>
+                <a href="<?php echo $branding['instagram-url']; ?>" target="_blank">
+                  <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/instagram-vino.png" alt="logo instagram">                  
+                </a>    
+              <?php }?>         
             </div>
           </div>
         </div>
@@ -112,7 +126,7 @@
         <div class="row sizeHeader">
           <div class="col-4 centrarmenu"> 
             <a href="<?php echo( home_url() )  ?>" class="navbar-brand">
-              <img src="<?php echo get_template_directory_uri();?>/images/logo.png" class="" alt="Logo Principal">
+              <img src="<?php echo $branding['logo-principal']; ?>" class="" alt="Logo Principal">
             </a>
           </div>
           <div class="col centrarmenu">

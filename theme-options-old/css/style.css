@@ -70,7 +70,7 @@
 	border: 1px solid #AA983F;
 }
 .wrap-title{
-	background-color: #AA983F;
+	background-color: #4D5752;
 	padding: 20px;
 }
 .wrap-title h2{
@@ -97,9 +97,12 @@
     border: none;
     border-radius: 5px;
     margin-top: 11px;
-    background-color: #49453C;
+    background-color: #000;
     padding: 10px 15px;
     color: #fff;
+}
+.wrap-title .btn-custom:hover{
+    background-color: #38538e;
 }
 .bg-gray-1{
 	background-color: #EFEFEF;
@@ -116,12 +119,12 @@
 	margin-bottom: 0;
 }
 .content-tab-link .nav-tabs li a{
-	color: #49453c;
+	color: #404040;
     font-family: 'pantonbold';
     display: block;
     padding: 20px;
-    background-color: #c1c1c1;
-    border-bottom: 1px solid #a2a2a2;
+    background-color: #cecece;
+    border-bottom: 1px solid #a9a9a9;
     border-right: 0;
     border-left: 0;
     border-top: 0;
@@ -133,7 +136,7 @@
 	color: #fff;
 }
 .content-tab-link .nav-tabs li a.active{
-	background-color: #49453c;
+	background-color: #AAACAD;
 	color: #fff;
 }
 form.theme_options .tab-content{
@@ -147,8 +150,9 @@ form.theme_options .form-group input,
 form.theme_options .form-group select,
 form.theme_options .form-group textarea{
     border-radius: 0;
-    border-color: #aa983f;
-    font-family: 'panton_lightregular';
+    border-color: #a20011;
+    font-family: 'pantonregular';
+    color: #000;
     font-size: 14px;
     line-height: 22px;
 }
@@ -202,6 +206,7 @@ form.theme_options .form-group{
     background-color: #efefef !Important;
 }
 
+
 /* Add More Module
 ============================================= */
 
@@ -245,6 +250,18 @@ form.theme_options .form-group{
     border-radius: 0;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #b3b3b3 !important;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #b3b3b3 !important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #b3b3b3 !important;
+}
 
 
 /* Home - Tabs
@@ -258,7 +275,7 @@ form.theme_options .form-group{
 }
 .content-tab-home .nav-pills .nav-link{
     background-color: transparent !Important;
-    color: #aa983f;
+    color: #AAACAD;
     padding: 15px 26px;
 }
 .content-tab-home .nav-pills .nav-item{

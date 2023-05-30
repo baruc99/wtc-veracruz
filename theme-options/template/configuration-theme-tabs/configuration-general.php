@@ -1,18 +1,17 @@
 <?php
-    $configuration_theme = get_option("themeoption_configuration_general");
+	$configuration_theme = get_option("themeoption_configuration_general");
 ?>
 <div class="title-section">
-	<h3><i class="fas fa-user-cog"></i>  <?php echo __( 'Opciones Generales', 'clean-theme'); ?></h3>
+	<h3><i class="fas fa-user-cog"></i>  Configuración General</h3>
 </div>
 
 <div class="form-group">
     <div class="row">
         <div class="col-lg-4 label-option">
-            <label for="code-google-analytics" class="control-label">
-                <?php echo __( 'Google Analytics ID', 'clean-theme'); ?>
-            </label>
+            <label for="code-google-analytics" class="control-label">ID de seguimiento Google Analytics</label>
             <span class="description-title">
-                <?php echo __( 'pegue aquí su ID de seguimiento de "Google Analytics": "UA-XXXXXXXX-1"', 'clean-theme'); ?>
+                Pega aquí el ID de seguimiento de tu cuenta de Google Analytics
+                ejemplo: "UA-XXXXXXXX-1"
             </span>
         </div>
         <div class="col-lg-8">
@@ -22,18 +21,37 @@
 </div>
 
 <div class="title-section">
-    <h3><?php echo __( 'E-mail', 'clean-theme'); ?></h3>
+    <h3>Correo Electrónico</h3>
 </div>
 <div class="form-group">
     <div class="row">
         <div class="col-lg-4 label-option">
-            <label for="e-mail" class="control-label"><?php echo __( 'E-mail', 'clean-theme'); ?></label>
+            <label for="e-mail" class="control-label">Correo Electrónico</label>
             <span class="description-title">
-                <?php echo __( 'Escriba su correo electrónico de contacto', 'clean-theme'); ?>
+                Escribe el e-mail en donde llegarán
+                los mensajes de tu página de contacto.
             </span>
         </div>
         <div class="col-lg-8">
             <input class="form-control" id="e-mail" name="e-mail" value="<?php echo $configuration_theme["e-mail"]; ?>">
+        </div>
+    </div>
+</div>
+
+<div class="title-section">
+    <h3>Telefono</h3>
+</div>
+<div class="form-group">
+    <div class="row">
+        <div class="col-lg-4 label-option">
+            <label for="phone" class="control-label">Telefono</label>
+            <span class="description-title">
+                Escribe el telefono en donde se reciben
+                las llamadas de contacto.
+            </span>
+        </div>
+        <div class="col-lg-8">
+            <input class="form-control" id="phone" name="phone" value="<?php echo $configuration_theme["phone"]; ?>">
         </div>
     </div>
 </div>
