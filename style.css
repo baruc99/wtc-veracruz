@@ -707,6 +707,19 @@ p {
 	z-index: 1;
 }
 
+.align-end{
+	display: flex;
+    justify-content: end;
+    height: 100%;
+    align-items: center;
+}
+
+.menu-responsive{
+	height: 40px;
+	cursor: pointer;
+	background-color: red;
+}
+
 /***********************************************************
 				 Inicio menu de navegacion
 ************************************************************/

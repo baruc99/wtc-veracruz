@@ -98,9 +98,7 @@
                   </a>
                 <?php }?>
             </div>
-            <div class="col-8">
-
-            </div>
+            <div class="col-md-8 col-2"></div>
             <div class="col alignLogos">
             <?php if(isset($branding['twitter-url']) && !empty($branding['twitter-url'])){ ?>
                 <a href="<?php echo $branding['facebook-url']; ?>" target="_blank">
@@ -120,27 +118,47 @@
             </div>
           </div>
         </div>
-
       </div>
+
       <nav class="container navbar" id="wrapper-menuheader">
         <div class="row sizeHeader">
-          <div class="col-4 centrarmenu"> 
+          <div class="col-md-4 col-5 centrarmenu"> 
             <a href="<?php echo( home_url() )  ?>" class="navbar-brand">
               <img src="<?php echo $branding['logo-principal']; ?>" class="" alt="Logo Principal">
             </a>
           </div>
-          <div class="col centrarmenu">
-            <?php
-                  wp_nav_menu( array(
-                    'menu' => 'Main Menu',
-                    'menu_class' => 'nav nav-menu d-print-none',
-                    'container_id' => 'main-menu',
-                    'current_class' => 'current-menu-item'
-                    // 'container_id' => 'navigation',
-                  //   'container_class' => 'collapse navbar-collapse navbar-ex1-collapse'
-                  ));
-            ?>
+          <div class="col d-none d-sm-block">
+            <div class="centrarmenu">
+              <?php
+                    wp_nav_menu( array(
+                      'menu' => 'Main Menu',
+                      'menu_class' => 'nav nav-menu d-print-none',
+                      'container_id' => 'main-menu',
+                      'current_class' => 'current-menu-item'
+                      // 'container_id' => 'navigation',
+                    //   'container_class' => 'collapse navbar-collapse navbar-ex1-collapse'
+                    ));
+              ?>
+            </div>
           </div>
+          <div class="col d-block d-sm-none">
+            <div class="align-end">
+              <img id="menu-responsive" class="menu-responsive" src="<?php echo get_template_directory_uri();?>/images/menu.svg">
+              <img id="close-menu" class="menu-responsive" src="<?php echo get_template_directory_uri();?>/images/close.svg">
+              
+              <?php
+                  // wp_nav_menu( array(
+                  //   'menu' => 'Main Menu',
+                  //   'menu_class' => 'nav nav-menu d-print-none',
+                  //   'container_id' => 'main-menu',
+                  //   'current_class' => 'current-menu-item'
+                  //   // 'container_id' => 'navigation',
+                  // //   'container_class' => 'collapse navbar-collapse navbar-ex1-collapse'
+                  // ));
+              ?>
+            </div>
+          </div>
+
         </div>
       </nav>  
     </header>

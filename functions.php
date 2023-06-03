@@ -19,7 +19,7 @@ function get_theme_scripts(){
 
     wp_enqueue_script( 'script-validate', get_template_directory_uri().'/js/jquery.validate.js', array( 'script-jquery' ), '2.3.4', true);
 
-    wp_enqueue_script( 'script-custom', get_template_directory_uri().'/js/functions.js', array( 'script-jquery' ), '1.0', true);
+    wp_enqueue_script( 'script-custom', get_template_directory_uri().'/js/functions.js', array( 'script-jquery' ), '1.0');
     $translation_array = array(
         'templateUrl' => admin_url('admin-ajax.php')
     );
