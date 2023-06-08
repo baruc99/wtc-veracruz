@@ -1,6 +1,6 @@
 /*general settings*/
-$(document).ready(function() {
-	// $("#form-contacto").validate({
+$(document).ready(function () {
+    // $("#form-contacto").validate({
     //     highlight: function(element) {
     //     },
     //     unhighlight: function(element) {
@@ -42,13 +42,33 @@ $(document).ready(function() {
     //     }
     // });
 
-    console.log("hola mundo");
-    // const menuResponsive = document.getElementById("menu-responsive");
+    // toggleMenu();
 
-    // menuResponsive.addEventListener('click', function() {
-    //     console.log('click');
-    // });
+
+
 
 
 
 });
+
+function toggleMenu() {
+    const menuResponsive = document.getElementById("menu-responsive");
+    const closeMenu = document.getElementById("close-menu");
+    // const menu = document.getElementById("main-menu");
+
+    closeMenu.classList.add("hiddenElement");
+    menu.classList.add("hiddenElement");
+
+
+    menuResponsive.addEventListener('click', function () {
+        closeMenu.classList.remove('hiddenElement');
+        menuResponsive.classList.add('hiddenElement');
+        menu.classList.remove("hiddenElement");
+    });
+
+    closeMenu.addEventListener('click', function () {
+        closeMenu.classList.add('hiddenElement');
+        menuResponsive.classList.remove('hiddenElement');
+        menu.classList.add("hiddenElement");
+    });
+}

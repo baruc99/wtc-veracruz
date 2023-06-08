@@ -10,14 +10,14 @@ require_once( get_stylesheet_directory().'/theme-options/theme-options.php' );
 /************************************************/
 function get_theme_scripts(){
     global $post;
-    wp_register_script('script-jquery', get_template_directory_uri().'/js/jquery-3.1.0.min.js', array(), '3.1.0', true );
+    wp_register_script('script-jquery', get_template_directory_uri().'/js/jquery-3.1.0.min.js', array(), '3.1.0' );
     wp_enqueue_script( 'script-jquery');
 
-    wp_enqueue_script( 'script-bootstrap', get_template_directory_uri().'/js/bootstrap.min.js', array( 'script-jquery' ), '4.6.0', true);
+    wp_enqueue_script( 'script-bootstrap', get_template_directory_uri().'/js/bootstrap.min.js', array( 'script-jquery' ), '4.6.0');
 
-    wp_enqueue_script( 'script-cycle', get_template_directory_uri().'/js/jquery.cycle2.min.js', array( 'script-jquery' ), '2.1.6', true);
+    wp_enqueue_script( 'script-cycle', get_template_directory_uri().'/js/jquery.cycle2.min.js', array( 'script-jquery' ), '2.1.6');
 
-    wp_enqueue_script( 'script-validate', get_template_directory_uri().'/js/jquery.validate.js', array( 'script-jquery' ), '2.3.4', true);
+    wp_enqueue_script( 'script-validate', get_template_directory_uri().'/js/jquery.validate.js', array( 'script-jquery' ), '2.3.4');
 
     wp_enqueue_script( 'script-custom', get_template_directory_uri().'/js/functions.js', array( 'script-jquery' ), '1.0');
     $translation_array = array(

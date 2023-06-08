@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<!-- <section class="fotografiawtc">
+<section class="fotografiawtc">
    <div class="img-banner"></div>
    <div class="container">
       <div class="row">
@@ -11,7 +11,7 @@
          </div>
       </div>
    </div>
-</section> -->
+</section>
 
 <!-- <section class="servicios-cards">
    <div class="container">

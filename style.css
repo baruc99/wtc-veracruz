@@ -717,8 +717,38 @@ p {
 .menu-responsive{
 	height: 40px;
 	cursor: pointer;
-	background-color: red;
 }
+
+.hiddenElement{
+	display: none;
+}
+
+.showElement{
+	display: block;
+}
+
+.heightLogo{
+	height: 3.125rem;
+}
+
+.borderOrange{
+	border: 1px solid #E9925D !important;
+}
+
+.borderOrange .orangeColor{
+	color: #E9925D;
+}
+
+.borderOrange:hover{
+	background-color: #E9925D;
+	border: 1px solid #fff !important;
+}
+
+.borderOrange:hover .orangeColor{
+	color: #fff;
+}
+
+
 
 /***********************************************************
 				 Inicio menu de navegacion
@@ -1935,6 +1965,8 @@ p {
 		padding-left: 0 !important;
 		padding-right: 0 !important;
 	}
+
+	
 }
 
 /*--->= 600px and <= 767px---*/

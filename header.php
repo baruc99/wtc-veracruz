@@ -24,6 +24,13 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
+    <!-- scrips -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+
     <!-- FB / 560x560 -->
     <?php if(!is_home() && !is_archive()){ ?>
         <meta property="og:title" content="<?php echo get_the_title(); ?>" />
@@ -120,47 +127,29 @@
         </div>
       </div>
 
-      <nav class="container navbar" id="wrapper-menuheader">
-        <div class="row sizeHeader">
-          <div class="col-md-4 col-5 centrarmenu"> 
-            <a href="<?php echo( home_url() )  ?>" class="navbar-brand">
-              <img src="<?php echo $branding['logo-principal']; ?>" class="" alt="Logo Principal">
-            </a>
-          </div>
-          <div class="col d-none d-sm-block">
-            <div class="centrarmenu">
-              <?php
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="<?php echo( home_url() )  ?>">
+            <img src="<?php echo $branding['logo-principal']; ?>" class="heightLogo" alt="Logo Principal">
+          </a>
+          <button class="navbar-toggler borderOrange" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <span class="navbar-toggler-icon"></span> -->
+            <ion-icon class="orangeColor" name="menu-outline"></ion-icon>
+          </button>
+  
+          <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+            <?php
                     wp_nav_menu( array(
                       'menu' => 'Main Menu',
                       'menu_class' => 'nav nav-menu d-print-none',
                       'container_id' => 'main-menu',
                       'current_class' => 'current-menu-item'
-                      // 'container_id' => 'navigation',
-                    //   'container_class' => 'collapse navbar-collapse navbar-ex1-collapse'
                     ));
               ?>
-            </div>
           </div>
-          <div class="col d-block d-sm-none">
-            <div class="align-end">
-              <img id="menu-responsive" class="menu-responsive" src="<?php echo get_template_directory_uri();?>/images/menu.svg">
-              <img id="close-menu" class="menu-responsive" src="<?php echo get_template_directory_uri();?>/images/close.svg">
-              
-              <?php
-                  // wp_nav_menu( array(
-                  //   'menu' => 'Main Menu',
-                  //   'menu_class' => 'nav nav-menu d-print-none',
-                  //   'container_id' => 'main-menu',
-                  //   'current_class' => 'current-menu-item'
-                  //   // 'container_id' => 'navigation',
-                  // //   'container_class' => 'collapse navbar-collapse navbar-ex1-collapse'
-                  // ));
-              ?>
-            </div>
-          </div>
+        </nav>
+      </div>
 
-        </div>
-      </nav>  
     </header>
     
 <body>
