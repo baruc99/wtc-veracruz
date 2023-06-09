@@ -132,7 +132,7 @@
           <a class="navbar-brand" href="<?php echo( home_url() )  ?>">
             <img src="<?php echo $branding['logo-principal']; ?>" class="heightLogo" alt="Logo Principal">
           </a>
-          <button class="navbar-toggler borderOrange" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <button id="responsive-menu-button" class="navbar-toggler borderOrange" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <!-- <span class="navbar-toggler-icon"></span> -->
             <ion-icon class="orangeColor" name="menu-outline"></ion-icon>
           </button>
@@ -141,7 +141,7 @@
             <?php
                     wp_nav_menu( array(
                       'menu' => 'Main Menu',
-                      'menu_class' => 'nav nav-menu d-print-none',
+                      'menu_class' => 'nav nav-menu d-print-none menu-responsivo',
                       'container_id' => 'main-menu',
                       'current_class' => 'current-menu-item'
                     ));

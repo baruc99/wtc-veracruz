@@ -46,29 +46,58 @@ $(document).ready(function () {
 
 
 
+    var breakpoint = window.matchMedia("(max-width: 768px)");
+
+
+
+
+
+
+    breakpoint.addListener(handleBreakpointChange);  // Registra el listener inicial
+
+    // Llama a la función handleBreakpointChange una vez para comprobar el estado inicial
+    handleBreakpointChange(breakpoint);
 
 
 
 });
 
-function toggleMenu() {
-    const menuResponsive = document.getElementById("menu-responsive");
-    const closeMenu = document.getElementById("close-menu");
-    // const menu = document.getElementById("main-menu");
+function menuResponsive() {
 
-    closeMenu.classList.add("hiddenElement");
-    menu.classList.add("hiddenElement");
+    const breakpoint = window.matchMedia("(max-width: 768px)");
 
+}
 
-    menuResponsive.addEventListener('click', function () {
-        closeMenu.classList.remove('hiddenElement');
-        menuResponsive.classList.add('hiddenElement');
-        menu.classList.remove("hiddenElement");
-    });
+function handleBreakpointChange(event) {
+    if (event.matches) {
+        // Se ha alcanzado el breakpoint de 768px o menos
+        console.log("Estás en el breakpoint de 768px o menos.");
 
-    closeMenu.addEventListener('click', function () {
-        closeMenu.classList.add('hiddenElement');
-        menuResponsive.classList.remove('hiddenElement');
-        menu.classList.add("hiddenElement");
-    });
+        const firtsLi = $('#menu-main-menu > li:first-child > a');
+
+        firtsLi.attr('href', '');
+
+        firtsLi.on('click', function (event) {
+            event.preventDefault();
+            console.log("click");
+            // $('#main-menu ul li:first-child ul')[0].addClass("menuUp");
+            $('#main-menu ul li:first-child ul').addClass('menuUp');
+        });
+
+        $(document).on('click', function (event) {
+            if (!$(event.target).closest(firtsLi).length) {
+                // Código para el clic fuera de firtsLi
+                $('#main-menu ul li:first-child ul').removeClass('menuUp');
+                console.log("otro lado");
+            }
+        });
+
+        
+
+    }
+    else {
+        // Se ha superado el breakpoint de 768px
+        console.log("Estás por encima del breakpoint de 768px.");
+        // Realiza las acciones correspondientes
+    }
 }

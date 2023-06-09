@@ -544,7 +544,7 @@ input {
 
 button,
 button[disabled]:hover,
-button[disabled]:focus,
+/* button[disabled]:focus, */
 input[type="button"],
 input[type="button"][disabled]:hover,
 input[type="button"][disabled]:focus,
@@ -567,7 +567,7 @@ input[type="submit"][disabled]:focus {
 }
 
 button:hover,
-button:focus,
+/* button:focus, */
 input[type="button"]:hover,
 input[type="button"]:focus,
 input[type="reset"]:hover,
@@ -1907,11 +1907,6 @@ p {
 	}
 }
 
-
-
-
-
-
 /*--- <= 1999px ---*/
 @media screen and (max-width: 1199px) {
 	/*< = @screen-lg*/
@@ -1964,6 +1959,21 @@ p {
 	.sin-padding-xs {
 		padding-left: 0 !important;
 		padding-right: 0 !important;
+	}
+
+	.menu-responsivo{
+		flex-direction: column !important;
+    	align-items: center !important;
+	}
+
+	#main-menu ul li:hover>ul {
+		display: none;
+		/* Mostrar el submenú al pasar el cursor sobre un elemento del menú principal */
+	}
+
+	.menuUp{
+		display: block !important;
+		z-index: 999;
 	}
 
 	
