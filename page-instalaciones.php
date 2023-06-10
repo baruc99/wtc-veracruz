@@ -13,7 +13,6 @@
             <div class="box-instalaciones">
                 <div class="full-size img-tajin" style="z-index: 0;position: relative;">
                     <div class="flecha-izquierda centrar-fecha-izquierda"></div>
-
                 </div>
             </div>
             <div class="box-instalaciones centrar-texto" style=" background: #EC945E">

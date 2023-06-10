@@ -3,10 +3,10 @@
 <div class="wrapper-quienes-somos textura">
     <div class="container">
         <div class="row">
-            <div class="col-6" style=" display: flex; align-items: center; justify-content: center;">
-                <img src="<?php echo get_template_directory_uri();?>/images/world-trade-quienes-somos.png" alt="world trade center" style="height: 400px;">
+            <div class="col-md-6" style=" display: flex; align-items: center; justify-content: center;">
+                <img class="height-img-quines-somos" src="<?php echo get_template_directory_uri();?>/images/world-trade-quienes-somos.png" alt="world trade center">
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
                 <div class="d-flex-9 mt-5">
                     <img class="hornaments-quienes-somos" src="<?php echo get_template_directory_uri();?>/images/hornament.png">
                     <h3 class="title">¿QUIÉNES SÓMOS?</h3>
@@ -21,6 +21,6 @@
     </div>
 </div>
 
-<?php get_template_part('eslogan'); ?>
-<?php get_template_part('orange-line'); ?>
+<?php// get_template_part('eslogan'); ?>
+<?php// get_template_part('orange-line'); ?>
 <?php get_footer(); ?>

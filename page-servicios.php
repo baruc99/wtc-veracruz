@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-4">
+            <div class="col-md-4">
                 <div class="card-servicios">
                     <div class="img-card-servicios">
                         <img src="<?php echo get_template_directory_uri();?>/images/servicios/CentroNegocios.png" alt="Centro de Negocios">
@@ -41,7 +41,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-md-4">
                 <div class="card-servicios">
                     <div class="img-card-servicios">
                         <img src="<?php echo get_template_directory_uri();?>/images/servicios/AreaCocina.png" alt="Area de Cocina">
@@ -71,7 +71,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-md-4">
                 <div class="card-servicios">
                     <div class="img-card-servicios">
                         <img src="<?php echo get_template_directory_uri();?>/images/servicios/LocalesComerciales.png" alt="Locales comerciales">

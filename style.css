@@ -898,7 +898,7 @@ p {
 	position: absolute;
 	top: -16.25rem;
 	left: 5%;
-	font-size: 48px;
+	font-size: 3rem;
 	font-family: Montserrat Medium;
 	color: #FFFFFF;
 }
@@ -1156,6 +1156,10 @@ p {
 	height: 37.5rem;
 }
 
+.height-img-quines-somos{
+	height: 400px;
+}
+
 .wrapper-quienes-somos p {
 	font-family: Montserrat;
 	color: #4D4D4D;
@@ -1179,6 +1183,7 @@ p {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	justify-content: center;
 }
 
 .d-flex-9 .box:nth-child(2) {
@@ -1961,6 +1966,8 @@ p {
 		padding-right: 0 !important;
 	}
 
+
+
 	.menu-responsivo{
 		flex-direction: column !important;
     	align-items: center !important;
@@ -1973,7 +1980,172 @@ p {
 
 	.menuUp{
 		display: block !important;
-		z-index: 999;
+		z-index: 999 !important;
+	}
+
+	.img-banner {
+		background-position: left;
+	}
+
+	.positionTitleBanner {
+		font-size: 2rem;
+		left: 0%;
+	}
+
+	.positionTitleBanner p {
+		margin: -0.875rem;
+		padding-left: 2rem;
+	}
+
+	.servicios-cards {
+		height: 100%;
+
+	}
+
+	.alignCenterAbsolute {
+		margin-left: 0%;
+		position: inherit;
+	}
+
+	.eslogan {
+		font-size: 1.875rem;
+	}
+
+	.hornament-before {
+		height: 2.313rem;
+		top: 10%;
+		right: 30%;
+	}
+
+	.hornament-after {
+		height: 2.313rem;
+		left: 42%;
+	}
+
+	.alignLogosFooter {
+		display: flex;
+		justify-content: space-between;
+		margin: 0.625rem;
+		align-items: center;
+		height: 100%;
+		flex-direction: row;
+	}
+
+	.logos-footer img {
+		height: 2rem;
+		margin-bottom: 0.625rem;
+	}
+
+	.addrees-footer {
+		background-color: #4D4D4D;
+		height: 100%;
+		justify-content: center;
+    	flex-direction: row;
+	}
+
+	.addrees-footer p {	
+		font-size: 0.625rem;
+		height: 100%;
+		text-align: center;
+	}
+
+	.alignLogos {
+		height: 100%;
+		margin-bottom: 0.625rem;
+	}
+
+	/* quienes somos */
+	.title {
+		font-size: 2rem;
+	}
+
+	.wrapper-quienes-somos {
+		height: 100%;
+	}
+
+	.height-img-quines-somos{
+		height: 12.5rem;
+		margin-top: 2.188rem;
+	}
+
+	.wrapper-quienes-somos p {
+		padding: 0 20px 0 20px;
+	}
+
+	/* transparencia */
+	.wrapper-transparencia {
+		height: 100%;
+	}
+
+	.title-seccion-trasnparencia {
+		font-size: 2rem !important;
+	}
+
+	.transparencia-text {
+		padding: 0 20px 0 20px;
+	}
+
+	/* eslogan */
+
+	.eslogan-other {
+		font-size: 1.875rem;
+	}
+
+	/* orange line */
+	.alignInfoLine {
+		font-size: 0.9rem;
+	}
+
+	.alignInfoLine a {
+		font-size: 0.9rem;
+	}
+
+	/* services */
+
+	.wrapper-servicios {
+		height: 100%;
+	}
+	.title-seccion {
+		font-size: 2rem;
+	}
+
+	.card-servicios {
+		height: 57rem;
+		margin-bottom: 1.4rem;
+	}
+
+	/* instalación */
+	.wrapper-instalaciones {
+		height: 100%;
+	}
+
+	.wrapper-instalaciones {
+		height: 70rem;
+	}
+
+	.instalaciones {
+		height: 24rem;
+	}
+
+	.hover-instalaciones {
+		width: 100%;
+		margin: 1rem
+	}
+
+	.flecha-izquierda {
+		width: 0;
+		height: 0;
+		border-top: 0px solid transparent;
+		border-right: 0px solid transparent;
+		border-bottom: 0px solid transparent;
+	}
+
+	.flecha-derecha {
+		width: 0;
+		height: 0;
+		border-top: 0px solid transparent;
+		border-bottom: 40px solid transparent;
+		border-left: 0px solid transparent;
 	}
 
 	

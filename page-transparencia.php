@@ -10,11 +10,11 @@
             </div>
         </div>
         <div class="row transparencia-text">
-            <div class="col-6">
+            <div class="col-md-6">
                 <p>Ley Número 848 de Transparencia y Acceso a la Información Pública para el Estado de Veracruz de Ignacio de la Llave:</p>
                 <p>"Con fundamento en los artículos 2 fracción IV, 17,18, 19, 20, 21, 22, 23 y 24 de la ley 848 de Transparencia y Acceso a la información Pública para el Estado de Veracruz de Ignacio de la Llave, así como en los lineamientos quinto y sexto de los Lineamientos Generales para elaborar formatos de solicitudes de acceso a la información pública y corrección de datos personales, se informa que todos los datos personales que constan en los archivos del Fideicomiso Público del Centro de Exposiciones y Convenciones de Veracruz, se encuentran protegidos y únicamente podran divulgarse para fines estadísticos".</p>
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
                 <p>Decreto que establece las bases para la creación del Fideicomiso Público del Centro de Exposiciones y Convenciones de Veracruz.</p>
                 <p><span>Decreto de Modificación a las Bases de Creación del Fideicomiso.</span></p> 
                 <p>Son las Normas de Operación para el funcionamiento del Fideicomiso Público del Centro de Exposiciones y Convenciones de Veracruz.</p>

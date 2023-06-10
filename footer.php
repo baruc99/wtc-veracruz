@@ -18,11 +18,11 @@
     <div class="addrees-footer">
       <div class="container">
         <div class="row">
-          <div class="col-2"></div>
-          <div class="col-8">
+          <div class="col-md-2"></div>
+          <div class="col-md-8 col">
             <p>Boulevard Adolfo Ruiz Cortines No. 3497 Col. Ylang Ylang. Boca del Río, Veracruz. México. C.P. 94298</p>
           </div>
-          <div class="col-2 alignLogos">
+          <div class="col-md-2  alignLogos">
             <?php if(isset($branding['twitter-url']) && !empty($branding['twitter-url'])){ ?>
               <a href="https://twitter.com/home?lang=es" target="_blank">
                 <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/twitter-naranja.png" alt="logo twiter">

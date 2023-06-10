@@ -13,10 +13,10 @@
    </div>
 </section>
 
-<!-- <section class="servicios-cards">
+<section class="servicios-cards">
    <div class="container">
       <div class="row">
-         <div class="col-4">
+         <div class="col-md-4 col">
             <div class="alignCenterAbsolute">
                <div class="imgCard">
                   <img src="<?php echo get_template_directory_uri();?>/images/centro-trabajo.png" alt="centro de trabajo">
@@ -28,7 +28,7 @@
             </div>
          </div>
 
-         <div class="col-4">
+         <div class="col-md-4 col">
             <div class="alignCenterAbsolute">
                <div class="imgCard">
                   <img src="<?php echo get_template_directory_uri();?>/images/areas-cocina.png" alt="áreas de cocina">
@@ -40,7 +40,7 @@
             </div>
          </div>
 
-         <div class="col-4">
+         <div class="col-md-4 col">
             <div class="alignCenterAbsolute">
                <div class="imgCard">
                <img src="<?php echo get_template_directory_uri();?>/images/mesas-servicio.png" alt="mesas de servicios">
@@ -53,9 +53,9 @@
          </div>
       </div>
    </div>
-</section> -->
+</section>
 
-<!-- <section class="seccion-eslogan">
+<section class="seccion-eslogan">
    <div class="container">
       <div class="row">
          <div class="col eslogan">
@@ -67,8 +67,8 @@
          </div>
       </div>
    </div>
-</section> -->
+</section>
 
-<!-- <div class="orange-line"></div> -->
+<div class="orange-line"></div>
 
-<?php// get_footer(); ?>
+<?php get_footer(); ?>

@@ -42,16 +42,7 @@ $(document).ready(function () {
     //     }
     // });
 
-    // toggleMenu();
-
-
-
     var breakpoint = window.matchMedia("(max-width: 768px)");
-
-
-
-
-
 
     breakpoint.addListener(handleBreakpointChange);  // Registra el listener inicial
 
@@ -73,15 +64,16 @@ function handleBreakpointChange(event) {
         // Se ha alcanzado el breakpoint de 768px o menos
         console.log("Estás en el breakpoint de 768px o menos.");
 
-        const firtsLi = $('#menu-main-menu > li:first-child > a');
+        var firtsLi = document.querySelector('#main-menu ul li:first-child');
+        
 
-        firtsLi.attr('href', '');
+        document.querySelector('#main-menu ul li:first-child a').href = '#';
+        
 
-        firtsLi.on('click', function (event) {
-            event.preventDefault();
+        firtsLi.addEventListener('click', function (event) {
+            // event.preventDefault();
             console.log("click");
-            // $('#main-menu ul li:first-child ul')[0].addClass("menuUp");
-            $('#main-menu ul li:first-child ul').addClass('menuUp');
+            document.querySelectorAll('#main-menu ul li:first-child ul')[0].classList.add('menuUp');
         });
 
         $(document).on('click', function (event) {
