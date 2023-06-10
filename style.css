@@ -2148,6 +2148,72 @@ p {
 		border-left: 0px solid transparent;
 	}
 
+	/* Conoce Veracruz */
+
+	.wrapper-conoce-veracruz {
+		height: 85rem;
+	}
+	
+	.title-conoce-veracruz {
+		font-size: 2rem;
+		white-space: nowrap;
+	}
+
+	.align-Center-title-conoce-veracruz {
+		height: 5rem;
+	}
+
+	.conoce-veracruz .box:nth-child(1) {
+		flex-basis: 100%;
+	}
+
+	.conoce-veracruz .box:nth-child(2) {
+		flex-basis: 100%;
+	}
+
+	.mosaico-conoce-veracruz .box-m:nth-child(1) {
+		flex-basis: 50%;
+	}
+
+	.mosaico-conoce-veracruz .box-m:nth-child(2) {
+		flex-basis: 50%;
+	}
+
+	.texto-mosaico h3 {
+		font-size: 15px;
+	}
+
+	.texto-mosaico p {
+		font-size: 12px;
+		padding: 0px 40px 25px 40px;
+	}
+
+	/* Eventos */
+
+	.wrapper-eventos {
+		background-image: url(images/wtcsite_fondocartelera.jpg);
+		background-size: cover;
+		height: 100%;
+		background-position: center;
+	}
+
+	.title-seccion-eventos {
+		font-size: 2rem;
+	}
+
+	.texto-eventos {
+		font-size: 0.8125rem;
+		height: 15rem;
+		text-align: center;
+	}
+
+	.texto-eventos span {
+		font-weight: bold;
+		font-size: 0.8125rem;
+	}
+
+
+
 	
 }
 

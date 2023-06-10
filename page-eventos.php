@@ -11,73 +11,73 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-4 agenda-evento p-3">            
+            <div class="col-md-4 col-6 agenda-evento p-3">            
                 <div class="card-eventos align-Center-column">
                     Enero
                     <a href="<?php echo( home_url() ) ?>/mes?mes=1"><span class="hover-text">Ver eventos</span></a>
                 </div>
             </div>
-            <div class="col-4 agenda-evento p-3">
+            <div class="col-md-4 col-6 agenda-evento p-3">
                 <div class="card-eventos align-Center-column">
                     Febrero
                     <a href="<?php echo( home_url() ) ?>/mes?mes=2"><span class="hover-text">Ver eventos</span></a>
                 </div>
             </div>
-            <div class="col-4 agenda-evento p-3">
+            <div class="col-md-4 col-6 agenda-evento p-3">
                 <div class="card-eventos align-Center-column">
                     Marzo
                     <a href="<?php echo( home_url() ) ?>/mes?mes=3"><span class="hover-text">Ver eventos</span></a>
                 </div>
             </div>
-            <div class="col-4 agenda-evento p-3">
+            <div class="col-md-4 col-6 agenda-evento p-3">
                 <div class="card-eventos align-Center-column">
                     Abril
                     <a href="<?php echo( home_url() ) ?>/mes?mes=4"><span class="hover-text">Ver eventos</span></a>
                 </div>
             </div>
-            <div class="col-4 agenda-evento p-3">
+            <div class="col-md-4 col-6 agenda-evento p-3">
                 <div class="card-eventos align-Center-column">
                     Mayo
                     <a href="<?php echo( home_url() ) ?>/mes?mes=5"><span class="hover-text">Ver eventos</span></a>
                 </div>
             </div>
-            <div class="col-4 agenda-evento p-3">
+            <div class="col-md-4 col-6 agenda-evento p-3">
                 <div class="card-eventos align-Center-column">
                     Junio
                     <a href="<?php echo( home_url() ) ?>/mes?mes=6"><span class="hover-text">Ver eventos</span></a>
                 </div>
             </div>
-            <div class="col-4 agenda-evento p-3">
+            <div class="col-md-4 col-6 agenda-evento p-3">
                 <div class="card-eventos align-Center-column">
                     Julio
                     <a href="<?php echo( home_url() ) ?>/mes?mes=7"><span class="hover-text">Ver eventos</span></a>
                 </div>
             </div>
-            <div class="col-4 agenda-evento p-3">
+            <div class="col-md-4 col-6 agenda-evento p-3">
                 <div class="card-eventos align-Center-column">
                     Agosto
                     <a href="<?php echo( home_url() ) ?>/mes?mes=8"><span class="hover-text">Ver eventos</span></a>
                 </div>
             </div>
-            <div class="col-4 agenda-evento p-3">
+            <div class="col-md-4 col-6 agenda-evento p-3">
                 <div class="card-eventos align-Center-column">
                     Septiembre
                     <a href="<?php echo( home_url() ) ?>/mes?mes=9"><span class="hover-text">Ver eventos</span></a>
                 </div>
             </div>
-            <div class="col-4 agenda-evento p-3">
+            <div class="col-md-4 col-6 agenda-evento p-3">
                 <div class="card-eventos align-Center-column">
                     Octubre
                     <a href="<?php echo( home_url() ) ?>/mes?mes=10"><span class="hover-text">Ver eventos</span></a>
                 </div>
             </div>
-            <div class="col-4 agenda-evento p-3">
+            <div class="col-md-4 col-6 agenda-evento p-3">
                 <div class="card-eventos align-Center-column">
                     Noviembre
                     <a href="<?php echo( home_url() ) ?>/mes?mes=11"><span class="hover-text">Ver eventos</span></a>
                 </div>
             </div>
-            <div class="col-4 agenda-evento p-3">
+            <div class="col-md-4 col-6 agenda-evento p-3">
                 <div class="card-eventos align-Center-column">
                     Diciembre
                     <a href="<?php echo( home_url() ) ?>/mes?mes=12"><span class="hover-text">Ver eventos</span></a>
