@@ -1173,6 +1173,7 @@ p {
 	font-size: 2.625rem;
 	font-style: italic;
 	font-weight: 700;
+	white-space: nowrap;
 }
 
 .hornaments-quienes-somos {
@@ -1955,6 +1956,62 @@ p {
 		padding-left: 0 !important;
 		padding-right: 0 !important;
 	}
+
+	.alignCenterAbsolute {
+		margin-left: 0%;
+	}
+
+	.card-index {
+		height: 260px;
+		width: 100%;
+	}
+
+	.eslogan {
+		font-size: 30px;
+	}
+	
+	.hornament-before {
+		height: 30px;
+		top: 5%;
+		right: 22%;
+	}
+
+	.hornament-after {
+		height: 30px;
+		bottom: 6%;
+		left: 30%;
+	}
+
+	.addrees-footer p {
+	
+		font-size: 0.5rem;
+	
+	}
+
+	.derechos-reservados p {
+		font-size: 0.488rem;
+	}
+
+	/* quienes somos */
+	.wrapper-quienes-somos {
+		height: 42rem;
+	}
+
+	.title {
+		font-size: 2rem;
+	}
+
+	.hornaments-quienes-somos {
+		height: 0.6rem;
+	}
+
+	.wrapper-quienes-somos p {
+		font-family: Montserrat;
+		color: #4D4D4D;
+		font-weight: 500;
+		font-size: 0.8rem;
+	}
+
 }
 
 /*--- <= 767px ---*/
@@ -1964,6 +2021,10 @@ p {
 	.sin-padding-xs {
 		padding-left: 0 !important;
 		padding-right: 0 !important;
+	}
+
+	.wrapper-header a {
+		font-size: 14px;
 	}
 
 
@@ -2008,17 +2069,19 @@ p {
 	}
 
 	.eslogan {
-		font-size: 1.875rem;
+		font-size: 1.4rem;
 	}
 
 	.hornament-before {
-		height: 2.313rem;
-		top: 10%;
+		height: 1.7rem;
+		top: 6%;
 		right: 30%;
 	}
+	
 
 	.hornament-after {
-		height: 2.313rem;
+		height: 1.7rem;
+		bottom: 5%;
 		left: 42%;
 	}
 
@@ -2032,7 +2095,7 @@ p {
 	}
 
 	.logos-footer img {
-		height: 2rem;
+		height: 1.5rem;
 		margin-bottom: 0.625rem;
 	}
 
@@ -2054,6 +2117,10 @@ p {
 		margin-bottom: 0.625rem;
 	}
 
+	.derechos-reservados p {
+		font-size: 0.6rem;
+	}
+
 	/* quienes somos */
 	.title {
 		font-size: 2rem;
@@ -2072,6 +2139,10 @@ p {
 		padding: 0 20px 0 20px;
 	}
 
+	.hornaments-quienes-somos {
+		height: 0rem;
+	}
+
 	/* transparencia */
 	.wrapper-transparencia {
 		height: 100%;
@@ -2088,16 +2159,16 @@ p {
 	/* eslogan */
 
 	.eslogan-other {
-		font-size: 1.875rem;
+		font-size: 1.4rem;
 	}
 
 	/* orange line */
 	.alignInfoLine {
-		font-size: 0.9rem;
+		font-size: 0.7rem;
 	}
 
 	.alignInfoLine a {
-		font-size: 0.9rem;
+		font-size: 0.7rem;
 	}
 
 	/* services */
@@ -2112,6 +2183,14 @@ p {
 	.card-servicios {
 		height: 57rem;
 		margin-bottom: 1.4rem;
+	}
+
+	.title-seccion:before {
+		width: 0%;
+	}
+	
+	.title-seccion:after {
+		width: 0%;
 	}
 
 	/* instalación */
@@ -2148,6 +2227,11 @@ p {
 		border-left: 0px solid transparent;
 	}
 
+	.centrar-texto p {
+		font-size: 14px;
+		padding: 0px 50px 0px 50px;
+	}
+
 	/* Conoce Veracruz */
 
 	.wrapper-conoce-veracruz {
@@ -2180,12 +2264,17 @@ p {
 	}
 
 	.texto-mosaico h3 {
-		font-size: 15px;
+		font-size: 13px;
 	}
 
 	.texto-mosaico p {
-		font-size: 12px;
-		padding: 0px 40px 25px 40px;
+		font-size: 10px;
+		padding: 0px 30px 15px 30px;
+	}
+
+	.texto-mosaico button {
+		font-size: 12px;	
+		width: 90px;
 	}
 
 	/* Eventos */
@@ -2212,6 +2301,20 @@ p {
 		font-size: 0.8125rem;
 	}
 
+	.card-eventos {
+		font-size: 1rem;
+	}
+
+	.title-seccion-eventos:before {
+		width: 0%;
+	}
+	
+	.title-seccion-eventos:after {
+		width: 0%;
+	}
+	
+	
+
 
 
 	
@@ -2233,6 +2336,10 @@ p {
 	/* <= device less 599px*/
 	.hidden-less-600 {
 		display: none !important;
+	}
+
+	.eslogan {
+		font-size: 1.4rem;
 	}
 
 }
