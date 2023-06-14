@@ -98,15 +98,15 @@
       <div class="wrapper-header">
         <div class="container">
           <div class="row">
-            <div class="col-md">
+            <div class="col-md col-6">
               <?php if(isset($general_settings['phone']) && !empty($general_settings['phone'])){ ?>
                   <a href="tel:<?php echo $newPhone ?>" >
                     Tel. <?php echo $general_settings['phone']?>
                   </a>
                 <?php }?>
             </div>
-            <div class="col-md-5 col-2"></div>
-            <div class="col-md alignLogos">
+            <div class="col-md-5 d-none d-sm-block"></div>
+            <div class="col-md col-6 alignLogos">
             <?php if(isset($branding['twitter-url']) && !empty($branding['twitter-url'])){ ?>
                 <a href="<?php echo $branding['facebook-url']; ?>" target="_blank">
                   <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/twitter-vino.png" alt="logo twiter">

@@ -6,6 +6,11 @@ $themename = "wtc-veracruz-2023";
 require_once( get_stylesheet_directory().'/theme-options/theme-options.php' );
 
 /************************************************/
+/* custom-meta                                  */
+/************************************************/
+require_once(get_stylesheet_directory().'/dashboard/custom-post-meta.php');
+
+/************************************************/
 /* Functions script and style                   */
 /************************************************/
 function get_theme_scripts(){
@@ -230,3 +235,75 @@ function obtenerNombreMes($numeroMes) {
         return 'Mes inválido';
     }
 }
+
+/*************************************/
+/*             Eventos               */
+/*************************************/
+
+function init_custom_type_eventos(){
+    $labels = array(
+        'name' => 'Nuevo Evento',
+        'singular_name' => 'Evento',
+        'add_new' => 'Agregar Evento',
+        'add_new_item' => 'Agregar Evento',
+        'edit_item' => 'Editar Evento',
+        'new_item' => 'Nueva Evento',
+        'view_item' => 'Ver Evento',
+        'search_items' => 'Buscar Evento',
+        'not_found' =>  'No se encontraron Evento',
+        'not_found_in_trash' => 'No hay Evento en la papelera',
+        'parent_item_colon' => ''
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => true,
+        'menu_position' => null,
+        'menu_icon' => 'dashicons-tickets-alt',
+        'menu_icon_background' => '#000000',
+        // 'supports' => array('title', 'editor'),
+        'supports' => array('title'),
+        'has_archive' =>true
+    );
+    
+    register_post_type('eventos-wtcv',$args);
+}
+add_action('init', 'init_custom_type_eventos');
+
+/* search manuals and IPL's
+============================================= */
+function get_search_ajax2(){
+    wp_reset_query();
+    $search_param = $_POST['s'];
+    $args = array(
+        'post_type' => 'eventos-wtcv',
+        'post_status' => array('publish'),
+        'orderby' => 'date',
+        'order'   => 'ASC',
+        's' => $search_param,
+        'posts_per_page' => -1
+    );
+
+    $cont = 0;
+    $query = new WP_Query($args);
+    if ( $query->have_posts() ){
+        while ($query->have_posts()){
+            $query->the_post();
+            $data_array[$cont]['title'] = get_the_title();
+            $data_array[$cont]['eventos-wtcv'] = get_post_meta($query->post->ID, 'eventos-wtcv', true);
+            // $data_array[$cont]['titulo_plan'] = get_post_meta($query->post->ID, 'titulo-plan', true);
+
+            $cont++;
+        }
+    }
+    echo json_encode($data_array);
+    wp_reset_query();
+    die();
+}
+add_action('wp_ajax_get_search_ajax', 'get_search_ajax2');
+add_action('wp_ajax_nopriv_get_search_ajax', 'get_search_ajax2');

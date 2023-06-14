@@ -807,6 +807,7 @@ p {
 	/* Color de fondo de los submenús */
 	padding: 0;
 	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+	z-index: 999;
 }
 
 #main-menu ul ul li {
@@ -2012,6 +2013,45 @@ p {
 		font-size: 0.8rem;
 	}
 
+	/* Instalaciones */
+	.eslogan-other {
+		font-size: 35px;
+	}
+
+	/* servicios */
+	.wrapper-servicios {
+		height: 80rem;
+	}
+
+	.card-servicios {
+		height: 70rem;
+	}
+
+	.services-description {
+		padding: 15px 15px 0px 15px;
+	}
+
+	/* Eventos */
+	.card-eventos {
+		font-size: 1.5rem;
+	}
+
+	.texto-eventos p {
+		text-align: center;
+	}
+
+	/* Conoce veracruz */
+
+	.texto-mosaico h3 {
+		font-size: 16px;
+	}
+
+	.texto-mosaico p {
+		
+		font-size: 11px;
+		padding: 0px 0px 25px 0px;
+	}
+
 }
 
 /*--- <= 767px ---*/
@@ -2165,6 +2205,7 @@ p {
 	/* orange line */
 	.alignInfoLine {
 		font-size: 0.7rem;
+		align-items: baseline;
 	}
 
 	.alignInfoLine a {
@@ -2313,6 +2354,18 @@ p {
 		width: 0%;
 	}
 	
+	.title-seccion-mes:before {
+		width: 0%;
+	}
+
+	.title-seccion-mes:after {
+		width: 0%;
+	}
+
+	.text-mes {
+		text-align: center;
+		margin-top: 30px;
+	}
 	
 
 
@@ -2340,6 +2393,21 @@ p {
 
 	.eslogan {
 		font-size: 1.4rem;
+	}
+
+	.heightLogo {
+		height: 2.125rem;
+	}
+
+	.derechos-reservados p {
+		font-size: 0.5rem;
+	}
+
+	.text-mes {
+		font-family: Montserrat;
+		color: #4D4D4D;
+		text-align: center;
+		margin-top: 55px;
 	}
 
 }

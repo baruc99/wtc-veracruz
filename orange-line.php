@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col alignInfoLine">
                 <?php if(isset($general_settings['phone']) && !empty($general_settings['phone'])){ ?>
-                    <a href="href=tel:<?php echo $newPhone ?>">
+                    <a href="tel:<?php echo $newPhone ?>" >
                         Tel.<?php echo $general_settings['phone']?>
                     </a>
                 <?php }?>
