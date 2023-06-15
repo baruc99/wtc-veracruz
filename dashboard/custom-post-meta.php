@@ -1,5 +1,24 @@
 <?php
 
+function add_admin_scripts_post( $hook ) {
+    global $post;
+    $id = $post->ID;
+    $slug = basename( get_permalink( $id ) );
+    if ( $hook == 'post-new.php' || $hook == 'post.php' ) {
+        if ( 'eventos-wtcv' === $post->post_type) {
+            wp_enqueue_style('bootstrap-grid', get_stylesheet_directory_uri().'/dashboard/css/bootstrap-grid.css' );
+            wp_enqueue_style('style-medios', get_stylesheet_directory_uri().'/dashboard/style-medios.css' );
+
+            wp_enqueue_script( 'thickbox' );
+            wp_enqueue_style('thickbox');
+            wp_enqueue_script('media-upload');
+            
+            wp_enqueue_script('script-function', get_stylesheet_directory_uri().'/dashboard/js/script-backend.js' );
+        }
+    }
+}
+add_action( 'admin_enqueue_scripts', 'add_admin_scripts_post', 10, 1 );
+
 /**********************************************
  * Add custom-meta - nuevo plan de vacunación *
  **********************************************/

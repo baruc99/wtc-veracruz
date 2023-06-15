@@ -75,11 +75,47 @@
                                        } else if (cruzaCambioMes($dateStart, $dateEnd)) {
                                            if ($mesStart == $mes) {
                                                mostrarEvento($primerDiaMes, $tipoEvento, $place);
-                                           } else if ($mesEnd == $mes) {
-                                               mostrarEvento("01 - " . $diaEnd, $tipoEvento, $place);
+                                           } else if ($mesEnd == $mes ) {
+                                                if( $mesEnd != "01" ){
+
+                                                    mostrarEvento("01 - " . $diaEnd, $tipoEvento, $place);
+                                                }
                                            }
                                        }
                                    }
+                               }
+                               else if( ( $year > $anioActual )  ){
+                                    if ($year !== $lastYear) {
+                                        if( ( $mesStart == $mes || $mesEnd == $mes ) ){                                    
+                        ?>
+    
+                                        <h3 class="title-seccion-mes"><?php echo $year ?></h3>
+                        <?php
+                                        }
+                                        $lastYear = $year; // Actualizar el último año impreso
+                                        if (!empty($dateStart) && empty($dateEnd)) {
+                                            if ($mesEventoPublicado == $mes) {
+                                                mostrarEvento($diaStart, $tipoEvento, $place);
+                                            }
+                                        } else {
+                                            if ($mesEventoPublicado == $mes && $mesStart == $mesEnd) {
+                                                if ($diaEnd == $diaStart) {
+                                                    mostrarEvento($diaStart, $tipoEvento, $place);
+                                                } else {
+                                                    mostrarEvento($periodo, $tipoEvento, $place);
+                                                }
+                                            } else if (cruzaCambioMes($dateStart, $dateEnd)) {
+                                                if ($mesStart == $mes) {
+                                                    if( $mesStart != "12" ){
+                                                    mostrarEvento($primerDiaMes, $tipoEvento, $place);
+                                                    }
+                                                } else if ($mesEnd == $mes) {
+                                                    mostrarEvento("01 - " . $diaEnd, $tipoEvento, $place);
+                                                }
+                                            }
+                                        }
+
+                                    }
                                }
                                
                             }
@@ -87,28 +123,6 @@
                         }
                     }
             ?>
-
-            <h1><?php// print_r($uniqueYears); ?></h1>
-
-        <!--  -->
-    
-
-        <!-- <div class="row mb-5">
-            <div class="col-md-2 align-Center">
-                <div class="imgMes">
-                    <img src="<?php echo get_template_directory_uri();?>/images/mes/calendario.png" alt="centro de trabajo">
-                </div>
-            </div>
-            <div class="col-md-4 align-Center">
-                <div class="card-dias-mes align-Center">22</div>
-            </div>
-            <div class="col-md-6 align-start">
-                <div class="text-mes">
-                    <h3>CONCIERTO MANUEL JOSÉ</h3>
-                    <p>Público - Salones ULÚA 3 Y 4</p>
-                </div>
-            </div>
-        </div> -->
     </div>
         <div class="altura-eventos-fin"></div>
 </div>

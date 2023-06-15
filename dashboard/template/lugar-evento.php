@@ -17,7 +17,8 @@
     </div>
     <div class="col-md-12">
         <h3>Sala </h3>
-        <textarea id="place" name="place" rows="1" cols="70" > <?php echo $place; ?> </textarea>
+        <!-- <textarea id="place" name="place" rows="1" cols="70" class="form-control" > <?php// echo $place; ?> </textarea> -->
+        <input type="text" class="form-control" id="place" name="place" value="<?php echo $place; ?>">
 
         <!-- <h3>Direccion del lugar </h3>
         <textarea id="address" name="address" rows="5" cols="100" > <?php// echo $address; ?> </textarea> -->

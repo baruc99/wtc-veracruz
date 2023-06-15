@@ -7,8 +7,8 @@
 ?>
 
 <h3>Dias del evento</h3>
-<div class="row p-3" style="display: flex; flex-direction: row; justify-content: space-around;">
-    <div class="col-md-6">
+<div class="row p-3" >
+    <div class="col-md-6 mb-2">
         <label for="meeting-time">Inicio:</label>
         <input type="date" id="dateStart" name="dateStart" value="<?php echo $dateStart; ?>" >
 
@@ -18,6 +18,7 @@
         <input type="date" id="dateEnd" name="dateEnd" value="<?php echo $dateEnd; ?>" >
     </div>
 </div>
+
 
 <!-- <h3>Horario de atención</h3>
 <div class="row p-3">
