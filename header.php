@@ -105,7 +105,7 @@
                   </a>
                 <?php }?>
             </div>
-            <div class="col-md-5 d-none d-sm-block"></div>
+            <div class="col-md-2 d-none d-sm-block"></div>
             <div class="col-md col-6 alignLogos">
             <?php if(isset($branding['twitter-url']) && !empty($branding['twitter-url'])){ ?>
                 <a href="<?php echo $branding['facebook-url']; ?>" target="_blank">

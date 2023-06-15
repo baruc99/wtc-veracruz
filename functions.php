@@ -148,6 +148,19 @@ function obtenerMes( $fechaInicio ){
      return $monthI;
 }
 
+function obtenerYear( $fechaInicio ){
+   
+    $fechaI = $fechaInicio;
+ 
+     $fechaNuevaInicio = explode( '-', $fechaI );
+ 
+     $dayI    = $fechaNuevaInicio[2];
+     $monthI  = $fechaNuevaInicio[1];
+     $yearI   = $fechaNuevaInicio[0];
+     
+     return $yearI;
+}
+
 function obtenerDia( $fechaInicio ){
    
     $fechaI = $fechaInicio;
@@ -199,6 +212,44 @@ function cruzaCambioMes($diaInicio, $diaFin) {
     
     return $mesInicio !== $mesFin;
 }
+
+function mostrarEvento($dia, $tipoEvento, $place){
+    ?>
+    <div class="row mb-5">
+        <div class="col-md-2 align-Center">
+            <div class="imgMes">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/mes/calendario.png" alt="centro de trabajo">
+            </div>
+        </div>
+        <div class="col-md-4 align-Center">
+            <div class="card-dias-mes align-Center"><?php echo $dia; ?></div>
+        </div>
+        <div class="col-md-6 align-start">
+            <div class="text-mes">
+                <h3><?php the_title(); ?></h3>
+                <p><?php echo $tipoEvento; ?> - <?php echo $place; ?></p>
+            </div>
+        </div>
+    </div>
+    <?php
+}
+
+function obtenerAnioSinRepetir($fecha1, $fecha2 = null) {
+    $years = array();
+    
+    $yearInicio = date('Y', strtotime($dateStart));
+    $years[] = $yearInicio;
+    
+    $yearFin = date('Y', strtotime($dateEnd));
+    if ($yearFin > $yearInicio) {
+        $years[] = $yearFin;
+    }
+    
+    $years_únicos = array_unique($years);
+    
+    return $years_únicos;
+}
+
 
 
 /************************************************/
