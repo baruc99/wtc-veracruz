@@ -6,15 +6,15 @@
     
 ?>
 
-<h3>Dias de vacunacion</h3>
-<div class="row p-3">
+<h3>Dias del evento</h3>
+<div class="row p-3" style="display: flex; flex-direction: row; justify-content: space-around;">
     <div class="col-md-6">
-        <label for="meeting-time">Inicio del perido:</label>
+        <label for="meeting-time">Inicio:</label>
         <input type="date" id="dateStart" name="dateStart" value="<?php echo $dateStart; ?>" >
 
     </div>
     <div class="col-md-6">
-        <label for="meeting-time">Fin del perido:</label>
+        <label for="meeting-time">Fin:</label>
         <input type="date" id="dateEnd" name="dateEnd" value="<?php echo $dateEnd; ?>" >
     </div>
 </div>

@@ -13,13 +13,13 @@ add_action( 'add_meta_boxes', 'add_custom_meta_beginning_date' );
 function meta_box_beginning_date(){ 
 	global $post;
 	echo '<input type="hidden" name="meta_noncename" id="meta_noncename" value="'.wp_create_nonce(plugin_basename(__FILE__)).'" />';
-	get_template_part( 'dashboard/template/nuevo', 'plan-vacunacion' );
+	get_template_part( 'dashboard/template/nuevo', 'evento' );
 }
 
 function meta_box_beginning_place(){ 
 	global $post;
 	echo '<input type="hidden" name="meta_noncename" id="meta_noncename" value="'.wp_create_nonce(plugin_basename(__FILE__)).'" />';
-	get_template_part( 'dashboard/template/lugar', 'plan-vacunacion' );
+	get_template_part( 'dashboard/template/lugar', 'evento' );
 }
 
 function meta_box_save_eventos_wtcv( $post_id, $post ){
@@ -31,12 +31,12 @@ function meta_box_save_eventos_wtcv( $post_id, $post ){
 	$type=$_POST['post_type'];  
 	$meta = array();
 	switch($type){
-		case 'plan-vacunacion-2023':
+		case 'eventos-wtcv':
 			$meta['dateStart'] 	= $_POST['dateStart'];
 			$meta['dateEnd'] 	= $_POST['dateEnd'];
 			$meta['hourStart'] 	= $_POST['hourStart'];
 			$meta['hourEnd'] 	= $_POST['hourEnd'];
-			$meta['municipio'] 	= $_POST['municipio'];
+			$meta['tipoEvento'] = $_POST['tipoEvento'];
 			$meta['place'] 		= $_POST['place'];
 			$meta['address'] 	= $_POST['address'];
 			

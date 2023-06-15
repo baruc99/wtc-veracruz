@@ -134,6 +134,73 @@ function inputTelephoneFormat($num){
     return $newNum;
 }
 
+
+function obtenerMes( $fechaInicio ){
+   
+    $fechaI = $fechaInicio;
+ 
+     $fechaNuevaInicio = explode( '-', $fechaI );
+ 
+     $dayI    = $fechaNuevaInicio[2];
+     $monthI  = $fechaNuevaInicio[1];
+     $yearI   = $fechaNuevaInicio[0];
+     
+     return $monthI;
+}
+
+function obtenerDia( $fechaInicio ){
+   
+    $fechaI = $fechaInicio;
+ 
+     $fechaNuevaInicio = explode( '-', $fechaI );
+ 
+     $dayI    = $fechaNuevaInicio[2];
+     $monthI  = $fechaNuevaInicio[1];
+     $yearI   = $fechaNuevaInicio[0];
+     
+     return $dayI;
+}
+
+function calcularPeriodo($fechaInicio, $fechaFin) {
+    
+    $fechaI = $fechaInicio;
+ 
+    $fechaNuevaInicio = explode( '-', $fechaI );
+ 
+    $dayI    = $fechaNuevaInicio[2];
+    $monthI  = $fechaNuevaInicio[1];
+    $yearI   = $fechaNuevaInicio[0];
+
+    $fechaF = $fechaFin;
+ 
+    $fechaNuevaFin = explode( '-', $fechaF );
+ 
+    $dayF    = $fechaNuevaFin[2];
+    $monthF  = $fechaNuevaFin[1];
+    $yearF   = $fechaNuevaFin[0];
+
+    $periodo = $dayI . " - " . $dayF;
+
+    return $periodo;
+     
+}
+
+function obtenerDiaYUltimoDia($dia, $mes) {
+    $ultimoDia = date('t', strtotime(date('Y') . '-' . $mes . '-01')); // Obtener el último día del mes
+    
+    $resultado = $dia . ' - ' . $ultimoDia;
+    
+    return $resultado;
+}
+
+function cruzaCambioMes($diaInicio, $diaFin) {
+    $mesInicio = date('m', strtotime($diaInicio));
+    $mesFin = date('m', strtotime($diaFin));
+    
+    return $mesInicio !== $mesFin;
+}
+
+
 /************************************************/
 /* Formulario de contacto para todos los sitios */
 /************************************************/
