@@ -30,3 +30,24 @@ var Custom_meta = {
 	}
 } 
 jQuery( document ).ready(Custom_meta);
+
+
+jQuery( document ).ready(function() {
+    Custom_meta;
+    
+    // Agregar validación de fecha final no menor que fecha inicial
+    jQuery('#dateStart, #dateEnd').change(function() {
+        var dateStartValue = jQuery('#dateStart').val();
+        var dateEndValue = jQuery('#dateEnd').val();
+        
+        if (dateStartValue && dateEndValue) {
+            var startDate = new Date(dateStartValue);
+            var endDate = new Date(dateEndValue);
+            
+            if (endDate < startDate) {
+                alert('La fecha final no puede ser menor que la fecha inicial.');
+                jQuery('#dateEnd').val('');
+            }
+        }
+    });
+});

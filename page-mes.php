@@ -89,7 +89,7 @@
                                         if( ( $mesStart == $mes || $mesEnd == $mes ) ){                                    
                         ?>
     
-                                        <h3 class="title-seccion-mes"><?php echo $year ?></h3>
+                                        <h3 class="title-seccion-mes mb-4"><?php echo $year ?></h3>
                         <?php
                                         }
                                         $lastYear = $year; // Actualizar el último año impreso
