@@ -24,17 +24,17 @@
           </div>
           <div class="col-md-2  alignLogos">
             <?php if(isset($branding['twitter-url']) && !empty($branding['twitter-url'])){ ?>
-              <a href="https://twitter.com/home?lang=es" target="_blank">
+              <a href="<?php echo $branding['twitter-url']; ?>" target="_blank">
                 <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/twitter-naranja.png" alt="logo twiter">
               </a>
             <?php } ?>
             <?php if(isset($branding['facebook-url']) && !empty($branding['facebook-url'])){ ?>
-              <a href="https://www.facebook.com/" target="_blank">
+              <a href="<?php echo $branding['facebook-url']; ?>" target="_blank">
                 <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/facebook-naranja.png" alt="logo facebook">
               </a>
             <?php }?>
             <?php if(isset($branding['instagram-url']) && !empty($branding['instagram-url'])){ ?>
-              <a href="https://www.instagram.com/" target="_blank">
+              <a href="<?php echo $branding['instagram-url']; ?>" target="_blank">
                 <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/instagram-naranja.png" alt="logo instagram">                  
               </a>
             <?php }?> 

@@ -28,7 +28,10 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-
+    <!-- tipografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
 
     <!-- FB / 560x560 -->
@@ -108,7 +111,7 @@
             <!-- <div class="col-md-2 d-none d-sm-block"></div> -->
             <div class="col-md-6 col-6 alignLogos">
             <?php if(isset($branding['twitter-url']) && !empty($branding['twitter-url'])){ ?>
-                <a href="<?php echo $branding['facebook-url']; ?>" target="_blank">
+                <a href="<?php echo $branding['twitter-url']; ?>" target="_blank">
                   <img class="logo-header" src="<?php echo get_template_directory_uri();?>/images/social-red/twitter-vino.png" alt="logo twiter">
                 </a>
               <?php }?>
