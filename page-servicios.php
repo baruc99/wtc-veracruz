@@ -13,7 +13,6 @@
                     <div class="img-card-servicios">
                         <img src="<?php echo get_template_directory_uri();?>/images/servicios/CentroNegocios.png" alt="Centro de Negocios">
                     </div>
-                
                     <div class="alignCenterAbsoluteServicios">
                         <div class="imgCardServicios">
                             <img src="<?php echo get_template_directory_uri();?>/images/centro-trabajo.png" alt="centro de trabajo">

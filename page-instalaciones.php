@@ -15,7 +15,7 @@
                     <div class="flecha-izquierda centrar-fecha-izquierda"></div>
                 </div>
             </div>
-            <div class="box-instalaciones centrar-texto" style=" background: #EC945E">
+            <div class="box-instalaciones centrar-texto">
                 <p>SALONES TAJÍN</p>
             </div>
         </div>
@@ -26,13 +26,13 @@
                     
                 </div>
             </div>
-            <div class="box-instalaciones centrar-texto" style=" background: #EC945E">
+            <div class="box-instalaciones centrar-texto">
                 <p> ÁREAS COMUNES</p>
             </div>
         </div>
         <div class="hover-instalaciones">
-        <div class="box-instalaciones centrar-texto" style=" background: #EC945E">
-            <p><span>SALONES ULÚA Y OLMECA</span></p>
+        <div class="box-instalaciones centrar-texto">
+            <p>SALONES ULÚA Y OLMECA</p>
         </div>
         <div class="box-instalaciones">
             <div class="full-size img-salones" style="z-index: 0;position: relative;">
@@ -45,7 +45,7 @@
         </div>
         </div>
         <div class="hover-instalaciones">
-            <div class="box-instalaciones centrar-texto" style=" background: #EC945E">
+            <div class="box-instalaciones centrar-texto">
                 <p>LOCALES COMERCIALES</p>
             </div>
             <div class="box-instalaciones">

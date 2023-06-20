@@ -1,3 +1,8 @@
+<?php
+    $hoteles = get_post_meta($post->ID, 'hoteles', true);
+    $quehacer = get_post_meta($post->ID, 'quehacer', true);
+?>
+
 <?php get_header(); ?>
  <div class="wrapper-conoce-veracruz textura">
     <div class="container">
@@ -20,7 +25,9 @@
                     <div class="height-mosailco texto-mosaico">
                         <h3>Hoteles cercanos A WTC</h3>
                         <p>Para aprovechar el tiempo, conoce la oferta de hoteles cercanos a WTC Veracruz y descubre sus ofertas.</p>
-                        <button>ver más</button>
+                        <a href="<?php echo $hoteles ?>" target="_blank">
+                            <button>ver más</button>
+                        </a>
                     </div>
                     <div class="height-mosailco">
                         <!-- <div class="full-size img-faroVC" style="z-index: 0;position: relative;"></div> -->
@@ -35,7 +42,9 @@
                     <div class="height-mosailco texto-mosaico">
                         <h3>¿Qué hacer en Veracruz?</h3>
                         <p>Estos son los destinos turísticos más cercanos al WTC Veracruz. El estado tiene algo para ti.</p>
-                        <button>ver más</button>
+                        <a href="<?php echo $quehacer ?>" target="_blank">
+                            <button>ver más</button>
+                        </a>
                     </div>
                 </div>
             </div>
