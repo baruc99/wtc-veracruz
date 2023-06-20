@@ -19,7 +19,7 @@
         <div class="hover-instalaciones">
             <div class="box-instalaciones">
                 <div class="full-size img-tajin" style="z-index: 0;position: relative;">
-                    <div class="overlay">
+                    <div class="overlay hover-style-text">
                         <?php if( isset($tajin) && !empty($tajin) ){ ?>
                             <p> <?php echo $tajin ?> </p>
                         <?php } ?>
@@ -34,7 +34,7 @@
         <div class="hover-instalaciones">
             <div class="box-instalaciones">
                 <div class="full-size img-area" style="z-index: 0;position: relative;">
-                    <div class="overlay">
+                    <div class="overlay hover-style-text">
                         <?php if( isset($comun) && !empty($comun) ){ ?>
                             <p> <?php echo $comun ?> </p>
                         <?php } ?>
@@ -53,7 +53,7 @@
         </div>
         <div class="box-instalaciones">
             <div class="full-size img-salones" style="z-index: 0;position: relative;">
-               <div class="overlay">
+               <div class="overlay hover-style-text">
                     <?php if( isset($ulua) && !empty($ulua) ){ ?>
                         <p> <?php echo $ulua ?> </p>
                     <?php } ?>    
@@ -68,7 +68,7 @@
             </div>
             <div class="box-instalaciones">
                 <div class="full-size img-locales" style="z-index: 0;position: relative;">
-                    <div class="overlay">
+                    <div class="overlay hover-style-text">
                         <?php if( isset($locales) && !empty($locales) ){ ?>
                             <p> <?php echo $locales ?> </p>
                         <?php } ?>

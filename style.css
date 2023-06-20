@@ -1687,6 +1687,26 @@ p {
     background-color: rgba(0, 0, 0, 0.5); /* Color y opacidad de la capa */
 }
 
+.hover-style-text{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 45px;
+}
+
+.hover-style-text p {
+	color: transparent;
+}
+
+.hover-instalaciones:hover .hover-style-text p {
+	color: #fff;
+	font-size: 1.25rem;
+	text-align: center;
+	font-family: Montserrat;
+	font-weight: 700;
+	font-style: italic;
+}
+
 
 /**
  * eventos
