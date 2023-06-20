@@ -1629,22 +1629,23 @@ p {
 	background-position: center;
 }
 
-.centrar-texto {
+.centrar-texto{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 	background: #EC945E
 }
-.centrar-texto:hover {
+.hover-instalaciones:hover .centrar-texto {
 	background: #FFFFFF
 }
-.centrar-texto:hover  ~ .flecha-derecha {
-	border-left: 40px solid #fff;
+
+.hover-instalaciones:hover .flecha-izquierda{
+	border-right: 40px solid #fff;
 }
 
-.centrar-texto:hover  ~  .flecha-izquierda {
-	border-right: 40px solid #fff;
+.hover-instalaciones:hover .flecha-derecha {
+	border-left: 40px solid #fff;
 }
 
 
@@ -1656,7 +1657,7 @@ p {
 	font-style: italic;
 	padding: 0px 70px 0px 70px;
 }
-.centrar-texto:hover p {
+.hover-instalaciones:hover p {
 	color: #EC945E;
 	
 }
@@ -1671,11 +1672,19 @@ p {
     display: flex;
 }
 
-
 .hover-instalaciones:hover .shadow {
 	background-color: rgb(0 0 0 / 56%);
 	height: 100%;
 	width: 100%;
+}
+
+.hover-instalaciones:hover .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color y opacidad de la capa */
 }
 
 

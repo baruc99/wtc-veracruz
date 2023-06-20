@@ -43,12 +43,9 @@ $(document).ready(function () {
     // });
 
     var breakpoint = window.matchMedia("(max-width: 768px)");
+    var url = window.location.pathname;
 
     breakpoint.addListener(handleBreakpointChange);  // Registra el listener inicial
-
-    // Llama a la función handleBreakpointChange una vez para comprobar el estado inicial
-    handleBreakpointChange(breakpoint);
-
 
 
 });
@@ -65,10 +62,10 @@ function handleBreakpointChange(event) {
         console.log("Estás en el breakpoint de 768px o menos.");
 
         var firtsLi = document.querySelector('#main-menu ul li:first-child');
-        
+
 
         document.querySelector('#main-menu ul li:first-child a').href = '#';
-        
+
 
         firtsLi.addEventListener('click', function (event) {
             // event.preventDefault();
@@ -84,7 +81,7 @@ function handleBreakpointChange(event) {
             }
         });
 
-        
+
 
     }
     else {
