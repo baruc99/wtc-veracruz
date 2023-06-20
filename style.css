@@ -2302,7 +2302,7 @@ p {
 
 	.hover-instalaciones {
 		width: 100%;
-		margin: 1rem
+		margin: 1rem 0;
 	}
 
 	.flecha-izquierda {
@@ -2324,6 +2324,18 @@ p {
 	.centrar-texto p {
 		font-size: 14px;
 		padding: 0px 50px 0px 50px;
+	}
+
+	.hover-instalaciones:hover .hover-style-text p {
+		font-size: 0.6rem;
+	}
+
+	.hover-instalaciones:hover .flecha-derecha {
+		border-left: 40px solid transparent;
+	}
+
+	.hover-instalaciones:hover .flecha-izquierda {
+		border-right: 40px solid transparent;
 	}
 
 	/* Conoce Veracruz */
