@@ -278,7 +278,7 @@
         </div>
     </div>
 </div>
-<div class="form-group">
+<!-- <div class="form-group">
     <div class="row">
         <div class="col-lg-3 label-option">
             <label for="youtube-url" class="control-label">Youtube Url</label>
@@ -288,10 +288,10 @@
             </span>
         </div>
         <div class="col-lg-9">
-            <input class="form-control" id="youtube-url" name="youtube-url" value="<?php echo $branding["youtube-url"]; ?>">
+            <input class="form-control" id="youtube-url" name="youtube-url" value="<?php// echo $branding["youtube-url"]; ?>">
         </div>
     </div>
-</div>
+</div> -->
 <div class="form-group">
     <div class="row">
         <div class="col-lg-3 label-option">
