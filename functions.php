@@ -260,8 +260,9 @@ function sendmail(){
     $configuration_theme = get_option("themeoption_configuration_general");
     $branding = get_option("themeoption_branding");
     
-    if( !empty($data_array['config']['email_cc']) && isset($data_array['config']['email_cc'])){
-        $email_cc = $data_array['config']['email_cc'];
+    if( !empty($data_array["email"]) && isset($data_array["email"])){
+        $email_cc = $data_array["email"];
+
     }else{
         $email_cc = $configuration_theme['e-mail'];    
     }
@@ -296,7 +297,7 @@ function sendmail(){
     $formvars['html'] = $html;
 
     //load template
-    $body = file_get_contents(get_stylesheet_directory_uri().'/template-newsletter/'.$template.'.html');
+    $body = file_get_contents(get_stylesheet_directory_uri().'/template-newsletter/template_mail.html');
 
     foreach ($formvars as $key => $value) {
         if(isset($formvars[$key]) && !empty($formvars[$key])){
@@ -312,14 +313,18 @@ function sendmail(){
     if($mailer->Send()){
         $result = array(
             "estatus" => "success",
-            "mensaje" => "Gracias por contactarnos, nosotros nos pondremos en contacto contigo"
+            "mensaje" => "Gracias por contactarnos, nosotros nos pondremos en contacto contigo",
+            "data" => $data_array,
+            "email_cc" => $email_cc
         );
     }else{
         $error = "Mailer Error: " . $mailer->ErrorInfo; // for testing
         $result = array(
             "estatus" => "danger",
             "mensaje" => "Hubo un problema intentelo más tarde.",
-            "code_error" => $error
+            "code_error" => $error,
+            "data" => $data_array,
+            "email_cc" => $email_cc
         );
     }
     

@@ -11,6 +11,9 @@ $(document).ready(function () {
             formData.append('permalink', wpurl_ajax.permalink );
             var self = $(form);
 
+            console.log( formData );
+            console.log( self );
+
             $.ajax({
                 url: wpurl_ajax.templateUrl,
                 type: "POST",
@@ -22,6 +25,7 @@ $(document).ready(function () {
                 },
                 success: function(data){
                     data = JSON.parse(data);
+                    console.log( data );
                     $($(form)).prepend("<span class='d-block alert alert-"+data.estatus+"'>"+data.mensaje+"</span>");
                     $($(form)).each (function(){
                         this.reset();
