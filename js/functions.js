@@ -11,9 +11,6 @@ $(document).ready(function () {
             formData.append('permalink', wpurl_ajax.permalink );
             var self = $(form);
 
-            console.log( formData );
-            console.log( self );
-
             $.ajax({
                 url: wpurl_ajax.templateUrl,
                 type: "POST",

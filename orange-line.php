@@ -12,8 +12,10 @@
                         Tel.<?php echo $general_settings['phone']?>
                     </a>
                 <?php }?>
-                <?php if(isset($general_settings['e-mail']) && !empty($general_settings['e-mail'])){ ?>    
-                    <p><?php echo $general_settings['e-mail']?></p>
+                <?php if(isset($general_settings['e-mail']) && !empty($general_settings['e-mail'])){ ?>
+                    <a href="mailto:<?php echo $general_settings['e-mail']?>">
+                        <?php echo $general_settings['e-mail']?>
+                    </a>
                 <?php }?>
             </div>
         </div>

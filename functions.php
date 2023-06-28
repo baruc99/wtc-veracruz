@@ -269,18 +269,28 @@ function sendmail(){
     
     $template = $data_array['config']['template_name'];
     $subject = $data_array['config']['subject'];
-    $fromname = "Recibio un nuevo mensaje de ...";
+    $fromname = "Recibió un nuevo mensaje de ...";
     
     unset($data_array['config']);
     $formvars = $data_array;
     
     $formvars['logo-principal'] = $branding['logo-principal'];
+    $formvars['permalink'] =  home_url();
     
     require get_template_directory().'/lib/phpmailer/PHPMailerAutoload.php';
 
     $mailer = new PHPMailer();
 
-    $mailer->AddAddress(''.$email_cc.'');
+    $mailer->IsSMTP();
+    $mailer->Host = "smtp.gmail.com"; 
+    $mailer->Username = 'veracruz.oficial@gmail.com';
+    $mailer->Password = 'kghltvfwekwadtaz';
+    $mailer->SMTPSecure = 'ssl';
+    //Whether to use SMTP authentication
+    $mailer->SMTPAuth = true;
+    $mailer->Port = 465; // Puerto a utilizar
+
+    $mailer->AddAddress("barucgs@gmail.com"); // poner correo del administrador 
     $mailer->Subject = $subject;
     $mailer->From = "no-responder@mail.com";
     $mailer->FromName = $fromname;
@@ -297,7 +307,8 @@ function sendmail(){
     $formvars['html'] = $html;
 
     //load template
-    $body = file_get_contents(get_stylesheet_directory_uri().'/template-newsletter/template_mail.html');
+    
+    $body = file_get_contents(get_stylesheet_directory_uri().'/template-newsletter/'.$template.'.html');
 
     foreach ($formvars as $key => $value) {
         if(isset($formvars[$key]) && !empty($formvars[$key])){
@@ -306,16 +317,17 @@ function sendmail(){
             $body = str_replace('{' . $key . '}', '-----' , $body);
         }
     }
+
     $mailer->CharSet = 'utf-8';
-    $mailer->MsgHTML($body);
     $mailer->IsHTML(true);
+    $mailer->MsgHTML($body);
 
     if($mailer->Send()){
         $result = array(
             "estatus" => "success",
-            "mensaje" => "Gracias por contactarnos, nosotros nos pondremos en contacto contigo",
+            "mensaje" => "Gracias por contactarnos, recibirá un correo de confirmación. Nosotros nos pondremos en contacto.",
+            // "mensaje" => "Gracias por contactarnos, nosotros nos pondremos en contacto contigo",
             "data" => $data_array,
-            "email_cc" => $email_cc
         );
     }else{
         $error = "Mailer Error: " . $mailer->ErrorInfo; // for testing
@@ -324,7 +336,68 @@ function sendmail(){
             "mensaje" => "Hubo un problema intentelo más tarde.",
             "code_error" => $error,
             "data" => $data_array,
-            "email_cc" => $email_cc
+            "email_cc" => $email_cc,
+            "formvars" => $formvars,
+            "body" => $body,
+            "url" => $url,
+            "template" => $template,
+        
+        );
+    }
+
+    // Información del segundo correo (Datos completos)
+    $dataEmail = $email_cc; // Dirección de correo del segundo destinatario
+    $dataSubject = 'Correo de confirmación del World Trade Center Veracruz';
+    
+     //build dinamic html
+     $html = "";
+     foreach ($formvars as $key => $value) {
+         if( $key != 'permalink' && $key != 'action' && $key != 'logo-principal'){
+             $html .= "<p>";
+                 $html .= "<strong>". $key .": </strong>  ".$value;
+             $html .= "</p>";
+         }
+     }
+     $formvars['html'] = $html;
+ 
+     //load template
+     
+     $dataBody = file_get_contents(get_stylesheet_directory_uri().'/template-newsletter/template_form_confirmation.html');
+ 
+     foreach ($formvars as $key => $value) {
+         if(isset($formvars[$key]) && !empty($formvars[$key])){
+             $dataBody = str_replace('{' . $key . '}', $value, $dataBody);
+         }else{
+             $dataBody = str_replace('{' . $key . '}', '-----' , $dataBody);
+         }
+     }
+
+    $mailer->ClearAddresses();
+    $mailer->AddAddress($email_cc);
+    $mailer->Subject = $dataSubject;
+    $mailer->Body = $dataBody;
+
+    // Envío del segundo correo
+    if($mailer->Send()){
+        $result = array(
+            "estatus" => "success",
+            "mensaje" => "Gracias por contactarnos, recibirá un correo de confirmación. Nosotros nos pondremos en contacto.",
+            // "mensaje" => "Gracias por contactarnos, nosotros nos pondremos en contacto contigo",
+            "data" => $data_array,
+        );
+    }else{
+        $error = "Mailer Error: " . $mailer->ErrorInfo; // for testing
+        $result = array(
+            "estatus" => "danger",
+            "mensaje" => "Hubo un problema intentelo más tarde.",
+            "code_error" => $error,
+            "data" => $data_array,
+            "email_cc" => $email_cc,
+            "formvars" => $formvars,
+            "body" => $body,
+            "url" => $url,
+            "template" => $template,
+        
         );
     }
     
