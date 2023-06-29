@@ -574,7 +574,7 @@ input[type="reset"]:hover,
 input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-	background: #007acc;
+	/* background: #007acc; */
 }
 
 button:focus,
@@ -1014,6 +1014,36 @@ p {
 	bottom: 10%;
 	left: 30%;
 }
+
+/* Contactenos */
+
+.btn-send{
+	background-color: #E9925D;
+	color: #FFFFFF;
+}
+
+.btn-send:hover{
+	background-color: #fff;
+	color: #E9925D;
+	border: 1px solid #686868;
+}
+
+.infoCongresos{
+	color: #666666;
+    font-size: 0.875rem;
+    text-align: justify;
+}
+
+.infoCongresos a{
+	color: #666666;
+    font-size: 0.875rem;
+    text-align: justify;
+}
+
+/* .btn-send{
+	background-color: #fff;
+	color: #E9925D;
+} */
 
 /**
  * footer
@@ -1736,6 +1766,10 @@ p {
 	width: 100%;
 }
 
+.btnFlechas{
+	height: 36px;
+}
+
 .title-seccion-eventos:before {
 	margin: 0px 15px 0 0px;
 	width: 100%;
@@ -1832,6 +1866,18 @@ p {
     color: #4D4D4D;
     /* padding: 0px 0; */
     text-decoration: underline;
+}
+
+.yearEvent{
+	display: flex;
+    justify-content: center;
+    align-content: center;
+	align-items: center;
+    color: #fff;
+    font-size: 42px;
+    font-weight: bold;
+    font-family: Montserrat;
+    
 }
 
 

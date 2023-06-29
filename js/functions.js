@@ -5,6 +5,22 @@ $(document).ready(function () {
         },
         unhighlight: function(element) {
         },
+        rules: {
+            telefono: {
+                required: true,
+                number: true,
+                minlength: 10,
+                maxlength: 10
+            }
+        },
+        messages: {
+            telefono: {
+                required: "Por favor, ingresa tu número de teléfono",
+                number: "Por favor, ingresa un número de teléfono válido",
+                minlength: "El número de teléfono debe tener 10 dígitos",
+                maxlength: "El número de teléfono debe tener 10 dígitos"
+            }
+        },
         submitHandler: function(form) {
             var formData = new FormData($(form)[0]);
             formData.append('action', 'sendmail');
@@ -36,7 +52,7 @@ $(document).ready(function () {
                     return false;
                 },
                 error: function(xhr) {
-                    console.log("Ocurrio un error, intente otra vez");
+                    console.log("Ocurrió un error, inténtalo de nuevo");
                     self.find('button').text('Error');
                 }
             });
@@ -47,9 +63,8 @@ $(document).ready(function () {
     var url = window.location.pathname;
 
     breakpoint.addListener(handleBreakpointChange);  // Registra el listener inicial
-
-
 });
+
 
 function menuResponsive() {
 

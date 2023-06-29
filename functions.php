@@ -266,6 +266,13 @@ function sendmail(){
     }else{
         $email_cc = $configuration_theme['e-mail'];    
     }
+
+    if(!empty($configuration_theme['e-mail-formulario']) && isset($configuration_theme['e-mail-formulario'])){
+        $send_email = $configuration_theme['e-mail-formulario'];
+    }
+    else{
+        $send_email = $configuration_theme['e-mail'];
+    }
     
     $template = $data_array['config']['template_name'];
     $subject = $data_array['config']['subject'];
@@ -290,7 +297,7 @@ function sendmail(){
     $mailer->SMTPAuth = true;
     $mailer->Port = 465; // Puerto a utilizar
 
-    $mailer->AddAddress("barucgs@gmail.com"); // poner correo del administrador 
+    $mailer->AddAddress($send_email); // poner correo del administrador 
     $mailer->Subject = $subject;
     $mailer->From = "no-responder@mail.com";
     $mailer->FromName = $fromname;
@@ -325,7 +332,7 @@ function sendmail(){
     if($mailer->Send()){
         $result = array(
             "estatus" => "success",
-            "mensaje" => "Gracias por contactarnos, recibirá un correo de confirmación. Nosotros nos pondremos en contacto.",
+            "mensaje" => "Gracias por contactarnos, recibirá un correo de confirmación.",
             // "mensaje" => "Gracias por contactarnos, nosotros nos pondremos en contacto contigo",
             "data" => $data_array,
         );
@@ -381,7 +388,7 @@ function sendmail(){
     if($mailer->Send()){
         $result = array(
             "estatus" => "success",
-            "mensaje" => "Gracias por contactarnos, recibirá un correo de confirmación. Nosotros nos pondremos en contacto.",
+            "mensaje" => "Gracias por contactarnos, recibirá un correo de confirmación.",
             // "mensaje" => "Gracias por contactarnos, nosotros nos pondremos en contacto contigo",
             "data" => $data_array,
         );

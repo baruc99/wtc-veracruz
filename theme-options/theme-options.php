@@ -90,6 +90,8 @@ function themeoption_save(){
 		"lat-lng"     	         => $_POST["lat-lng"],
 		"code-google-analytics"  => $_POST["code-google-analytics"],
 		"e-mail"     		 	 => $_POST["e-mail"],
+		"e-mail-formulario"	 	 => $_POST["e-mail-formulario"],
+		"e-mail-congresos"	 	 => $_POST["e-mail-congresos"],
 		'phone'					 => $_POST["phone"]
 	);
 

@@ -1,13 +1,24 @@
 <?php get_header(); ?>
 
+<?php
+    $anioActual = date("Y");
+?>
+
 <section class="wrapper-eventos">
     <div class="img-banner-eventos"></div>
     <div class="container">
         <div class="row">
-            <div class="col altuta-texto-eventos texto-eventos">
+            <div class="col-md-12 altuta-texto-eventos texto-eventos">
                 <h3 class="title-seccion-eventos">CARTELERA</h3>
                 <p>World Trade Center Veracruz está lleno de eventos, abiertos al público o para un segmento especíﬁco.<br></p>
                 <p><span>¡NUESTRA CARTELERA TIENE ALGO PARA TI!</span></p>
+            </div>
+            <div class="col-md-12 yearEvent">
+                <img class="btnFlechas pr-3" src="<?php echo get_template_directory_uri();?>/images/atras.png" alt="botón atrás">
+
+                <?php echo $anioActual ?>
+
+                <img class="btnFlechas pl-3" src="<?php echo get_template_directory_uri();?>/images/adelante.png" alt="botón adelante">
             </div>
         </div>
         <div class="row">
