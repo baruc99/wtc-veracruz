@@ -1,9 +1,6 @@
-<?php get_header(); ?>
-
-<?php
-    $anioActual = date("Y");
+<?php 
+    get_header(); 
 ?>
-
 <section class="wrapper-eventos">
     <div class="img-banner-eventos"></div>
     <div class="container">
@@ -15,88 +12,48 @@
             </div>
             <div class="col-md-12 yearEvent">
                 <img class="btnFlechas pr-3" src="<?php echo get_template_directory_uri();?>/images/atras.png" alt="botón atrás">
-
-                <?php echo $anioActual ?>
-
+                <span id="currentYear"></span>
                 <img class="btnFlechas pl-3" src="<?php echo get_template_directory_uri();?>/images/adelante.png" alt="botón adelante">
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 col-6 agenda-evento p-3">            
-                <div class="card-eventos align-Center-column">
-                    Enero
-                    <a href="<?php echo( home_url() ) ?>/mes?mes=1"><span class="hover-text">Ver eventos</span></a>
+        <?php
+            $current_month = date('n');
+            $current_year = isset($_GET['year']) ? $_GET['year'] : date('Y');
+            $month_labels = array(
+                1 => 'Enero',
+                2 => 'Febrero',
+                3 => 'Marzo',
+                4 => 'Abril',
+                5 => 'Mayo',
+                6 => 'Junio',
+                7 => 'Julio',
+                8 => 'Agosto',
+                9 => 'Septiembre',
+                10 => 'Octubre',
+                11 => 'Noviembre',
+                12 => 'Diciembre'
+            );
+
+            for ($month = 1; $month <= 12; $month++) {
+                $current_url = home_url($_SERVER['REQUEST_URI']);
+                $month_url = add_query_arg(array('mes' => $month, 'year' => $current_year), home_url('/mes/'));
+                $class = ($current_month == $month) ? 'current-month' : '';
+                ?>
+                <div class="col-md-4 col-6 agenda-evento p-3">
+                    <div class="card-eventos align-Center-column <?php echo $class; ?>">
+                        <?php echo $month_labels[$month]; ?>
+                        <a href="<?php echo esc_url($month_url); ?>"><span class="hover-text">Ver eventos</span></a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4 col-6 agenda-evento p-3">
-                <div class="card-eventos align-Center-column">
-                    Febrero
-                    <a href="<?php echo( home_url() ) ?>/mes?mes=2"><span class="hover-text">Ver eventos</span></a>
-                </div>
-            </div>
-            <div class="col-md-4 col-6 agenda-evento p-3">
-                <div class="card-eventos align-Center-column">
-                    Marzo
-                    <a href="<?php echo( home_url() ) ?>/mes?mes=3"><span class="hover-text">Ver eventos</span></a>
-                </div>
-            </div>
-            <div class="col-md-4 col-6 agenda-evento p-3">
-                <div class="card-eventos align-Center-column">
-                    Abril
-                    <a href="<?php echo( home_url() ) ?>/mes?mes=4"><span class="hover-text">Ver eventos</span></a>
-                </div>
-            </div>
-            <div class="col-md-4 col-6 agenda-evento p-3">
-                <div class="card-eventos align-Center-column">
-                    Mayo
-                    <a href="<?php echo( home_url() ) ?>/mes?mes=5"><span class="hover-text">Ver eventos</span></a>
-                </div>
-            </div>
-            <div class="col-md-4 col-6 agenda-evento p-3">
-                <div class="card-eventos align-Center-column">
-                    Junio
-                    <a href="<?php echo( home_url() ) ?>/mes?mes=6"><span class="hover-text">Ver eventos</span></a>
-                </div>
-            </div>
-            <div class="col-md-4 col-6 agenda-evento p-3">
-                <div class="card-eventos align-Center-column">
-                    Julio
-                    <a href="<?php echo( home_url() ) ?>/mes?mes=7"><span class="hover-text">Ver eventos</span></a>
-                </div>
-            </div>
-            <div class="col-md-4 col-6 agenda-evento p-3">
-                <div class="card-eventos align-Center-column">
-                    Agosto
-                    <a href="<?php echo( home_url() ) ?>/mes?mes=8"><span class="hover-text">Ver eventos</span></a>
-                </div>
-            </div>
-            <div class="col-md-4 col-6 agenda-evento p-3">
-                <div class="card-eventos align-Center-column">
-                    Septiembre
-                    <a href="<?php echo( home_url() ) ?>/mes?mes=9"><span class="hover-text">Ver eventos</span></a>
-                </div>
-            </div>
-            <div class="col-md-4 col-6 agenda-evento p-3">
-                <div class="card-eventos align-Center-column">
-                    Octubre
-                    <a href="<?php echo( home_url() ) ?>/mes?mes=10"><span class="hover-text">Ver eventos</span></a>
-                </div>
-            </div>
-            <div class="col-md-4 col-6 agenda-evento p-3">
-                <div class="card-eventos align-Center-column">
-                    Noviembre
-                    <a href="<?php echo( home_url() ) ?>/mes?mes=11"><span class="hover-text">Ver eventos</span></a>
-                </div>
-            </div>
-            <div class="col-md-4 col-6 agenda-evento p-3">
-                <div class="card-eventos align-Center-column">
-                    Diciembre
-                    <a href="<?php echo( home_url() ) ?>/mes?mes=12"><span class="hover-text">Ver eventos</span></a>
-                </div>
-            </div>
+                <?php
+            }
+        ?>
         </div>
     </div>
 </section>
+
+
 
 
 <?php get_footer(); ?>

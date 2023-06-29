@@ -1,9 +1,9 @@
 /*general settings*/
 $(document).ready(function () {
     $("#form-contacto").validate({
-        highlight: function(element) {
+        highlight: function (element) {
         },
-        unhighlight: function(element) {
+        unhighlight: function (element) {
         },
         rules: {
             telefono: {
@@ -21,10 +21,10 @@ $(document).ready(function () {
                 maxlength: "El número de teléfono debe tener 10 dígitos"
             }
         },
-        submitHandler: function(form) {
+        submitHandler: function (form) {
             var formData = new FormData($(form)[0]);
             formData.append('action', 'sendmail');
-            formData.append('permalink', wpurl_ajax.permalink );
+            formData.append('permalink', wpurl_ajax.permalink);
             var self = $(form);
 
             $.ajax({
@@ -33,25 +33,25 @@ $(document).ready(function () {
                 data: formData,
                 processData: false,
                 contentType: false,
-                beforeSend: function (){
+                beforeSend: function () {
                     self.find('button').html('Enviando... <i class="fas fa-spinner fa-spin"></i>');
                 },
-                success: function(data){
+                success: function (data) {
                     data = JSON.parse(data);
-                    console.log( data );
-                    $($(form)).prepend("<span class='d-block alert alert-"+data.estatus+"'>"+data.mensaje+"</span>");
-                    $($(form)).each (function(){
+                    console.log(data);
+                    $($(form)).prepend("<span class='d-block alert alert-" + data.estatus + "'>" + data.mensaje + "</span>");
+                    $($(form)).each(function () {
                         this.reset();
                     });
                 },
-                complete: function() {
+                complete: function () {
                     self.find('button').html('Enviado');
                     $(this).animate({
                         scrollTop: 0
                     }, 800);
                     return false;
                 },
-                error: function(xhr) {
+                error: function (xhr) {
                     console.log("Ocurrió un error, inténtalo de nuevo");
                     self.find('button').text('Error');
                 }
@@ -59,50 +59,82 @@ $(document).ready(function () {
         }
     });
 
+    var pathname = window.location.pathname;
     var breakpoint = window.matchMedia("(max-width: 768px)");
-    var url = window.location.pathname;
 
-    breakpoint.addListener(handleBreakpointChange);  // Registra el listener inicial
+    if (pathname == "/eventos/") {
+        var currentYearElement = document.getElementById("currentYear");
+        var backButton = document.querySelector(".btnFlechas.pr-3");
+        var forwardButton = document.querySelector(".btnFlechas.pl-3");
+        var currentYear = new Date().getFullYear();
+
+        var urlParams = new URLSearchParams(window.location.search);
+        var yearParam = urlParams.get("year");
+
+        if (yearParam) {
+            currentYear = parseInt(yearParam);
+            updateYear();
+        }
+
+        // Agregar el año actual como variable a la URL sin recargar la página
+        history.pushState({}, "", "?year=" + currentYear);
+
+        updateYear();
+
+        backButton.addEventListener("click", function () {
+            currentYear--;
+            updateYear();
+            updateURL();
+        });
+
+        forwardButton.addEventListener("click", function () {
+            currentYear++;
+            updateYear();
+            updateURL();
+        });
+
+        function updateYear() {
+            currentYearElement.textContent = currentYear;
+
+            backButton.style.display = currentYear < 2024 ? "none" : "inline-block";
+            forwardButton.style.display = currentYear > 2023 ? "none" : "inline-block";
+        }
+
+        function updateURL() {
+            history.pushState({}, "", "?year=" + currentYear);
+        }
+
+    }
+
+    
+
+    breakpoint.addListener(handleBreakpointChange);
+
+
+
 });
 
 
-function menuResponsive() {
-
-    const breakpoint = window.matchMedia("(max-width: 768px)");
-
-}
-
 function handleBreakpointChange(event) {
     if (event.matches) {
-        // Se ha alcanzado el breakpoint de 768px o menos
         console.log("Estás en el breakpoint de 768px o menos.");
 
-        var firtsLi = document.querySelector('#main-menu ul li:first-child');
-
+        var firstLi = document.querySelector('#main-menu ul li:first-child');
 
         document.querySelector('#main-menu ul li:first-child a').href = '#';
 
-
-        firtsLi.addEventListener('click', function (event) {
-            // event.preventDefault();
+        firstLi.addEventListener('click', function (event) {
             console.log("click");
             document.querySelectorAll('#main-menu ul li:first-child ul')[0].classList.add('menuUp');
         });
 
         $(document).on('click', function (event) {
-            if (!$(event.target).closest(firtsLi).length) {
-                // Código para el clic fuera de firtsLi
+            if (!$(event.target).closest(firstLi).length) {
                 $('#main-menu ul li:first-child ul').removeClass('menuUp');
                 console.log("otro lado");
             }
         });
-
-
-
-    }
-    else {
-        // Se ha superado el breakpoint de 768px
+    } else {
         console.log("Estás por encima del breakpoint de 768px.");
-        // Realiza las acciones correspondientes
     }
 }

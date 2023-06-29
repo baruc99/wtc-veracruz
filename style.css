@@ -1751,7 +1751,7 @@ p {
 	background-image: url(images/wtcsite_fondocartelera.jpg);
 	background-size: cover;
 	width: 100%;
-	height: 54.75rem;
+	height: 60rem;
 }
 
 .title-seccion-eventos {
@@ -1764,10 +1764,6 @@ p {
 	font-size: 2.625rem;
 	color: #ffffff;
 	width: 100%;
-}
-
-.btnFlechas{
-	height: 36px;
 }
 
 .title-seccion-eventos:before {
@@ -1877,7 +1873,11 @@ p {
     font-size: 42px;
     font-weight: bold;
     font-family: Montserrat;
-    
+    top: -50px;
+}
+
+.btnFlechas{
+	height: 36px;
 }
 
 
