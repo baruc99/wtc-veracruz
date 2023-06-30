@@ -68,29 +68,16 @@ $(document).ready(function () {
         var forwardButton = document.querySelector(".btnFlechas.pl-3");
         var currentYear = new Date().getFullYear();
 
-        var urlParams = new URLSearchParams(window.location.search);
-        var yearParam = urlParams.get("year");
-
-        if (yearParam) {
-            currentYear = parseInt(yearParam);
-            updateYear();
-        }
-
-        // Agregar el año actual como variable a la URL sin recargar la página
-        history.pushState({}, "", "?year=" + currentYear);
-
         updateYear();
 
         backButton.addEventListener("click", function () {
             currentYear--;
             updateYear();
-            updateURL();
         });
 
         forwardButton.addEventListener("click", function () {
             currentYear++;
             updateYear();
-            updateURL();
         });
 
         function updateYear() {
@@ -98,15 +85,26 @@ $(document).ready(function () {
 
             backButton.style.display = currentYear < 2024 ? "none" : "inline-block";
             forwardButton.style.display = currentYear > 2023 ? "none" : "inline-block";
-        }
 
-        function updateURL() {
-            history.pushState({}, "", "?year=" + currentYear);
+            // Obtener todos los enlaces con la clase "card-eventos"
+            var enlacesEventos = document.getElementsByClassName("card-eventos");
+
+            // Recorrer los enlaces y actualizar el atributo href con el nuevo año
+            for (var i = 0; i < enlacesEventos.length; i++) {
+                var enlace = enlacesEventos[i].querySelector("a");
+                var href = enlace.getAttribute("href");
+
+                // Remover cualquier referencia a "year" existente en el atributo href
+                href = href.replace(/&a=\d{4}/g, "");
+
+                // Agregar el nuevo año al atributo href
+                enlace.setAttribute("href", href + "&a=" + currentYear);
+            }
         }
 
     }
 
-    
+
 
     breakpoint.addListener(handleBreakpointChange);
 

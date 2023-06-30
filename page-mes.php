@@ -1,10 +1,10 @@
-<?php get_header(); ?>
-
 <?php
     $mes = $_GET['mes'];
+    $anioActual = $_GET['a'];
     $mesNombre = obtenerNombreMes($mes);
-    $anioActual = date("Y");
 ?>
+
+<?php get_header(); ?>
 
 <div class="wrapper-mes textura">
     <div class="container">
@@ -15,113 +15,66 @@
             </div>
         </div>
 
-        <!--  -->
         <?php
-                    $args = array(
-                        'post_type' => 'eventos-wtcv',
-                        'order' => 'ASC',
-                        'orderby' => 'meta_value',
-                        'meta_key' => 'dateStart',
-                        'posts_per_page' => -1
-                    );
-                    $cont = 0;
-                    $loop = new WP_Query($args);
+            $args = array(
+                'post_type' => 'eventos-wtcv',
+                'order' => 'ASC',
+                'orderby' => 'meta_value',
+                'meta_key' => 'dateStart',
+                'posts_per_page' => -1
+            );
+            $cont = 0;
+            $loop = new WP_Query($args);
 
-                    if ($loop->have_posts()) {
-                        while ($loop->have_posts()) {
-                            $loop->the_post();
-                    
-                            $dateStart = get_post_meta($post->ID, 'dateStart', true);
-                            $dateEnd = get_post_meta($post->ID, 'dateEnd', true);
-                            $hourStart = get_post_meta($post->ID, 'hourStart', true);
-                            $hourEnd = get_post_meta($post->ID, 'hourEnd', true);
-                            $tipoEvento = get_post_meta($post->ID, 'tipoEvento', true);
-                            $place = get_post_meta($post->ID, 'place', true);
-                    
-                            $mesEventoPublicado = obtenerMes($dateStart);
-                            $diaStart = obtenerDia($dateStart);
-                            $diaEnd = obtenerDia($dateEnd);
-                            $mesStart = obtenerMes($dateStart);
-                            $mesEnd = obtenerMes($dateEnd);
-                            $periodo = calcularPeriodo($dateStart, $dateEnd);
-                            $primerDiaMes = obtenerDiaYUltimoDia($diaStart, $mes);
-                            $yeardelEvento = obtenerYear( $dateStart );
+            if ($loop->have_posts()) {
+                while ($loop->have_posts()) {
+                    $loop->the_post();
+            
+                    $dateStart = get_post_meta($post->ID, 'dateStart', true);
+                    $dateEnd = get_post_meta($post->ID, 'dateEnd', true);
+                    $hourStart = get_post_meta($post->ID, 'hourStart', true);
+                    $hourEnd = get_post_meta($post->ID, 'hourEnd', true);
+                    $tipoEvento = get_post_meta($post->ID, 'tipoEvento', true);
+                    $place = get_post_meta($post->ID, 'place', true);
+            
+                    $mesEventoPublicado = obtenerMes($dateStart);
+                    $diaStart = obtenerDia($dateStart);
+                    $diaEnd = obtenerDia($dateEnd);
+                    $mesStart = obtenerMes($dateStart);
+                    $mesEnd = obtenerMes($dateEnd);
+                    $periodo = calcularPeriodo($dateStart, $dateEnd);
+                    $primerDiaMes = obtenerDiaYUltimoDia($diaStart, $mes);
+                    $yeardelEventoStart = obtenerYear( $dateStart );
+                    $yeardelEventoEnd = obtenerYear( $dateEnd );
 
-                            // Obtener el año de dateStart y agregarlo al array
-                            $yearStart = date('Y', strtotime($dateStart));
-                            $years[] = $yearStart;
+                    //          dia o dias - tipo de evnto - lugar
+                    // mostrarEvento($diaStart, $tipoEvento, $place);
 
-                            // Obtener el año de dateEnd y agregarlo al array si es diferente de dateStart
-                            $yearEnd = date('Y', strtotime($dateEnd));
-                            if ($yearEnd !== $yearStart) {
-                                $years[] = $yearEnd;
+                    if (isset($dateStart) && !empty($dateStart) && isset($dateEnd) && !empty($dateEnd)) {
+                        // el dia de inicio es el mismo que el dia del final
+
+                        if($yeardelEventoStart == $anioActual && $yeardelEventoEnd == $anioActual){
+                            if($diaStart == $diaEnd){
+                                mostrarEvento($diaStart, $tipoEvento, $place);
                             }
-                            
-                            $uniqueYears = array_unique($years);
-
-                            foreach ($uniqueYears as $year) {
-                               if( ($anioActual == $yeardelEvento) && $year == $anioActual ){
-                                   if (!empty($dateStart) && empty($dateEnd)) {
-                                       if ($mesEventoPublicado == $mes) {
-                                           mostrarEvento($diaStart, $tipoEvento, $place);
-                                       }
-                                   } else {
-                                       if ($mesEventoPublicado == $mes && $mesStart == $mesEnd) {
-                                           if ($diaEnd == $diaStart) {
-                                               mostrarEvento($diaStart, $tipoEvento, $place);
-                                           } else {
-                                               mostrarEvento($periodo, $tipoEvento, $place);
-                                           }
-                                       } else if (cruzaCambioMes($dateStart, $dateEnd)) {
-                                           if ($mesStart == $mes) {
-                                               mostrarEvento($primerDiaMes, $tipoEvento, $place);
-                                           } else if ($mesEnd == $mes ) {
-                                                if( $mesEnd != "01" ){
-
-                                                    mostrarEvento("01 - " . $diaEnd, $tipoEvento, $place);
-                                                }
-                                           }
-                                       }
-                                   }
-                               }
-                               else if( ( $year > $anioActual )  ){
-                                    if ($year !== $lastYear) {
-                                        if( ( $mesStart == $mes || $mesEnd == $mes ) ){                                    
-                        ?>
-    
-                                        <h3 class="title-seccion-mes mb-4"><?php echo $year ?></h3>
-                        <?php
-                                        }
-                                        $lastYear = $year; // Actualizar el último año impreso
-                                        if (!empty($dateStart) && empty($dateEnd)) {
-                                            if ($mesEventoPublicado == $mes) {
-                                                mostrarEvento($diaStart, $tipoEvento, $place);
-                                            }
-                                        } else {
-                                            if ($mesEventoPublicado == $mes && $mesStart == $mesEnd) {
-                                                if ($diaEnd == $diaStart) {
-                                                    mostrarEvento($diaStart, $tipoEvento, $place);
-                                                } else {
-                                                    mostrarEvento($periodo, $tipoEvento, $place);
-                                                }
-                                            } else if (cruzaCambioMes($dateStart, $dateEnd)) {
-                                                if ($mesStart == $mes) {
-                                                    if( $mesStart != "12" ){
-                                                    mostrarEvento($primerDiaMes, $tipoEvento, $place);
-                                                    }
-                                                } else if ($mesEnd == $mes) {
-                                                    mostrarEvento("01 - " . $diaEnd, $tipoEvento, $place);
-                                                }
-                                            }
-                                        }
-
-                                    }
-                               }
-                               
+                            else if( $diaStart != $diaEnd && $mesStart == $mesEnd){
+                                mostrarEvento($primerDiaMes, $tipoEvento, $place);
                             }
+                        }
 
+
+                    } else if (isset($dateStart) && !empty($dateStart) && (!isset($dateEnd) || empty($dateEnd))) {
+                        // solo esta lleno la fecha de inicio
+                        if($yeardelEventoStart == $anioActual && $yeardelEventoEnd == $anioActual){
+                            mostrarEvento($diaStart, $tipoEvento, $place);
                         }
                     }
+                    
+
+    
+
+                }
+            }
             ?>
     </div>
         <div class="altura-eventos-fin"></div>
