@@ -50,88 +50,82 @@
                     //          dia o dias - tipo de evnto - lugar
                     // mostrarEvento($diaStart, $tipoEvento, $place);
 
-                    // if (isset($dateStart) && !empty($dateStart) && isset($dateEnd) && !empty($dateEnd)) {
-                    //     // el dia de inicio es el mismo que el dia del final
 
-                    //     if($yeardelEventoStart == $anioActual && $yeardelEventoEnd == $anioActual){
+                    // // valida que tengan datos
+                    // if (!empty($dateStart) && !empty($dateEnd)){
 
-                    //         // mismo dia el dia de inicio y fin 
-                    //         if($diaStart == $diaEnd && $mesStart == $mes && $mesEnd ==$mes){
-                    //             mostrarEvento($diaStart, $tipoEvento, $place);
-                    //         }
-                    //         // dias diferentes y mismo mes (periodo)
-                    //         else if( $diaStart != $diaEnd && $mesStart == $mes && $mesEnd == $mes  ){
-                    //             mostrarEvento($periodo, $tipoEvento, $place);
-                    //         }
-                    //         // dias y mes diferentes
-                    //         else if( cruzaCambioMes($dateStart, $dateEnd) ){
-                    //             if (!empty($dateStart) && empty($dateEnd)) {
-                    //                 if ($mesEventoPublicado == $mes) {
-                    //                     mostrarEvento($diaStart, $tipoEvento, $place);
-                    //                 }
-                    //             } else {
-                    //                 if ($mesEventoPublicado == $mes && $mesStart == $mesEnd) {
-                    //                     if ($diaEnd == $diaStart) {
-                    //                         mostrarEvento($diaStart, $tipoEvento, $place);
-                    //                     } else {
-                    //                         mostrarEvento($periodo, $tipoEvento, $place);
-                    //                     }
-                    //                 } else if (cruzaCambioMes($dateStart, $dateEnd)) {
-                    //                     if ($mesStart == $mes) {
-                    //                         if( $mesStart != "12" ){
-                    //                         mostrarEvento($primerDiaMes, $tipoEvento, $place);
-                    //                         }
-                    //                     } else if ($mesEnd == $mes) {
-                    //                         mostrarEvento("01 - " . $diaEnd, $tipoEvento, $place);
-                    //                     }
+                    //     // año de fecha inicio y final es el mismo y que sea igual al año actual
+                    //     if ($yeardelEventoEnd == $yeardelEventoStart && $yeardelEventoStart == $anioActual) {
+
+                    //         // Hay un cambio de mes entre las fechas
+                    //         if (cruzaCambioMes($diaInicio, $diaFin)) {
+                                
+                               
+                    //         } 
+                    //          // No hay cambio de mes, muestra un mensaje o realiza otras acciones
+                    //         else {
+
+                    //             // Las fechas representan un periodo válido
+                    //             if (esPeriodo($dateStart, $dateEnd)) {
+                                    
+                                   
+                    //             } 
+                    //             // Las fechas no representan un periodo válido, muestra un mensaje o realiza otras acciones
+                    //             else {
+
+                    //                 // Las fechas son iguales
+                    //                 if (strcmp($dateStart, $dateEnd) === 0) {
+                                     
                     //                 }
                     //             }
-
-            
+                        
+                               
                     //         }
-                    //     }
-                    //     else if( $yeardelEventoStart == $anioActual && $yeardelEventoEnd >= $anioActual ){
-                    //         if ($mesEnd == $mes) {
-                    //             mostrarEvento("01 - " . $diaEnd, $tipoEvento, $place);
-                    //         }
-                    //     }    
-
-
-                    // } else if (isset($dateStart) && !empty($dateStart) && (!isset($dateEnd) || empty($dateEnd))) {
-                    //     // solo esta lleno la fecha de inicio
-                    //     if($yeardelEventoStart == $anioActual){
                             
-                    //         if($mes == $mesStart){
-                    //             mostrarEvento($diaStart, $tipoEvento, $place);
-                    //         }
+
+                            
+                    //     }
+                    //     // años diferentes
+                    //     else if( $yeardelEventoEnd != $yeardelEventoStart){
 
                     //     }
+
                     // }
-                    if ($yeardelEventoStart == $anioActual || $yeardelEventoEnd == $anioActual) {
-                        // Verificar si el evento ocurre en el mes actual
-                        if ($mesStart == $mes || $mesEnd == $mes) {
-                            // Mismo año y mismo mes
-                            if ($yeardelEventoStart == $anioActual && $yeardelEventoEnd == $anioActual && $mesStart == $mes && $mesEnd == $mes) {
-                                // Mismo día de inicio y fin
-                                if ($diaStart == $diaEnd) {
-                                    mostrarEvento($diaStart, $tipoEvento, $place);
-                                }
-                                // Días diferentes y mismo mes (período)
-                                else if ($diaStart != $diaEnd) {
-                                    mostrarEvento($periodo, $tipoEvento, $place);
+                    // //solo tenga fecha de inicio
+                    // else if(!empty($dateStart) && empty($dateEnd)){
+
+                    // }
+
+                    if (!empty($dateStart) && !empty($dateEnd)) {
+                        if ($yeardelEventoEnd == $yeardelEventoStart && $yeardelEventoStart == $anioActual) {
+
+                            if (cruzaCambioMes($dateStart, $dateEnd)) {
+                                // Acciones cuando hay un cambio de mes entre las fechas
+                            } 
+                            else {
+                                if (esPeriodo($dateStart, $dateEnd)) {
+                                    // Acciones cuando las fechas representan un periodo válido
+                                    if ($mesStart == $mes && $mesEnd == $mes) {
+                                        mostrarEvento($periodo, $tipoEvento, $place);
+                                    }
+                                } else {
+                                    if ($dateStart ==  $dateEnd) {
+                                        // Acciones cuando las fechas son iguales
+                                        mostrarEvento($diaStart, $tipoEvento, $place);
+                                    }
                                 }
                             }
-                            // Cruza cambio de mes y año
-                            else if (cruzaCambioMes($dateStart, $dateEnd) && ($yeardelEventoStart == $anioActual || $yeardelEventoEnd == $anioActual)) {
-                                // Inicio del período al final del mes y año anterior
-                                if ($yeardelEventoStart < $anioActual && $mesStart == $mes) {
-                                    mostrarEvento($primerDiaMes, $tipoEvento, $place);
-                                }
-                                // Fin del período al principio del mes y año siguiente
-                                else if ($yeardelEventoEnd > $anioActual && $mesEnd == $mes) {
-                                    mostrarEvento("01 - " . $diaEnd, $tipoEvento, $place);
-                                }
+                        } else if ($yeardelEventoEnd != $yeardelEventoStart) {
+                            // Acciones cuando los años son diferentes
+                        }
+                    } else if (!empty($dateStart) && empty($dateEnd)) {
+                        // Acciones cuando solo hay fecha de inicio
+                        if( $yeardelEventoStart == $anioActual ){
+                            // mes corresponde al mes la fecha
+                            if( $mesStart == $mes ){
+                                mostrarEvento($diaStart, $tipoEvento, $place);
                             }
+
                         }
                     }
                     

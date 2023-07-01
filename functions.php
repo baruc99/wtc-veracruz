@@ -213,6 +213,17 @@ function cruzaCambioMes($diaInicio, $diaFin) {
     return $mesInicio !== $mesFin;
 }
 
+function esPeriodo($fechaInicio, $fechaFin) {
+    $inicio = strtotime($fechaInicio);
+    $fin = strtotime($fechaFin);
+
+    if ($inicio < $fin) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 function mostrarEvento($dia, $tipoEvento, $place){
     ?>
     <div class="row mb-5">
