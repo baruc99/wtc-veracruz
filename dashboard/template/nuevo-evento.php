@@ -6,32 +6,47 @@
     
 ?>
 
-<h3>Dias del evento</h3>
-<div class="row p-3" >
-    <div class="col-md-6 mb-2">
+
+<div class="row p-3 form-group">
+    <div class="col-md-4">
+        <label>Días del evento</label>
+    </div>
+    <div class="col-md-4 mb-2">
         <label for="meeting-time">Inicio:</label>
         <input type="date" id="dateStart" name="dateStart" value="<?php echo $dateStart; ?>" >
 
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
         <label for="meeting-time">Fin:</label>
         <input type="date" id="dateEnd" name="dateEnd" value="<?php echo $dateEnd; ?>" >
     </div>
 </div>
 
-
-<!-- <h3>Horario de atención</h3>
-<div class="row p-3">
-    <div class="col-md-6">
-        <label for="meeting-time">Hora de abrir ( formato de 24 horas ):</label>
-        <input type="number" id="hourStart" name="hourStart" min="0" max="24" value="<?php echo $hourStart; ?>"  >
+<!-- <div class="row p-3 form-group">
+    <div class="col-md-4">
+        <label>Hora del evento</label>
+    </div>
+    <div class="col-md-4 mb-2">
+        <label >Inicio:</label>
+        <input type="time" id="hourStart" name="hourStart" step="3600" value="<?php echo $$hourStart; ?>" >
 
     </div>
-    <div class="col-md-6">
+</div> -->
+
+<div class="row p-3 form-group">
+    <div class="col-md-4">
+        <label>Hora del evento</label>
+    </div>
+    <div class="col-md-4">
+        <label for="meeting-time">Empieza: </label>
+        <input type="time" id="hourStart" name="hourStart" min="0" max="24" value="<?php echo $hourStart; ?>"  >
+
+    </div>
+    <!-- <div class="col-md-6">
         
         <label for="meeting-time">Hora de cerrar ( formato de 24 horas ):</label>
 
-        <input type="number" id="hourEnd" name="hourEnd" min="0" max="24" value="<?php echo $hourEnd; ?>" >
+        <input type="time" id="hourEnd" name="hourEnd" min="0" max="24" value="<?php echo $hourEnd; ?>" >
 
-    </div> 
-</div> -->
+    </div>  -->
+</div>

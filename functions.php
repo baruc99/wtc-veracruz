@@ -224,7 +224,7 @@ function esPeriodo($fechaInicio, $fechaFin) {
     }
 }
 
-function mostrarEvento($dia, $tipoEvento, $place){
+function mostrarEvento($dia, $tipoEvento, $place, $hour){
     ?>
     <div class="row mb-5">
         <div class="col-md-2 align-Center">
@@ -235,10 +235,17 @@ function mostrarEvento($dia, $tipoEvento, $place){
         <div class="col-md-4 align-Center">
             <div class="card-dias-mes align-Center"><?php echo $dia; ?></div>
         </div>
-        <div class="col-md-6 align-start">
+        <div class="col-md-6 align-start align-md-center">
             <div class="text-mes">
                 <h3><?php the_title(); ?></h3>
                 <p><?php echo $tipoEvento; ?> - <?php echo $place; ?></p>
+                <?php
+                    if(isset($hour) && !empty($hour) ){ ?>
+                        <p style="margin-top: -1rem;"><?php echo $hour; ?> hrs</p>
+                <?php   }
+                ?>
+                
+                
             </div>
         </div>
     </div>

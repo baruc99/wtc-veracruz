@@ -48,7 +48,7 @@
                     $yeardelEventoEnd = obtenerYear( $dateEnd );
 
                     //          dia o dias - tipo de evnto - lugar
-                    // mostrarEvento($diaStart, $tipoEvento, $place);
+                    // mostrarEvento($diaStart, $tipoEvento, $place , $hourStart);
 
 
                     // // valida que tengan datos
@@ -102,28 +102,28 @@
                             if (cruzaCambioMes($dateStart, $dateEnd)) {
                                if( $mesStart == $mes ){
                                     //Accion para finales de mes 
-                                    mostrarEvento( $primerDiaMes , $tipoEvento, $place);
+                                    mostrarEvento( $primerDiaMes , $tipoEvento, $place , $hourStart);
                                }
                                else if( $mesEnd == $mes ){
                                     // Acciones para cambio de mes
-                                    mostrarEvento("01 - ". $diaEnd , $tipoEvento, $place);
+                                    mostrarEvento("01 - ". $diaEnd , $tipoEvento, $place , $hourStart);
                                }
                             } 
                             else {
                                 if (esPeriodo($dateStart, $dateEnd)) {
                                     // Acciones cuando las fechas representan un periodo válido
                                     if ($mesStart == $mes && $mesEnd == $mes) {
-                                        mostrarEvento($periodo, $tipoEvento, $place);
+                                        mostrarEvento($periodo, $tipoEvento, $place , $hourStart);
                                     }
                                 } else {
 
                                     if ($dateStart ==  $mes && $dataEnd == $mes) {
                                         // son el mismo mes
-                                        mostrarEvento($diaStart, $tipoEvento, $place);
+                                        mostrarEvento($diaStart, $tipoEvento, $place , $hourStart);
                                     }
                                     else if( $dateStart == $dataEnd ){
                                         // Acciones cuando las fechas son iguales
-                                        mostrarEvento($diaStart, $tipoEvento, $place);
+                                        mostrarEvento($diaStart, $tipoEvento, $place , $hourStart);
                                     }
                                 }
                             }
@@ -131,10 +131,10 @@
                             // Acciones cuando los años son diferentes
                             if( $mesStart == 12 && $mesEnd == 01 ){
                                 if( $mes == 12 ){
-                                    mostrarEvento( $primerDiaMes , $tipoEvento, $place);
+                                    mostrarEvento( $primerDiaMes , $tipoEvento, $place , $hourStart);
                                 }
                                 else if( $mes == 01 ){
-                                    mostrarEvento("01 - ". $diaEnd , $tipoEvento, $place);
+                                    mostrarEvento("01 - ". $diaEnd , $tipoEvento, $place , $hourStart);
                                 }
                             }
                         }
@@ -143,7 +143,7 @@
                         if( $yeardelEventoStart == $anioActual ){
                             // mes corresponde al mes la fecha
                             if( $mesStart == $mes ){
-                                mostrarEvento($diaStart, $tipoEvento, $place);
+                                mostrarEvento($diaStart, $tipoEvento, $place , $hourStart);
                             }
 
                         }

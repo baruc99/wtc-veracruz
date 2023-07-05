@@ -1973,7 +1973,7 @@ p {
 	height: 70%;
 }
 
-.align-start {
+.align-start{
 	display: flex;
 	justify-content: start;
 	align-items: center;
@@ -2480,6 +2480,13 @@ p {
 	.text-mes {
 		text-align: center;
 		margin-top: 30px;
+	}
+
+	.align-start{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 6.25rem;
 	}
 	
 
