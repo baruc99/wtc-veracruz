@@ -2001,6 +2001,15 @@ p {
 	height: 160px;
 }
 
+.btnRegresar{
+	width: 15%;
+}
+
+.alingEnd{
+	display: flex;
+    justify-content: end;
+}
+
 
 /**
  * Media Query's
@@ -2142,6 +2151,11 @@ p {
 	.texto-eventos p {
 		text-align: center;
 	}
+
+	.btnRegresar{
+		width: 25%;
+	}
+	
 
 	/* Conoce veracruz */
 
@@ -2486,7 +2500,7 @@ p {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 6.25rem;
+		height: 100%
 	}
 	
 
@@ -2530,6 +2544,10 @@ p {
 		color: #4D4D4D;
 		text-align: center;
 		margin-top: 55px;
+	}
+
+	.btnRegresar{
+		width: 40%;
 	}
 
 }

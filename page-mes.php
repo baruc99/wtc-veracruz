@@ -47,55 +47,6 @@
                     $yeardelEventoStart = obtenerYear( $dateStart );
                     $yeardelEventoEnd = obtenerYear( $dateEnd );
 
-                    //          dia o dias - tipo de evnto - lugar
-                    // mostrarEvento($diaStart, $tipoEvento, $place , $hourStart);
-
-
-                    // // valida que tengan datos
-                    // if (!empty($dateStart) && !empty($dateEnd)){
-
-                    //     // año de fecha inicio y final es el mismo y que sea igual al año actual
-                    //     if ($yeardelEventoEnd == $yeardelEventoStart && $yeardelEventoStart == $anioActual) {
-
-                    //         // Hay un cambio de mes entre las fechas
-                    //         if (cruzaCambioMes($diaInicio, $diaFin)) {
-                                
-                               
-                    //         } 
-                    //          // No hay cambio de mes, muestra un mensaje o realiza otras acciones
-                    //         else {
-
-                    //             // Las fechas representan un periodo válido
-                    //             if (esPeriodo($dateStart, $dateEnd)) {
-                                    
-                                   
-                    //             } 
-                    //             // Las fechas no representan un periodo válido, muestra un mensaje o realiza otras acciones
-                    //             else {
-
-                    //                 // Las fechas son iguales
-                    //                 if (strcmp($dateStart, $dateEnd) === 0) {
-                                     
-                    //                 }
-                    //             }
-                        
-                               
-                    //         }
-                            
-
-                            
-                    //     }
-                    //     // años diferentes
-                    //     else if( $yeardelEventoEnd != $yeardelEventoStart){
-
-                    //     }
-
-                    // }
-                    // //solo tenga fecha de inicio
-                    // else if(!empty($dateStart) && empty($dateEnd)){
-
-                    // }
-
                     if (!empty($dateStart) && !empty($dateEnd)) {
                         if ($yeardelEventoEnd == $anioActual && $yeardelEventoStart == $anioActual) {
                             // mismo año
@@ -148,16 +99,19 @@
 
                         }
                     }
-                    
-
-    
-
                 }
             }
             ?>
     </div>
-        <div class="altura-eventos-fin"></div>
-</div>
+    <div class="container">
+        <div class="altura-eventos-fin alingEnd">
+            <a href="<?php echo home_url() . '/eventos'; ?>">
+                <img src="<?php echo get_template_directory_uri();?>/images/mes/bt_regresar.png" alt="boton regresar">
+            </a>
+        </div>
 
+    </div>
+       
+</div>
 <?php get_template_part('orange-line'); ?>
 <?php get_footer(); ?>
