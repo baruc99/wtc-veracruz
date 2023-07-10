@@ -1,17 +1,20 @@
 <?php
 	$configuration_theme = get_option("themeoption_configuration_general");
+    $isSuperAdmin = es_superadministrador();
 ?>
 <div class="title-section">
 	<h3><i class="fas fa-user-cog"></i>  Configuración General</h3>
 </div>
 
+<?php if( $isSuperAdmin == true ){ ?>
+<!-- soy superadmin -->
 <div class="form-group">
     <div class="row">
         <div class="col-lg-4 label-option">
             <label for="code-google-analytics" class="control-label">ID de seguimiento Google Analytics</label>
             <span class="description-title">
                 Pega aquí el ID de seguimiento de tu cuenta de Google Analytics
-                ejemplo: "UA-XXXXXXXX-1"
+                ejemplo: "G-XXXXXXXXXX"
             </span>
         </div>
         <div class="col-lg-8">
@@ -20,6 +23,7 @@
     </div>
 </div>
 
+<?php }?>
 <div class="title-section">
     <h3>Correo Electrónico</h3>
 </div>

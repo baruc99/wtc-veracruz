@@ -18,7 +18,7 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
     <!-- Icons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('template_url'); ?>/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $branding['favicon']; ?>">
 
     <!-- Apple -->
     <meta name="apple-mobile-web-app-capable" content="yes">

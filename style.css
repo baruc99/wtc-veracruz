@@ -2556,6 +2556,57 @@ p {
 @media screen and (max-width: 320px) {
 	/* <= device less 320px*/
 
+	.positionTitleBanner {
+		font-size: 1.4rem;
+	}
+
+	.eslogan {
+		font-size: 1rem;
+	}
+
+	.logos-footer img {
+		height: 1rem;
+	}
+
+	.alignInfoLine a {
+		font-size: 0.5rem;
+	}
+
+	.title-seccion-mes {
+		font-size: 2rem;
+	}
+
+	.title-seccion {
+		font-size: 1.5rem;
+	}
+
+	.title-conoce-veracruz {
+		font-size: 1.5rem;
+	}
+
+	.title {
+		font-size: 1.5rem;
+	}
+
+	.sizeBtnReturn{
+		height: 30px;
+	}
+
+	.texto-mosaico h3 {
+		font-size: 10px;
+	}
+
+	.eslogan-other {
+		font-size: 1rem;
+	}
+
+	.title-seccion-trasnparencia {
+		font-size: 1.5rem !important;
+	}
+
+	.centrar-texto p {
+		padding: 0px 0px 0px 0px;
+	}
 }
 
 /*utilities*/

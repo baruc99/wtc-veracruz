@@ -1,6 +1,7 @@
 <footer>
   <?php
     $branding = get_option("themeoption_branding");
+    $configuration_theme = get_option("themeoption_configuration_general");
   ?>
 
   
@@ -57,15 +58,14 @@
 </footer>
 
 </div>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', '#code', 'auto');
-  ga('send', 'pageview');
-  
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $configuration_theme["code-google-analytics"]; ?>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '<?php echo $configuration_theme["code-google-analytics"]; ?>');
 </script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

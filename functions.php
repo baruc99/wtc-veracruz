@@ -269,6 +269,15 @@ function obtenerAnioSinRepetir($fecha1, $fecha2 = null) {
 }
 
 
+// saber si es super admin
+function es_superadministrador() {
+    $user = wp_get_current_user();
+    $id = ( array ) $user;
+    $id =  $user->ID;
+    
+    return user_can( $id, 'manage_network' );
+}
+
 
 /************************************************/
 /* Formulario de contacto para todos los sitios */

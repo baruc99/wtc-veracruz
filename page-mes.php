@@ -106,7 +106,7 @@
     <div class="container">
         <div class="altura-eventos-fin alingEnd">
             <a href="<?php echo home_url() . '/eventos'; ?>">
-                <img src="<?php echo get_template_directory_uri();?>/images/mes/bt_regresar.png" alt="boton regresar">
+                <img class="sizeBtnReturn" src="<?php echo get_template_directory_uri();?>/images/mes/bt_regresar.png" alt="boton regresar">
             </a>
         </div>
 
